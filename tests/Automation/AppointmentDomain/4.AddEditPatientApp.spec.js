@@ -116,9 +116,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await confirmexisting.clickOnConfirmExistingDetails();
     await page.waitForTimeout(5000);
 
-    const addReferralText = await page
-      .getByRole("heading", { name: "Add a Referral" })
-      .isVisible();
+    const addReferralText = await page.getByRole("heading", { name: "Add a Referral" }).isVisible();
 
     if (addReferralText) {
       //Add New Referral to Patient.
@@ -325,15 +323,9 @@ test.describe("Database Comparison Add Edit Patient", () => {
         );
       }
     } else {
-      await servicebookapp.SelectDate(
-        jsonData.addEditAppointments[index].rea_date.toString()
-      );
-      await servicebookapp.selectDropdownSpecility(
-        jsonData.addEditAppointments[index].rea_special
-      );
-      await servicebookapp.selectDropdownClinicType(
-        jsonData.addEditAppointments[index].rea_clinic_type
-      );
+      await servicebookapp.SelectDate(jsonData.addEditAppointments[index].rea_date.toString());
+      await servicebookapp.selectDropdownSpecility(jsonData.addEditAppointments[index].rea_special);
+      await servicebookapp.selectDropdownClinicType(jsonData.addEditAppointments[index].rea_clinic_type);
 
       await servicebookapp.selectDropdownClinicLocation(
         jsonData.addEditAppointments[index].rea_location
@@ -347,12 +339,13 @@ test.describe("Database Comparison Add Edit Patient", () => {
       );
       await servicebookapp.clickOnShowCalendarbtn();
       //await servicebookapp.clickOnHPnameLink(serviceappdetails.HPNameLink)
-
+       await page.pause()
       await servicebookapp.clickOnMorningSlotstoAddApp(
         jsonData.addEditAppointments[index].convertedTime
       );
 
-      await servicebookapp.clickOnNextButton();
+      //await servicebookapp.clickOnNextButton();
+      await page.getByTestId('Next').click()
 
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
