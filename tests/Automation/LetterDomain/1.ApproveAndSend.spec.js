@@ -133,6 +133,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
       await letterorSummeries.clickOnEditHistoryIcon()
       await letterorSummeries.clickOnclosePopup()
       await letterorSummeries.clickOnSendEmailButton()
+       await page.getByRole('button', { name: 'cancelIcon' }).click()
       await letterorSummeries.clickOnclosePopup()
       await letterorSummeries.clickOnApproveRecordLink()
       await expect(page.getByText("Letter approve successfully")).toHaveText("Letter approve successfully");      
