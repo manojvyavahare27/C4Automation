@@ -40,7 +40,7 @@ const consoleLogs = [];
 let jsonData;
 
 test.describe("Database Comparison Add Edit Patient", () => {
-  test("Extract Patient Details", async ({}) => {
+  test("Extract Patient Details", async ({ }) => {
     const excelFilePath =
       process.env.EXCEL_FILE_PATH || "./ExcelFiles/AppointmentDomain.xlsx";
     const jsonFilePath =
@@ -96,25 +96,31 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await homepage.clickOnAppointmentIcon();
     await patientsearch.clickOnsettingbutton();
     await patientsearch.clickOncustomizableViewforPatientSearchOnAppointment();
-    await patientsearch.clickOnResetToDefaultViewButton();   
-    await page.getByRole("img", { name: "Cellma Image Avatar" }).click();   
+    await patientsearch.clickOnResetToDefaultViewButton();
+    await page.getByRole("img", { name: "Cellma Image Avatar" }).click();
     await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnAppointmentIcon();
     await patientsearch.clickOnSearchPatButton();
-    await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname);
+    await patientsearch.enterGivenName(
+      jsonData.addPatient[index].pat_firstname
+    );
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);
     await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
-    await patientsearch.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref);
+    await patientsearch.enterHospitalRef(
+      jsonData.addPatient[index].pat_hospital_ref
+    );
 
-    await patientsearch.clickOnSearchPatButton();    
-    await patientsearch.clickOnSearchPatientLink();    
+    await patientsearch.clickOnSearchPatButton();
+    await patientsearch.clickOnSearchPatientLink();
     await page.waitForTimeout(5000);
-    await confirmexisting.clickOnConfirmExistingDetails();  
+    await confirmexisting.clickOnConfirmExistingDetails();
     await page.waitForTimeout(5000);
-    
-    const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
-    
-    if (addReferralText) {     
+
+    const addReferralText = await page
+      .getByRole("heading", { name: "Add a Referral" })
+      .isVisible();
+
+    if (addReferralText) {
       //Add New Referral to Patient.
       await page.waitForTimeout(2500);
       await addreferral.enterReceiveReferrldate(
@@ -156,7 +162,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         jsonData.AddReferral[index].ref_preferred_examiner_sex_entry
       );
       await addreferral.selectConsultant();
-      
+
       await addreferral.selectMethodOfArrival(
         jsonData.AddReferral[index].ref_method_of_arrival.toString()
       );
@@ -168,7 +174,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await expect(page.getByText("Referral added successfully")).toHaveText(
         "Referral added successfully"
       );
-      
+
       await servicebookapp.SelectDate(
         jsonData.addEditAppointments[index].rea_date.toString()
       );
@@ -185,26 +191,26 @@ test.describe("Database Comparison Add Edit Patient", () => {
         jsonData.addEditAppointments[index].rea_region_eli_text
       );
       await servicebookapp.ClickonSearchHPButton();
-      
+
       await servicebookapp.clickOnHPnameLink(
         jsonData.addEditAppointments[index].rea_hp_name_link
       );
       await servicebookapp.clickOnShowCalendarbtn();
       // TS
-      
+
       //Select Morning Slots
       await servicebookapp.clickOnMorningSlotstoAddApp(
         jsonData.addEditAppointments[index].convertedTime
       );
-      
 
+      await page.waitForTimeout(2000)
       await servicebookapp.clickOnNextButton();
-      
+
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
       );
       // await servicebookapp.selectAppDetailsZone()
-     
+
       await servicebookapp.selectAppDetailsAppReason(
         jsonData.addEditAppointments[index].rea_review_reason
       );
@@ -263,9 +269,9 @@ test.describe("Database Comparison Add Edit Patient", () => {
           "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
         );
       }
-      
+
       await scheduleserviceapp.clickOnDateLink();
-      await page.waitForTimeout(7000);      
+      await page.waitForTimeout(7000);
       await addeditpatientappointment.selectConsultant();
       await addeditpatientappointment.selectAppointmentDuration(
         jsonData.addEditAppointments[index].rea_duration
@@ -278,14 +284,14 @@ test.describe("Database Comparison Add Edit Patient", () => {
       );
       await addeditpatientappointment.selectResonforReviewAppointment(
         jsonData.addEditAppointments[index].rea_review_reason
-      );      
+      );
       await addeditpatientappointment.clickOnSaveButton();
 
       await expect(
         page.getByText("Appointment updated successfully")
       ).toHaveText("Appointment updated successfully");
 
-      //Communication Consent      
+      //Communication Consent
       //  await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')
       await scheduleserviceapp.clickOnAppScheduleStatus();
       await scheduleserviceapp.clickOnCancelButton();
@@ -318,7 +324,6 @@ test.describe("Database Comparison Add Edit Patient", () => {
         );
       }
     } else {
-     
       await servicebookapp.SelectDate(
         jsonData.addEditAppointments[index].rea_date.toString()
       );
@@ -328,7 +333,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.selectDropdownClinicType(
         jsonData.addEditAppointments[index].rea_clinic_type
       );
-     
+
       await servicebookapp.selectDropdownClinicLocation(
         jsonData.addEditAppointments[index].rea_location
       );
@@ -345,10 +350,9 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.clickOnMorningSlotstoAddApp(
         jsonData.addEditAppointments[index].convertedTime
       );
-      
 
       await servicebookapp.clickOnNextButton();
-      
+
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
       );
@@ -373,8 +377,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       );
       await servicebookapp.clickOnSaveAndBookbTodaysDateButton();
 
-     
-      //Communication Consent     
+      //Communication Consent
       await servicebookapp.clikcOnRadioAllNo();
       await servicebookapp.clickOnRadioAllYes();
       await page.waitForTimeout(2000);
@@ -415,19 +418,23 @@ test.describe("Database Comparison Add Edit Patient", () => {
           "\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n"
         );
       } else {
-        console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
-      }     
+        console.log(
+          "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
+        );
+      }
       //Edit Patient App.
-      await scheduleserviceapp.clickOnDateLink();      
+      await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(8000);
       await addeditpatientappointment.selectAppointmentDuration(
         jsonData.addEditAppointments[index].rea_duration
-      );      
+      );
       await addeditpatientappointment.selectResonforReviewAppointment(
         jsonData.addEditAppointments[index].rea_review_reason
-      );      
+      );
       await addeditpatientappointment.clickOnSaveButton();
-      await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
+      await expect(
+        page.getByText("Appointment updated successfully")
+      ).toHaveText("Appointment updated successfully");
 
       //Cancel Appointment
       await scheduleserviceapp.clickOnAppScheduleStatus();
@@ -457,7 +464,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         console.log(
           "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
         );
-      }      
-    }   
+      }
+    }
   });
 });
