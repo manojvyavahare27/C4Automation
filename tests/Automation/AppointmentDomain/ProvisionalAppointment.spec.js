@@ -81,7 +81,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await patientsearch.clickonBackButton()
         await homepage.clickOnSidebarAppointmentIcon()
         await serviceapp.clickOnProvisionalAppLink()
-        await page.pause()
+        
         await provisionalapp.clickOnSearchBtn()
         await provisionalapp.clickOnAllLinks()
         await provisionalapp.clickOnProvisionalApp()
@@ -99,7 +99,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await page.waitForTimeout(2000) 
         const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();   
         //console.log(addReferralText)
-        //await page.pause()
+        
         if(addReferralText==true)
         {  
           await page.waitForTimeout(2000) 
@@ -158,7 +158,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
             "\n Referral Details Comparision: Parameters from both JSON files do not match!\n"
           );
         }
-        //await page.pause()
+       
         await page.waitForTimeout(3000)
         await serviceapp.clickOnProvisionalAppLink()
         await provisionalapp.clickOnSearchBtn()
@@ -182,13 +182,13 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await provisionalapp.enterAppDate(jsonData.prvAppointments[index].prv_date)
         await provisionalapp.enterConfirmStartDate(jsonData.prvAppointments[index].prv_confirmation_start_date)
         await provisionalapp.enterAppconfirmEndDate(jsonData.prvAppointments[index].prv_confirmation_end_date)
-        // await page.pause()
+        
         await provisionalapp.selectReasonforApp(jsonData.prvAppointments[index].prv_reason)
         await provisionalapp.enterNotes(jsonData.prvAppointments[index].prv_notes)
         await provisionalapp.clickOnSaveProvisionalApp()   
         await page.waitForTimeout(2000) 
         //await expect(page.getByText('Provisional appointment booked successfully')).toHaveText('Provisional appointment booked successfully')
-        //await page.pause()
+        
         
 
         ////////// Provisional Appointment Comparison //////////
@@ -220,7 +220,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
 
         }
         else{
-            // await page.pause()
+            
         await provisionalapp.clickOnSaveProvisionalApp()
         await expect(page.getByText('Appointment Type required')).toHaveText('Appointment Type required')
         await expect(page.getByText('Specialty required')).toHaveText('Specialty required')
@@ -238,13 +238,13 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await provisionalapp.enterAppDate(jsonData.prvAppointments[index].prv_date)
         await provisionalapp.enterConfirmStartDate(jsonData.prvAppointments[index].prv_confirmation_start_date)
         await provisionalapp.enterAppconfirmEndDate(jsonData.prvAppointments[index].prv_confirmation_end_date)
-        // await page.pause()
+        
         await provisionalapp.selectReasonforApp(jsonData.prvAppointments[index].prv_reason)
         await provisionalapp.enterNotes(jsonData.prvAppointments[index].prv_notes)
         await provisionalapp.clickOnSaveProvisionalApp()   
         await page.waitForTimeout(2000) 
         //await expect(page.getByText('Provisional appointment booked successfully')).toHaveText('Provisional appointment booked successfully')
-        //await page.pause()
+        
         }
 
         ////////// Provisional Appointment Comparison //////////

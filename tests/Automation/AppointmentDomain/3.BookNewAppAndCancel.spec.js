@@ -98,7 +98,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      //await homepage.clickOnPatientIcon()
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnAppointmentIcon()    
-     await page.pause() 
+    
      await patientsearch.clickOnSearchPatButton()
      await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
      await page.waitForTimeout(1000);
@@ -106,22 +106,22 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname)
      await patientsearch.selectSex(jsonData.addPatient[index].pat_sex)  
      await patientsearch.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref)
-     //await page.pause()
+    
      //await patientsearch.selectBornDate()
      await patientsearch.clickOnSearchPatButton()
      //await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
      await patientsearch.clickOnSearchPatientLink()   
-     //await page.pause()
+     
      //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
      await page.waitForTimeout(5000);    
      await confirmexisting.clickOnConfirmExistingDetails()
      await page.waitForTimeout(5000);
      const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
      console.log(addReferralText)
-     await page.pause()
+     
      if(addReferralText)
      {       
-     // await page.pause()
+    
      //Add New Referral to Patient.
      await page.waitForTimeout(1500);
      await addreferral.enterReceiveReferrldate(jsonData.AddReferral[index].rtt_referral_received_date.toString())
@@ -139,10 +139,9 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await addreferral.selectClinicLocation(jsonData.AddReferral[index].ref_clinic_location)
      await addreferral.selectTeam(jsonData.AddReferral[index].ref_region_eli_text.toString())
      await addreferral.selectPatientcare()
-     //await page.pause()
+     
      await addreferral.selectPreferredSexForAssessment(jsonData.AddReferral[index].ref_preferred_examiner_sex_entry)
-     await addreferral.selectConsultant()
-     //await page.pause()
+     await addreferral.selectConsultant()    
      await page.waitForTimeout(2000);
      await addreferral.selectMethodOfArrival(jsonData.AddReferral[index].ref_method_of_arrival.toString())
      await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString())
@@ -164,7 +163,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           
           
           //Select Morning Slots
-          await page.pause()
+         
           await page.waitForTimeout(2000)
           await servicebookapp.clickOnMorningSlots(jsonData.bookNewAppointments[index].convertedTime)
            await page.waitForTimeout(2000)
@@ -173,13 +172,13 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.selectAppDetailsAppReason(jsonData.bookNewAppointments[index].rea_review_reason)
           await servicebookapp.selectSendAppTextEmail()
           await servicebookapp.selectPatientType(jsonData.bookNewAppointments[index].rea_patient_type)
-         await page.pause()
+         
           await servicebookapp.selectReasonForAppdelay(jsonData.bookNewAppointments[index].rea_reason_for_delay)
           await servicebookapp.enterTriage(jsonData.bookNewAppointments[index].rea_triage.toString())
           await servicebookapp.enterNotes(jsonData.bookNewAppointments[index].rea_notes)
           await servicebookapp.clickOnNextButton()
           await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
-          await page.pause()
+          
 
            await page.waitForTimeout(2000)
           //Communication Consent
@@ -190,8 +189,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
            await page.waitForTimeout(1000)
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-          await page.pause()
-
+         
           // 3rd July code
           await scheduleserviceapp.clickOnLinksMenu()
           await scheduleserviceapp.clickOnAddAppointmentLink()
@@ -314,7 +312,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           
           //Select Morning Slots
           await servicebookapp.clickOnMorningSlots(jsonData.bookNewAppointments[index].convertedTime)
-          await page.pause()
+          
           await servicebookapp.clickOnNextButton()
           await servicebookapp.selectAppDetailsAppointmentType(jsonData.bookNewAppointments[index].reaType)    
           await servicebookapp.selectAppDetailsAppReason(jsonData.bookNewAppointments[index].rea_review_reason)
@@ -341,7 +339,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      
         sqlQuery ="select * from referral_appointments  where rea_pat_id = '" + patId +"' and rea_time = '" +jsonData.bookNewAppointments[index].rea_time +
           "' and rea_record_status = 'approved'";
-         // await page.pause()
+         
         console.log(sqlQuery);
         sqlFilePath = "SQLResults/AppointmentDomain/bookNewApp.json";
         results = await executeQuery(sqlQuery, sqlFilePath);

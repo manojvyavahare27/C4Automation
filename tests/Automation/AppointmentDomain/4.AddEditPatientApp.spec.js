@@ -111,7 +111,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await page.waitForTimeout(5000);
     await confirmexisting.clickOnConfirmExistingDetails();  
     await page.waitForTimeout(5000);
-    ///await page.pause()
+    
     const addReferralText = await page.getByRole('heading', { name: 'Add a Referral' }).isVisible();
     
     if (addReferralText) {     
@@ -156,7 +156,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         jsonData.AddReferral[index].ref_preferred_examiner_sex_entry
       );
       await addreferral.selectConsultant();
-      //await page.pause()
+      
       await addreferral.selectMethodOfArrival(
         jsonData.AddReferral[index].ref_method_of_arrival.toString()
       );
@@ -185,13 +185,13 @@ test.describe("Database Comparison Add Edit Patient", () => {
         jsonData.addEditAppointments[index].rea_region_eli_text
       );
       await servicebookapp.ClickonSearchHPButton();
-      //await page.pause()
+      
       await servicebookapp.clickOnHPnameLink(
         jsonData.addEditAppointments[index].rea_hp_name_link
       );
       await servicebookapp.clickOnShowCalendarbtn();
       // TS
-      //await page.pause()
+      
       //Select Morning Slots
       await servicebookapp.clickOnMorningSlotstoAddApp(
         jsonData.addEditAppointments[index].convertedTime
@@ -199,12 +199,12 @@ test.describe("Database Comparison Add Edit Patient", () => {
       
 
       await servicebookapp.clickOnNextButton();
-      //await page.pause()
+      
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
       );
       // await servicebookapp.selectAppDetailsZone()
-      //await page.pause()
+     
       await servicebookapp.selectAppDetailsAppReason(
         jsonData.addEditAppointments[index].rea_review_reason
       );
@@ -263,7 +263,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
           "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
         );
       }
-      //await page.pause();
+      
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(7000);      
       await addeditpatientappointment.selectConsultant();
@@ -318,7 +318,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         );
       }
     } else {
-      //await page.pause()
+     
       await servicebookapp.SelectDate(
         jsonData.addEditAppointments[index].rea_date.toString()
       );
@@ -328,7 +328,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.selectDropdownClinicType(
         jsonData.addEditAppointments[index].rea_clinic_type
       );
-      //await page.pause();
+     
       await servicebookapp.selectDropdownClinicLocation(
         jsonData.addEditAppointments[index].rea_location
       );
@@ -348,7 +348,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       
 
       await servicebookapp.clickOnNextButton();
-      //await page.pause()
+      
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
       );
