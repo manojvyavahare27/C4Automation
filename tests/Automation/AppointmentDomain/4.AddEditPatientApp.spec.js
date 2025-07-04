@@ -339,7 +339,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       );
       await servicebookapp.clickOnShowCalendarbtn();
       //await servicebookapp.clickOnHPnameLink(serviceappdetails.HPNameLink)
-       await page.pause()
+      // await page.pause()
       await servicebookapp.clickOnMorningSlotstoAddApp(
         jsonData.addEditAppointments[index].convertedTime
       );
@@ -425,6 +425,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await addeditpatientappointment.selectResonforReviewAppointment(
         jsonData.addEditAppointments[index].rea_review_reason
       );
+      //await page.pause()
       await addeditpatientappointment.clickOnSaveButton();
       await expect(
         page.getByText("Appointment updated successfully")
