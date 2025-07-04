@@ -204,7 +204,8 @@ test.describe("Database Comparison Add Edit Patient", () => {
       );
 
       await page.waitForTimeout(2000)
-      await servicebookapp.clickOnNextButton();
+      
+          await servicebookapp.clickOnNextButton()
 
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
