@@ -111,11 +111,11 @@ test.describe("Medications Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
-      await page.waitForTimeout(2000);
+      await page.waitForTimeout(4000);
       //await confirmexisting.clickOnConfirmExistingDetails();
       await homepage.clickOnMedicationSidebar()
      // await page.pause()
-      await page.waitForTimeout(2000);
+      await page.waitForTimeout(3000);
       await homepage.clickOnAddMedicationlink()
       //await page.pause()
       await page.waitForTimeout(1000);
@@ -129,7 +129,7 @@ test.describe("Medications Category", () => {
       await contacthistory.enterContactDate("26/04/2024");
       await contacthistory.selectContactReason("Assessments");
       await contacthistory.selectContactLocation("Cardio Location");
-      await contacthistory.enterContactWith("Dr Sathya");
+     // await contacthistory.enterContactWith("Dr Sathya");
       await contacthistory.clickOnAddContact();
       await Medications.clickOnViewContactItemsMenu();
       await Medications.clickOnPinContactItemsMenu();
