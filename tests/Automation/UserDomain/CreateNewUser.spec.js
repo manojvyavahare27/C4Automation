@@ -290,7 +290,7 @@ await fileInput.setInputFiles(targetFilePath);
     
         //await this.page.locator('div').filter({ hasText: 'Is User Going On DiaryYesNo' }).getByRole('button', { name: 'Yes' }).click()
         
-          await page.pause() 
+         // await page.pause() 
         await adduserwizard.clickOnNext()
                
         await page.waitForTimeout(2000)
@@ -317,7 +317,7 @@ await fileInput.setInputFiles(targetFilePath);
         await sethpdairy.enterHpWorkingStartTime(jsonData.setHpDiary[index].hpd_working_start_time)
         await page.waitForTimeout(2000)
         await sethpdairy.enterHpWorkingEndTime(jsonData.setHpDiary[index].hpd_working_end_time)   
-        await page.pause()
+        //await page.pause()
         //await sethpdairy.selectHpWorkingHrsOccuranceType()
         //await sethpdairy.selectHpworkingHrsOccurance()
         await page.waitForTimeout(2000)
@@ -332,11 +332,12 @@ await fileInput.setInputFiles(targetFilePath);
         await sethpdairy.enterClinicScheduleWorkingHrsEndTime(jsonData.setHpClinicDiary[index].hcd_clinic_end_time)
         // await sethpdairy.selectClinicScheduleOccuranceType()
         // await sethpdairy.selectClinicScheduleOccurance()
-        await page.pause()
+       
         await page.waitForTimeout(1000)  
         await sethpdairy.clickOnSavebnt()
         await page.waitForTimeout(500)
         await expect(page.getByText('HP work schedule set successfully')).toHaveText('HP work schedule set successfully')
+        await page.waitForTimeout(1000)  
         await sethpdairy.clickOnNextbtn()
         await page.waitForTimeout(4000)
         await page.getByTestId('Next').click()
