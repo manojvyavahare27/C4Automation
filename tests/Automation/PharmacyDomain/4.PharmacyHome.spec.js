@@ -96,7 +96,8 @@ test.describe("Medications Category", () => {
      // await page.pause()
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPharmacyIcon()
-      await pharmacyLoc.clickOnCardioLocation()
+      //await pharmacyLoc.clickOnCardioLocation()
+      await pharmacyLoc.clickOnDefaultPharmacyLocation()
       
       // Prescription Tab
       await pharmacyHomePage.clickPrescriptionTab();
