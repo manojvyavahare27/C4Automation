@@ -48,7 +48,7 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
     this.neverCollectedIcon = page.locator('xpath=//*[@data-testid="Never Collected"]');
 
     this.buttonSaveDetails=page.locator("xpath=//button[@id=':r46a:']//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row css-1n5khr6'][normalize-space()='Save']")
-    this.expandMedicationForDispense=page.locator("xpath=//button[@aria-label='expandRowIconVenlafaxine']")
+    this.expandMedicationForDispense=page.locator("xpath=//button[@aria-label='expandRowIconParacetamol 500mg / Ibuprofen 200mg tablets']")
     this.txtboxDispenseQty=page.locator("xpath=//label[@id='Dispense Quantity']")
     this.butttonDispense=page.locator("xpath=//button[@aria-label='Dispense']")
     this.buttobBackToStock=page.locator("xpath=//button[@data-testid='Back to Stock']")
