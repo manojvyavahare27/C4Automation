@@ -93,7 +93,7 @@ test.describe("Medications Category", () => {
      // await page.pause()
       await homepage.clickOnHomeDashboardIcon()
       await homepage.clickOnPharmacyIcon()
-      await pharmacyLoc.clickOnCardioLocation()
+      await pharmacyLoc.clickOnDefaultPharmacyLocation()
       await homepage.clickOnMenuFindPatientLink()
       
       
@@ -102,7 +102,7 @@ test.describe("Medications Category", () => {
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");
-      //await page.pause()
+      
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
       await patientsearch.selectSex(data.pat_sex);
@@ -114,15 +114,23 @@ test.describe("Medications Category", () => {
       await page.waitForTimeout(4000);
       //await confirmexisting.clickOnConfirmExistingDetails();
       await homepage.clickOnMedicationSidebar()
-     // await page.pause()
+     
       await page.waitForTimeout(3000);
       await homepage.clickOnAddMedicationlink()
       //await page.pause()
       await page.waitForTimeout(1000);
       await homepage.clickOnContactHistoryCategory()
 
+      await page.waitForTimeout(4000);
+      const alertPopup= await page.locator("xpath=//h2[text()='Alerts']").isVisible()      
+      if(alertPopup==true)
+        {       
+          await page.getByRole('button', { name: 'cancelIcon' }).click()
+        }
+      await page.waitForTimeout(2000);
 
-      await page.waitForTimeout(1000);
+
+     
        await contacthistory.clickOnShowFilter()
       await contacthistory.selectServiceFilter("General Medicine Automation");
       await contacthistory.selectContactReasonFilter("Assessments");
@@ -173,6 +181,7 @@ test.describe("Medications Category", () => {
       await page.waitForTimeout(2000);            
       //await page.pause()      
       await MedicationsExtraDetails.EnterOnDose(page,jsonData.AddMedication[index].medi_dose,jsonData.AddMedication[index].pacr_que_name)
+      await page.getByTestId('Ok').click()
       await MedicationsExtraDetails.enterForm()
       await MedicationsExtraDetails.selectFrequency(jsonData.AddMedication[index].medi_frequency)
       await MedicationsExtraDetails.selectRoute(jsonData.AddMedication[index].medi_route)

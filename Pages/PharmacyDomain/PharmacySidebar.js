@@ -4,6 +4,7 @@ class PharmacySidebars {
 
         // Sidebar
         this.cardioLocation = page.locator("xpath=//h1[normalize-space()='Cardio Location']");
+        this.defaultPharmacyLocation=page.locator("xpath=//h1[normalize-space()='Default Pharmacy']")
         this.patientsTab = page.locator("xpath=//span[normalize-space()='Patients']");
         this.findPatientSidebarLink = page.locator("xpath=//h1[normalize-space()='Find Patient']");
         this.medicationTab = page.locator("xpath=//h1[normalize-space()='Search Prescriptions']");
@@ -25,6 +26,11 @@ class PharmacySidebars {
 
     async clickOnCardioLocation() {
         await this.cardioLocation.click();
+    }
+
+    async clickOnDefaultPharmacyLocation()
+    {
+        await this.defaultPharmacyLocation.click()
     }
 
     async clickOnPatientsTab() {
