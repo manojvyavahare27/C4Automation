@@ -147,11 +147,11 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.fillPrescriptionType('General');
      // await pharmacyHomePage.fillPrescriptionCode('123');
      await page.pause()
-     await pharmacyHomePage.fillPrescribedBy('Dr  CAMHS WHITESTONE CLINIC')
+    // await pharmacyHomePage.fillPrescribedBy('Dr  CAMHS WHITESTONE CLINIC')
       await pharmacyHomePage.fillNotes('add for testing');
       await page.waitForTimeout(1000)
-      
-      await pharmacyHomePage.clickonExpandButton()
+      await pharmacyHomePage.ClickOnExpandMedication()
+      //await pharmacyHomePage.clickonExpandButton()
       await page.waitForTimeout(1000)         
       await page.pause()
      // await pharmacyHomePage.clickOnitemWithPrescriptionLink()
@@ -160,7 +160,7 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.clickOnitemsOnlyLink()
       await pharmacyHomePage.clickOnitemNotOnPrescriptionLink()
       await pharmacyHomePage.clickOnitemWithPrescriptionLink()
-      await pharmacyHomePage.clickonExpandButton()      
+      await pharmacyHomePage.ClickOnExpandMedication()     
        await page.pause()     
             
        await pharmacyHomePage.clickExpandIcon()

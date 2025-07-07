@@ -119,20 +119,24 @@ test.describe("Database Comparison Add New Referral", () => {
         await loginpage.enter_Password(jsonData.loginDetails[0].password);
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
-        await homepage.clickonSidebarHomeIcon();
+        await page.waitForTimeout(3000)
+        //await homepage.clickonSidebarHomeIcon();
         await homepage.clickOnSideIconStock()
         await page.waitForTimeout(3000)
         await stockallLoc.clickOnShowHiddenLocationButton()
-        await page.waitForTimeout(2000)
+        await page.waitForTimeout(4000)
         await stockTransferPage.clickOnDefaultPharmacyLink()
-        
+        await page.waitForTimeout(3000)
        /// await stockTransferPage.enterRequestLocation('Default Pharmacy')
 
 
         // Stock Return Page
         await stocksidebar.clickOnManageStockTab()
+        await page.waitForTimeout(2000)
         await stocksidebar.clickOnReturnsLink()
+        await page.waitForTimeout(2000)
         await stockReturnPage.clickOnLastPendingReturnLink()
+       
         await page.waitForTimeout(2000)
         await processStockReturnPopup.clickOnReturnbutton()
         await expect(page.getByText('The items will be transferred to Default Pharmacy')).toHaveText('The items will be transferred to Default Pharmacy')

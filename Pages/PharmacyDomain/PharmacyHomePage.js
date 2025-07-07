@@ -57,7 +57,7 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
     this.buttonSaveBackToStock=page.locator("xpath=//button[@data-testid='Save']")
 
     //
-    this.expandMedicationIcon=page.locator('svg[data-testid="ExpandCircleDownOutlinedIcon"]');
+    this.expandMedicationIcon=page.locator("xpath=//button[@aria-label='expandRowIconundefined']");
     this.dispenseButton = page.locator("xpath=button[data-testid='Dispense']")
     this.selectCheckBox=page.locator("xpath=//span[@data-testid='hideLabel']//input[@type='checkbox']")
    
