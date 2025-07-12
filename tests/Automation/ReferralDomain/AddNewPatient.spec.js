@@ -97,10 +97,11 @@ test.describe("Database Comparison Add Edit Patient", () => {
       //await patientsearch.enterPatientIdentificationId()
 
       // await patientsearch.selectFutureDate()
-      // //await page.pause()
+      await page.pause()
       // await expect(page.getByText('Date selected is future date')).toHaveText('Date selected is future date')
       // await patientsearch.clearBornDate()
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
+      
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnAddPatientbutton();
       //await page.goto("http://10.0.0.64:3000/cellmaUser/patient/patientDuplicateCheck")
