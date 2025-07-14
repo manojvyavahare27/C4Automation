@@ -101,7 +101,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         await page.waitForTimeout(3000)
         //await adduserwizard.toggleUserIsHP()    
         await adduserwizard.clickOnNext()
-        
+        await page.pause()
         
         await sethpdairy.enterStartdate(jsonData.editHpDiary[index].hpd_start_date)
         await sethpdairy.enterEndDate(jsonData.editHpDiary[index].hpd_end_date)
@@ -122,7 +122,8 @@ test.describe("Database Comparison Edit HP Diary", () => {
         await sethpdairy.clickOnRepeatSchedule()
         // await sethpdairy.closeRepeatSchedulePopupPage()
         // await sethpdairy.clickOnRepeatSchedule()
-        await sethpdairy.enterRepeatScheduleEndDate()
+        await page.waitForTimeout(2000)
+        await sethpdairy.enterRepeatScheduleEndDate(jsonData.editHpDiary[index].RepeatScheduleEndDate)
         await sethpdairy.clickOnSaveForRepeatSchedule()
         //await expect(page.getByText('HP work schedule set successfully')).toHaveText('HP work schedule set successfully')
         
@@ -131,13 +132,14 @@ test.describe("Database Comparison Edit HP Diary", () => {
         // await sethpdairy.selectWorkingDays()
         // await sethpdairy.enterHpWorkingStartTime()
         await page.waitForTimeout(2000)
-        await sethpdairy.clickOnNextButton()
+        //await sethpdairy.clickOnNextButton()
+        await page.getByTestId('Next').click()
         
        // await page.pause()
         //HP Diary
         //await page.pause()
         //await page.getByTestId('Next').click()
-        await page.waitForTimeout(1000)
+        await page.waitForTimeout(3000)
         await hpdiary.clickOnNextButton()
         await hpdiary.clickOnClinicDiarybutton()
         await hpdiary.selectDaywiseView()

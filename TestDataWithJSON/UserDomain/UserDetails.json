@@ -15,9 +15,9 @@
   ],
   "addListItem": [
     {
-      "eli_text": "UserEscC",
+      "eli_text": "UserThree",
       "eli_numeric_value": "1",
-      "eli_text_other_lang": "UserEscC",
+      "eli_text_other_lang": "UserThree",
       "eli_code": "ADLILC.8847",
       "eli_code_type": "local",
       "eli_code_text": "Rio15"
@@ -25,12 +25,12 @@
   ],
   "createUser": [
     {
-      "use_increment": 1002,
-      "use_username": "Test.1002User",
+      "use_increment": 1011,
+      "use_username": "Test.1011User",
       "use_firstname": "Auto",
       "use_password": "Manoj@2024",
       "use_surname": "Riomedtest",
-      "use_email": "thayne.sampson1002@riomed.com",
+      "use_email": "thayne.sampson1011@riomed.com",
       "use_expires": "30/06/2035",
       "use_title": "Mr",
       "use_profession": "Consultant",
@@ -114,7 +114,8 @@
       "hpd_saturday": 1,
       "hpd_sunday": 1,
       "hpd_occuring": "month",
-      "hpd_week_of_month": 2
+      "hpd_week_of_month": 2,
+      "RepeatScheduleEndDate": "31/08/2025"
     }
   ],
   "setHpLeave": [
@@ -154,7 +155,7 @@
   "editHpLeave": [
     {
       "hpd_start_date": "10/06/2025",
-      "hpd_end_date": "13/06/2026",
+      "hpd_end_date": "13/08/2026",
       "hpd_working_start_time": "01:20",
       "hpd_working_end_time": "10:20",
       "hpd_indicator": 2,
@@ -171,7 +172,7 @@
   "editHpClinicLeave": [
     {
       "hcd_start_date": "10/06/2025",
-      "hcd_end_date": "13/06/2026",
+      "hcd_end_date": "13/08/2026",
       "hcd_clinic_start_time": "00:00",
       "hcd_clinic_end_time": "00:00",
       "hcd_indicator": 2,

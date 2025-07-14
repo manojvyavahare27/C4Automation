@@ -2,7 +2,7 @@ class SetHPDairy{
     constructor(page)
     {
         this.page=page
-        this.btnSaveHp=page.locator("xpath=//div[contains(text(),'Save')]")
+        this.btnSaveHp=page.locator("xpath=//button[@data-testid='Save']")
         this.btnNextHP=page.getByTestId('Next')
         this.startDate=page.locator('input[name="startDate"]')
         this.endDate=page.locator('input[name="endDate"]')
@@ -37,7 +37,7 @@ class SetHPDairy{
         this.btnRepeatSchedule=page.locator("xpath=//div[contains(text(),'Repeat Schedule')]")
         this.closeRepeatSchedulePopup=page.getByTestId('CancelIcon').locator('path')
         //this.RepeatScheduleEndDate=page.getByTestId('CommonCellmaPopup').getByPlaceholder('dd/mm/yyyy')
-          this.RepeatScheduleEndDate=page.locator("xpath=//div[@class='MuiFormControl-root MuiTextField-root css-qvcbpi']//input[@id='End Date']")
+          this.RepeatScheduleEndDate=page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row mui-jk5bwa']//input[@id='End Date']")
         this.btnSaveRepeatSchedule=page.getByTestId('CommonCellmaPopup').getByTestId('Save')
         this.deleteHPSchedule=page.getByRole('row', { name: '03/07/2023 03/07/2023 Monday Monday Start Time - 01:09 End Time - 10:50 - - delete edit' }).getByRole('button', { name: 'delete' })
                                      //getByRole('row', { name: '09/06/2023 09/06/2023 Friday Friday Start Time - 01:09 End Time - 10:50 - - delete edit' }).getByRole('button', { name: 'delete' })
@@ -76,10 +76,14 @@ class SetHPDairy{
     {
        await this.btnSaveRepeatSchedule.click()
     }
-    async enterRepeatScheduleEndDate()
-    {
-        await this.RepeatScheduleEndDate.type("28/07/2025")
+    async enterRepeatScheduleEndDate(RepeatScheduleEndDate) {
+    if (RepeatScheduleEndDate) {
+        await this.RepeatScheduleEndDate.click();
+        await this.RepeatScheduleEndDate.fill(RepeatScheduleEndDate);
+    } else {
+        console.warn("RepeatScheduleEndDate is undefined or empty.");
     }
+}
     async closeRepeatSchedulePopupPage()
     {
         await this.closeRepeatSchedulePopup.click()

@@ -20,7 +20,7 @@
     "use_title": "Mr",
     "use_profession": "Consultant",
     "use_show_summary_default": 0,
-    "use_password_last_modified": "08/07/2025",
+    "use_password_last_modified": "14/07/2025",
     "use_reason": null,
     "use_login_attempts": "0",
     "use_big_button": null,
@@ -58,7 +58,7 @@
     "use_gender": null,
     "use_jwt_token": null,
     "use_show_hp_diary": 1,
-    "use_cellma4_password": "$2a$10$OE7amBNIdNYQzlvsJoXMMenF9ZsAdBzWjcsQRYKR6fzBe4Uu8L7l.",
+    "use_cellma4_password": "$2a$10$e8YgMFfchs1zPVyJCrnQnOFOQt8TlgMdDVtmNJgzAX47Zlhn8G5vG",
     "use_logon_unique_key_created": null,
     "use_cellma_portal_session": null,
     "use_license_key": null
