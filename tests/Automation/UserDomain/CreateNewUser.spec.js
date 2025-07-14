@@ -332,7 +332,7 @@ await fileInput.setInputFiles(targetFilePath);
         await sethpdairy.enterClinicScheduleWorkingHrsEndTime(jsonData.setHpClinicDiary[index].hcd_clinic_end_time)
         // await sethpdairy.selectClinicScheduleOccuranceType()
         // await sethpdairy.selectClinicScheduleOccurance()
-        await page.pause()
+       // await page.pause()
         await page.waitForTimeout(3000)  
         await sethpdairy.clickOnSavebnt()
         await page.waitForTimeout(500)
