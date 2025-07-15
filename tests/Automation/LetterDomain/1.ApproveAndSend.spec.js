@@ -90,6 +90,7 @@ await page.waitForTimeout(1000);
 await confirmexisting.clickOnConfirmExistingDetails();
 console.log("Confirmed existing patient details.");
 
+
 await page.waitForTimeout(1000);
 
 await patientsidebar.clickOnLettersCategory();
@@ -186,17 +187,19 @@ console.log("Clicked HTML icon.");
 await letterorSummeries.clickOnEditHistoryIcon();
 console.log("Opened edit history.");
 
+await page.waitForTimeout(1000);
 await letterorSummeries.clickOnclosePopup();
 console.log("Closed edit history popup.");
 
 await letterorSummeries.clickOnSendEmailButton();
 console.log("Clicked Send Email button.");
 
+await page.waitForTimeout(1000);
 await page.getByRole('button', { name: 'cancelIcon' }).click();
 console.log("Cancelled Send Email popup.");
 
-await letterorSummeries.clickOnclosePopup();
-console.log("Closed email popup.");
+// await letterorSummeries.clickOnclosePopup();
+// console.log("Closed email popup.");
 
 await letterorSummeries.clickOnApproveRecordLink();
 console.log("Clicked Approve record.");
