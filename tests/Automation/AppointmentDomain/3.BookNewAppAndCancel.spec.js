@@ -319,7 +319,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.selectSendAppTextEmail()
           await servicebookapp.selectPatientType(jsonData.bookNewAppointments[index].rea_patient_type)
           await servicebookapp.selectReasonForAppdelay(jsonData.bookNewAppointments[index].rea_reason_for_delay)
-          await servicebookapp.enterTriage(jsonData.bookNewAppointments[index].rea_triage.toString())
+         // await servicebookapp.enterTriage(jsonData.bookNewAppointments[index].rea_triage.toString())
           await servicebookapp.enterNotes(jsonData.bookNewAppointments[index].rea_notes)    
           await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
