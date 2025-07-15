@@ -462,21 +462,24 @@ async enterInStockQuantityZero() {
 
 async  clickOnLogout(page) {
   if (!page) throw new Error('❌ Page is undefined');
-
+   
   const profileIcon = page.locator('//button[@aria-label="profileIcon"]');
+  
   const logoutOption = page.locator('//div[@aria-label="Logout"]');
 
   // Wait for and hover on profile icon
+  await page.waitForTimeout(1000)
   await profileIcon.waitFor({ state: 'visible' });
   await profileIcon.hover();
   console.log('✅ Hovered on profile icon');
-
+await page.waitForTimeout(1000)
   // Click on profile icon after hover
   await profileIcon.click();
   console.log('✅ Clicked on profile icon');
 
   // Wait for and click the logout option
   await logoutOption.waitFor({ state: 'visible' });
+  await page.waitForTimeout(1000)
   await logoutOption.click();
   console.log('✅ Clicked on logout');
 }

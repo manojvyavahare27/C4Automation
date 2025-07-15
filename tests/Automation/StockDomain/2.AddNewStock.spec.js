@@ -55,7 +55,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await loginpage.enter_Password(jsonData.loginDetails[0].password);
     await page.waitForTimeout(2000);
     await loginpage.clickOnLogin();
-    await page.pause()
+   // await page.pause()
     await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnSideIconStock()
 
@@ -116,7 +116,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await addStockItems.toggleControlledDrug()
    await addStockItems.togglePrescriptionOnly()
    await addStockItems.toggleSuitableForHomeDelivery()
- await page.pause()
+ //await page.pause()
    await page.getByTestId('batch').click();
    //Add Batch Details
    await addStockItems.enterSupplier(jsonData.AddNewStock[0].stbat_supplier)
