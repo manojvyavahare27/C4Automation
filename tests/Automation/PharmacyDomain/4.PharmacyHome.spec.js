@@ -164,12 +164,14 @@ test.describe("Medications Category", () => {
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickOnAwaitingProductionLink()
+       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickPartiallyProduced()
       await page.getByRole('button', { name: 'Save' }).click()
       //await pharmacyHomePage.clickOnSaveButton()
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickOnPartiallyProducedLink()
+       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickOnExpandIconForDispense()
       await page.waitForTimeout(1000)
       await pharmacyHomePage.enterDispenseQty()
@@ -179,9 +181,9 @@ test.describe("Medications Category", () => {
       //await pharmacyHomePage.clickOnSaveButton()
 
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-      
+       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickOnProducedLink()
-
+      await page.waitForTimeout(1000)
       await pharmacyHomePage.clickCollected()
       await page.getByRole('button', { name: 'Save' }).click()
       //await pharmacyHomePage.clickOnSaveButton()
