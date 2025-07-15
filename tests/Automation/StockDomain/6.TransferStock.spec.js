@@ -72,7 +72,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockallLoc.clickOnShowHiddenLocationButton()
     await stockallLoc.clickOnDefaultStockLocation()
     await page.waitForTimeout(2000);
-    await page.pause()
+    
     // Stock items filters   
     await stockItemsFliters.selectLocation('Default Pharmacy')
     await stockItemsFliters.selectCategory(jsonData.EditStockItem[0].stock_category)
