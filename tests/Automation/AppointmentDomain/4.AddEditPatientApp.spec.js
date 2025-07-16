@@ -342,6 +342,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.enterNotes(
         jsonData.addEditAppointments[index].rea_notes
       );
+      await page.pause()
       await servicebookapp.clickOnSaveAndBookbTodaysDateButton();
 
       //Communication Consent
@@ -394,10 +395,11 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await page.waitForTimeout(8000);
       await addeditpatientappointment.selectAppointmentDuration(jsonData.addEditAppointments[index].rea_duration);
       await addeditpatientappointment.selectResonforReviewAppointment(jsonData.addEditAppointments[index].rea_review_reason);
-      //await page.pause()
+      await page.pause()
       await addeditpatientappointment.clickOnSaveButton();
       await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
-
+      await page.waitForTimeout(1000);
+      await page.locator("xpath=//div[contains(text(),'Ok')]").click()
       //Cancel Appointment
       await scheduleserviceapp.clickOnAppScheduleStatus();
       await scheduleserviceapp.clickOnCancelButton();
