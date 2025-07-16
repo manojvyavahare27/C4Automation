@@ -419,17 +419,11 @@ test.describe("Database Comparison Add Edit Patient", () => {
       //Edit Patient App.
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(8000);
-      await addeditpatientappointment.selectAppointmentDuration(
-        jsonData.addEditAppointments[index].rea_duration
-      );
-      await addeditpatientappointment.selectResonforReviewAppointment(
-        jsonData.addEditAppointments[index].rea_review_reason
-      );
+      await addeditpatientappointment.selectAppointmentDuration(jsonData.addEditAppointments[index].rea_duration);
+      await addeditpatientappointment.selectResonforReviewAppointment(jsonData.addEditAppointments[index].rea_review_reason);
       //await page.pause()
       await addeditpatientappointment.clickOnSaveButton();
-      await expect(
-        page.getByText("Appointment updated successfully")
-      ).toHaveText("Appointment updated successfully");
+      await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
 
       //Cancel Appointment
       await scheduleserviceapp.clickOnAppScheduleStatus();
@@ -438,9 +432,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         jsonData.addEditAppointments[index].rea_cancelled_reason
       );
       await scheduleserviceapp.clickOnSaveCancelledAppButton();
-      await expect(
-        page.getByText("Patient appointment cancelled successfully")
-      ).toHaveText("Patient appointment cancelled successfully");
+      await expect(page.getByText("Patient appointment cancelled successfully")).toHaveText("Patient appointment cancelled successfully");
 
       sqlQuery = "select * from referral_appointments where rea_id = " + reaId;
       console.log(sqlQuery);
