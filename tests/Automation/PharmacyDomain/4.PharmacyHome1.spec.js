@@ -172,7 +172,7 @@ test.describe("Medications Category", () => {
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
       await page.waitForTimeout(1000)   
       // await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-      await page.pause()
+      //await page.pause()
       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickOnProducedLink()
       await page.waitForTimeout(1000)

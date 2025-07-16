@@ -52,7 +52,7 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
     this.txtboxDispenseQty=page.locator("xpath=//label[@id='Dispense Quantity']")
     this.butttonDispense=page.locator("xpath=//button[@aria-label='Dispense']")
     this.buttobBackToStock=page.locator("xpath=//button[@data-testid='Back to Stock']")
-    this.backtoStockQuantity=page.locator("xpath=//input[@id='quantity_663']")
+    this.backtoStockQuantity=page.locator("xpath=//input[contains(@name, 'quantity')]")
     this.txtareaReasonForReturn=page.locator("xpath=//textarea[@id='reasonForReturn']")
     this.buttonSaveBackToStock=page.locator("xpath=//button[@data-testid='Save']")
 
@@ -326,7 +326,7 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
 
   async enterDispenseQty()
   {
-    await this.txtboxDispenseQty.type('5')
+    await this.txtboxDispenseQty.fill('1')
   }
   async clickOnDispenseButton()
   {
