@@ -105,7 +105,9 @@ class ServiceBookApp {
     this.txtboxTriage = page.getByTestId("Triage");
     this.txtboxNotes = page.getByTestId("Notes");
 
-    this.btnSaveAndBookbTodaysDate = page.locator("xpath=//button[@data-testid='Save And Book Today's Date']");
+   // this.btnSaveAndBookbTodaysDate = page.locator("xpath=//button[@data-testid='Save And Book Today's Date']");
+   this.btnSaveAndBookbTodaysDate = page.locator("xpath=//button[@data-testid=\"Save And Book Today's Date\"]");
+
 
     //Communication Consent
     // this.radioContactGP=page.locator('div').filter({ hasText: /^GP address Number & RoadGP address Number & Road Contact GPYesNo$/ }).getByLabel('No')
