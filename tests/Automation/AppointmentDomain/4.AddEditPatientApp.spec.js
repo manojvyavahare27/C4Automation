@@ -397,9 +397,10 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await addeditpatientappointment.selectResonforReviewAppointment(jsonData.addEditAppointments[index].rea_review_reason);
       //await page.pause()
       await addeditpatientappointment.clickOnSaveButton();
+       await page.locator("xpath=//div[contains(text(),'Ok')]").click()
       await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
       await page.waitForTimeout(1000);
-      await page.locator("xpath=//div[contains(text(),'Ok')]").click()
+     
       //Cancel Appointment
       await scheduleserviceapp.clickOnAppScheduleStatus();
       await scheduleserviceapp.clickOnCancelButton();
