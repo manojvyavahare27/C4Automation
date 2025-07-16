@@ -61,7 +61,7 @@ class ServiceBookApp {
     this.slowMonth = page.getByTestId("month");
     this.slotAvailableSlot = page.getByTestId("availableSlots");
     //this.bntNext = page.getByTestId("Next");
-    this.bntNext=page.locator("xpath=//button[@data-testid='Next']")
+    this.bntNext=page.locator("xpath=//div[contains(text(),'Next')]")
 
     this.btncancel = page.getByTestId("Cancel");
     this.btnslot830 = page.getByTestId("08:15 AM");
@@ -105,9 +105,7 @@ class ServiceBookApp {
     this.txtboxTriage = page.getByTestId("Triage");
     this.txtboxNotes = page.getByTestId("Notes");
 
-    this.btnSaveAndBookbTodaysDate = page.getByTestId(
-      "Save And Book Today's Date"
-    );
+    this.btnSaveAndBookbTodaysDate = page.locator("xpath=//button[@data-testid='Save And Book Today's Date']");
 
     //Communication Consent
     // this.radioContactGP=page.locator('div').filter({ hasText: /^GP address Number & RoadGP address Number & Road Contact GPYesNo$/ }).getByLabel('No')

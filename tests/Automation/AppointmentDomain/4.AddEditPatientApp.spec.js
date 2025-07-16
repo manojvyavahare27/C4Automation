@@ -272,23 +272,13 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(7000);
       await addeditpatientappointment.selectConsultant();
-      await addeditpatientappointment.selectAppointmentDuration(
-        jsonData.addEditAppointments[index].rea_duration
-      );
-      await addeditpatientappointment.clickOnRescheduleDate(
-        jsonData.addEditAppointments[index].rea_edited_date
-      );
-      await addeditpatientappointment.enterRescheduleTime(
-        jsonData.addEditAppointments[index].rea_edited_time
-      );
-      await addeditpatientappointment.selectResonforReviewAppointment(
-        jsonData.addEditAppointments[index].rea_review_reason
-      );
+      await addeditpatientappointment.selectAppointmentDuration(jsonData.addEditAppointments[index].rea_duration);
+      await addeditpatientappointment.clickOnRescheduleDate(jsonData.addEditAppointments[index].rea_edited_date);
+      await addeditpatientappointment.enterRescheduleTime(jsonData.addEditAppointments[index].rea_edited_time);
+      await addeditpatientappointment.selectResonforReviewAppointment(jsonData.addEditAppointments[index].rea_review_reason);
       await addeditpatientappointment.clickOnSaveButton();
 
-      await expect(
-        page.getByText("Appointment updated successfully")
-      ).toHaveText("Appointment updated successfully");
+      await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
 
       //Communication Consent
       //  await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')
@@ -298,9 +288,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         jsonData.addEditAppointments[index].rea_cancelled_reason
       );
       await scheduleserviceapp.clickOnSaveCancelledAppButton();
-      await expect(
-        page.getByText("Patient appointment cancelled successfully")
-      ).toHaveText("Patient appointment cancelled successfully");
+      await expect(page.getByText("Patient appointment cancelled successfully")).toHaveText("Patient appointment cancelled successfully");
       // await menu.clickOnMenubtn()
       //await menu.clickOnLogout()
 
@@ -308,44 +296,29 @@ test.describe("Database Comparison Add Edit Patient", () => {
       console.log(sqlQuery);
       results = await executeQuery(sqlQuery, sqlFilePath);
 
-      match = await compareJsons(
-        sqlFilePath,
-        null,
-        jsonData.addEditAppointments[index]
-      );
+      match = await compareJsons(sqlFilePath, null, jsonData.addEditAppointments[index]);
       if (match) {
-        console.log(
-          "\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n"
-        );
+        console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files match!\n");
       } else {
-        console.log(
-          "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n"
-        );
+        console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
       }
     } else {
       await servicebookapp.SelectDate(jsonData.addEditAppointments[index].rea_date.toString());
       await servicebookapp.selectDropdownSpecility(jsonData.addEditAppointments[index].rea_special);
       await servicebookapp.selectDropdownClinicType(jsonData.addEditAppointments[index].rea_clinic_type);
 
-      await servicebookapp.selectDropdownClinicLocation(
-        jsonData.addEditAppointments[index].rea_location
-      );
-      await servicebookapp.selectTeam(
-        jsonData.addEditAppointments[index].rea_region_eli_text
-      );
+      await servicebookapp.selectDropdownClinicLocation(jsonData.addEditAppointments[index].rea_location);
+      await servicebookapp.selectTeam(jsonData.addEditAppointments[index].rea_region_eli_text);
       await servicebookapp.ClickonSearchHPButton();
-      await servicebookapp.clickOnHPnameLink(
-        jsonData.addEditAppointments[index].rea_hp_name_link
-      );
+      await servicebookapp.clickOnHPnameLink(jsonData.addEditAppointments[index].rea_hp_name_link);
       await servicebookapp.clickOnShowCalendarbtn();
       //await servicebookapp.clickOnHPnameLink(serviceappdetails.HPNameLink)
       // await page.pause()
-      await servicebookapp.clickOnMorningSlotstoAddApp(
-        jsonData.addEditAppointments[index].convertedTime
-      );
+      await servicebookapp.clickOnMorningSlotstoAddApp(jsonData.addEditAppointments[index].convertedTime);
+      await page.waitForTimeout(2000)
 
-      //await servicebookapp.clickOnNextButton();
-      await page.getByTestId('Next').click()
+      await servicebookapp.clickOnNextButton();
+      //await page.getByTestId('Next').click()
 
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
