@@ -342,7 +342,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.enterNotes(
         jsonData.addEditAppointments[index].rea_notes
       );
-      await page.pause()
+      //await page.pause()
       await servicebookapp.clickOnSaveAndBookbTodaysDateButton();
 
       //Communication Consent
