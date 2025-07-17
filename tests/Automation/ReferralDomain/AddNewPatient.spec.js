@@ -97,7 +97,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       //await patientsearch.enterPatientIdentificationId()
 
       // await patientsearch.selectFutureDate()
-      await page.pause()
+     
       // await expect(page.getByText('Date selected is future date')).toHaveText('Date selected is future date')
       // await patientsearch.clearBornDate()
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
