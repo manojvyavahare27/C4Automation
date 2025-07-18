@@ -15,9 +15,9 @@
   ],
   "addListItem": [
     {
-      "eli_text": "UserThree",
+      "eli_text": "Userseven",
       "eli_numeric_value": "1",
-      "eli_text_other_lang": "UserThree",
+      "eli_text_other_lang": "Userseven",
       "eli_code": "ADLILC.8847",
       "eli_code_type": "local",
       "eli_code_text": "Rio15"
@@ -25,12 +25,12 @@
   ],
   "createUser": [
     {
-      "use_increment": 1011,
-      "use_username": "Test.1011User",
+      "use_increment": 1022,
+      "use_username": "Test.1022User",
       "use_firstname": "Auto",
       "use_password": "Manoj@2024",
       "use_surname": "Riomedtest",
-      "use_email": "thayne.sampson1011@riomed.com",
+      "use_email": "thayne.sampson1022@riomed.com",
       "use_expires": "30/06/2035",
       "use_title": "Mr",
       "use_profession": "Consultant",
@@ -86,7 +86,7 @@
   "setHpClinicDiary": [
     {
       "hcd_start_date": "02/06/2025",
-      "hcd_end_date": "15/08/2025",
+      "hcd_end_date": "28/08/2025",
       "hcd_clinic_start_time": "00:15",
       "hcd_clinic_end_time": "23:45",
       "hcd_monday": 1,
@@ -103,7 +103,7 @@
   "editHpDiary": [
     {
       "hpd_start_date": "02/06/2025",
-      "hpd_end_date": "15/08/2025",
+      "hpd_end_date": "28/08/2025",
       "hpd_working_start_time": "00:15",
       "hpd_working_end_time": "23:45",
       "hpd_monday": 1,
