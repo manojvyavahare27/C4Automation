@@ -5,7 +5,7 @@ class Homepage{
         this.iconPatient=page.locator("xpath=//div[@data-testid='Patients']")
         this.sidebarPatientIcon=page.locator("xpath=//img[@alt='Patients Image Avatar']")
         this.iconHomePage=page.locator("xpath=//img[@alt='homeDashboard']")
-        this.iconAppointment=page.getByTestId('Appointments').nth(1)
+        this.iconAppointment=page.locator("xpath=//div[@data-testid='Appointments']")
         this.pharmacyIcon=page.locator("xpath=//div[@class='MuiBox-root mui-1s8bum5']//div[@aria-label='Pharmacy']")
 
         
@@ -24,7 +24,7 @@ class Homepage{
 
         //SideIcon
         this.homeDashboard=page.locator("xpath=//img[@alt='homeDashboard']")
-        this.homeicon=page.locator("xpath=//img[@alt='homeDashboard']")
+        this.homeicon=page.locator("xpath=//div[@data-testid='moduleDrawerHomeDashboard']")
         this.sideIconTask=page.getByTestId('tasks')
         this.sideIconAlerts=page.getByTestId('alerts')
         this.sideIconMessages=page.getByTestId('messages')
