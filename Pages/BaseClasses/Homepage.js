@@ -32,7 +32,7 @@ class Homepage{
         this.sideIconLetters=page.getByTestId('letters')
         this.sideIconReferrals=page.getByTestId('referrals')
         this.sideIconPatient=page.locator("xpath=//img[@alt='Patients Image Avatar']")
-        this.sideIconStock=page.locator("xpath=//div[@aria-label='Stock']")
+        this.sideIconStock=page.locator("xpath=//div[@data-testid='moduleDrawerStock']")
        // this.sideIconRejectedReferral=page.getByTestId('ourRejectedReferrals')
         
         this.sideIconRejectedReferral=page.locator("xpath=//h1[normalize-space()='Our Rejected On Referrals']")
