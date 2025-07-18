@@ -9425,3 +9425,10 @@
 {"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-16T15:56:55.165Z"}
 {"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-16T15:56:55.684Z"}
 {"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-18T02:48:28.291Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-07-18T04:20:42.863Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-07-18T04:20:44.148Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-07-18T04:20:44.285Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-07-18T04:20:46.370Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-07-18T04:20:48.284Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-07-18T04:20:48.383Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-07-18T04:20:48.755Z"}
