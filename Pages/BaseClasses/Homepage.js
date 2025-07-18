@@ -6,7 +6,7 @@ class Homepage{
         this.sidebarPatientIcon=page.locator("xpath=//img[@alt='Patients Image Avatar']")
         this.iconHomePage=page.locator("xpath=//img[@alt='homeDashboard']")
         this.iconAppointment=page.locator("xpath=//div[@data-testid='Appointments']")
-        this.pharmacyIcon=page.locator("xpath=//div[@class='MuiBox-root mui-1s8bum5']//div[@aria-label='Pharmacy']")
+        this.pharmacyIcon=page.locator("xpath=//div[@data-testid='Pharmacy']")
 
         
         this.iconReferral=page.getByRole('heading', { name: 'Referrals' })
