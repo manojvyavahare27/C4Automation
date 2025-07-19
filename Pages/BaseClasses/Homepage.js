@@ -23,7 +23,7 @@ class Homepage{
 
 
         //SideIcon
-        this.homeDashboard=page.locator("xpath=//img[@alt='homeDashboard']")
+        this.homeDashboard=page.locator("xpath=//div[@data-testid='moduleDrawerHomeDashboard']']")
         this.homeicon=page.locator("xpath=//div[@data-testid='moduleDrawerHomeDashboard']")
         this.sideIconTask=page.getByTestId('tasks')
         this.sideIconAlerts=page.getByTestId('alerts')
@@ -31,7 +31,7 @@ class Homepage{
         this.sideIconAppointment=page.locator("xpath=//div[@data-testid='appointments']")
         this.sideIconLetters=page.getByTestId('letters')
         this.sideIconReferrals=page.getByTestId('referrals')
-        this.sideIconPatient=page.locator("xpath=//img[@alt='Patients Image Avatar']")
+        this.sideIconPatient=page.locator("xpath=//div[@data-testid='moduleDrawerPatients']")
         this.sideIconStock=page.locator("xpath=//div[@data-testid='moduleDrawerStock']")
        // this.sideIconRejectedReferral=page.getByTestId('ourRejectedReferrals')
         
