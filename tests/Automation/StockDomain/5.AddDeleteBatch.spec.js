@@ -80,9 +80,10 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()
 
+   //await page.pause()
    await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
    await stockItemsFliters.clickSearchButton()
-   await page.waitForTimeout(1000)
+   await page.waitForTimeout(2000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
    
 
@@ -133,6 +134,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
    //Delete Batch
    
+   //await page.pause()
    await addStockItems.clickOnExpandsDefaultPharmacy()
    await addBatch.clickOnExtraBatchLink()
    await page.waitForTimeout(3000)
@@ -151,6 +153,7 @@ test.describe("Database Comparison Add New Referral", () => {
    await page.waitForTimeout(200) 
    await expect(page.getByText('Stock item updated successfully')).toHaveText('Stock item updated successfully')
    await page.waitForTimeout(500) 
+  // await page.pause()
    await addStockItems.clickOnExpandsDefaultPharmacy()
    await addBatch.clickOnExtraBatchLink()
 
