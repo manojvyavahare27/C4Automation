@@ -23,7 +23,7 @@ class Homepage{
 
 
         //SideIcon
-        this.homeDashboard=page.locator("xpath=//div[@data-testid='moduleDrawerHomeDashboard']']")
+        this.homeDashboard=page.locator("xpath=//div[@data-testid='moduleDrawerHomeDashboard']")
         this.homeicon=page.locator("xpath=//div[@data-testid='moduleDrawerHomeDashboard']")
         this.sideIconTask=page.getByTestId('tasks')
         this.sideIconAlerts=page.getByTestId('alerts')
