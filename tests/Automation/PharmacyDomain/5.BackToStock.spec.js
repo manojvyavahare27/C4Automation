@@ -106,7 +106,7 @@ test.describe("Medications Category", () => {
     //   await pharmacyHomePage.enterPatientGivenName(jsonData.addPatient[index].pat_firstname.toString());
     //   await pharmacyHomePage.enterPatientFamilyName(jsonData.addPatient[index].pat_surname.toString());
      
-      await page.pause()
+     // await page.pause()
       await pharmacyHomePage.enterPatientGivenName(jsonData.addPatient[index].pat_firstname.toString())
       await pharmacyHomePage.enterPatientFamilyName(jsonData.addPatient[index].pat_surname.toString())
       await pharmacyHomePage.enterPrescriptionStatus('Collected')
@@ -115,7 +115,7 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.clickOnClosePopup()
 
       await pharmacyHomePage.clickOnChangeStatus()
-      await page.pause()
+     // await page.pause()
 
       await pharmacyHomePage.clickOnExpandIconForDispense()
       await pharmacyHomePage.clickOnBackToStockButton()
