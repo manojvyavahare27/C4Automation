@@ -279,9 +279,11 @@ await fileInput.setInputFiles(targetFilePath);
         await adduserwizard.selectPROMsReason()
         await adduserwizard.selectLocal()
         await adduserwizard.selectCommissionLevel(jsonData.createEstProfessional[index].esp_commision_level)      
-        //await adduserwizard.enterPROMsNumber(jsonData.createEstProfessional[index].esp_hp_proms_code)    
+       
+        await page.pause() //await adduserwizard.enterPROMsNumber(jsonData.createEstProfessional[index].esp_hp_proms_code)    
         await adduserwizard.clickOnSave()
-        await expect(page.getByText('User Already Exists')).toHaveText('User Already Exists')    
+        await expect(page.getByText('User Already Exists')).toHaveText('User Already Exists') 
+        await page.pause()   
         await usersearch.enterUserSearch(jsonData.createUser[index].use_username)
         await page.waitForTimeout(1000)
         await adduserwizard.clickOnSave()
