@@ -98,7 +98,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await patientsearch.enterFamilyName(jsonData.patDetails[index].pat_surname);
         await patientsearch.clickOnSearchButton();
         await patientsearch.clickOnSearchPatientLink();
-
+await page.pause()
         await confirmexisting.clickOnConfirmExistingDetails();
         await topbluebar.clickOnTopBlueBar();
         await editpatient.clickOnPatientDetails();

@@ -280,10 +280,10 @@ await fileInput.setInputFiles(targetFilePath);
         await adduserwizard.selectLocal()
         await adduserwizard.selectCommissionLevel(jsonData.createEstProfessional[index].esp_commision_level)      
        
-        await page.pause() //await adduserwizard.enterPROMsNumber(jsonData.createEstProfessional[index].esp_hp_proms_code)    
+        //await adduserwizard.enterPROMsNumber(jsonData.createEstProfessional[index].esp_hp_proms_code)    
         await adduserwizard.clickOnSave()
         await expect(page.getByText('User Already Exists')).toHaveText('User Already Exists') 
-        await page.pause()   
+       
         await usersearch.enterUserSearch(jsonData.createUser[index].use_username)
         await page.waitForTimeout(1000)
         await adduserwizard.clickOnSave()
@@ -302,12 +302,13 @@ await fileInput.setInputFiles(targetFilePath);
         await expect(page.getByText('Please select End Date')).toHaveText('Please select End Date')
         await expect(page.getByText('Please select Start Time')).toHaveText('Please select Start Time')
         await expect(page.getByText('Please select End Time')).toHaveText('Please select End Time')
-
+        await page.pause()   
         await sethpdairy.enterStartdate(jsonData.setHpDiary[index].searchStartDate)
         await page.waitForTimeout(2000)
         await sethpdairy.enterEndDate(jsonData.setHpDiary[index].searchEndDate)
         await page.waitForTimeout(2000)
         await sethpdairy.clickOnSearchbutton()
+         await page.pause()   
         await page.waitForTimeout(2000)
         await sethpdairy.clickOnHpStartDate(jsonData.setHpDiary[index].hpd_start_date)
         await page.waitForTimeout(2000)
