@@ -19,22 +19,22 @@ class PatientSearch
         this.txtbox_Barcode=page.getByTestId('Barcode')
         this.txtbox_NHSNo =page.getByRole('textbox', { name: 'NHS No' })
         this.txtbox_BornDate=page.getByPlaceholder('dd/mm/yyyy')
-        this.dropdown_PatientSeenInLastDays=page.locator("xpath=//div[@id='mui-component-select-patientSeenInLastDays']")
+        this.dropdown_PatientSeenInLastDays=page.locator("xpath=//input[@name='patientSeenInLastDays']")
         this.txtbox_MPINumber=page.getByRole('textbox', { name: 'MPI Number' })
         this.checkbox_IncludeDeceasedPatient=page.getByRole('checkbox', { name: 'Include deceased patients' })
         this.checkbox_IncludeServicePatient=page.getByRole('checkbox', { name: 'Include service patients' })
         this.checkbox_Soundex=page.getByRole('checkbox', { name: 'Soundex' })
                
-        this.btnExportList=page.locator("xpath=//div[contains(text(),'Export List')]")
+        this.btnExportList=page.locator("xpath=//button[@data-testid='Export List']")
 
         this.btnSearchPatientOnPopup=page.getByTestId('CommonCellmaPopup').getByTestId('Search')
         this.btn_Search=page.locator("xpath=//button[@data-testid='Search']")
         //this.btn_Search=page.locator("xpath=//div[contains(text(),'Search')]")
         //this.btn_SearchAppPat=page.
-        this.txtbox_SearchPatient = page.locator("xpath=//div[@class='MuiGrid-root MuiGrid-container css-1d3bbye']//button[@aria-label='Search']")
+        this.txtbox_SearchPatient = page.locator("xpath=//button[@data-testid='Search']")
         //this.txtbox_SearchPatient=page.getByRole('textbox', { name: 'Search' })
         //this.btn_AddPatient=page.locator("xpath=//button[contains(text(),'Add Patient')]")
-        this.btn_AddPatient=page.locator("xpath=//div[contains(text(),'Add Patient')]")//17Feb2025
+        this.btn_AddPatient=page.locator("xpath=//button[@data-testid='Add Patient']")//17Feb2025
         this.dropdown_sex=page.locator("xpath=//input[@name='sex']")
         this.dropdown_sex_male=page.getByRole('option', { name: 'Male', exact: true })  
         this.txtbox_Identifier=page.getByTestId('Identifier')

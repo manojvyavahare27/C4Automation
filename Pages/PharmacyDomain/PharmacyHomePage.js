@@ -12,7 +12,7 @@ class PharmacyHomePage {
     this.ptPrescriptionStatus = page.locator('input[data-testid="papreStatus"]');
     this.ptPharmacySearchLocation = page.locator("xpath=//input[@id='pharmacyLocationSearch']");
 
-    this.ptSearchButton=page.locator("xpath=//div[contains(text(),'Search')]")
+    this.ptSearchButton=page.locator("xpath=//button[@data-testid='Search']")
 
     //Links
     this.payLink=page.locator("xpath=//a[@data-testid='Pay']")

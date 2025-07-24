@@ -15,7 +15,7 @@ class PatientDuplicateCheck
         this.dropdown_is_baby_born_inthe_hospital=page.getByTestId('Is baby born in this hospital?').getByRole('button', { name: '​' })
         this.txtbox_mobile=page.getByTestId('Mobile')
         this.txtbox_EmailID=page.getByTestId('Email')
-        this.btn_Duplicate_check=page.locator("xpath=//div[contains(text(),'Duplicate Check')]")
+        this.btn_Duplicate_check=page.locator("xpath=//button[@data-testid='Duplicate Check']")
         this.btn_Create_Patient=page.getByTestId('Create Patient')
 
     }

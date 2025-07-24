@@ -13,11 +13,11 @@ class AddReferral{
 
         //this.dropdowntimeofreferral=page.getByTestId('Time of Referral').getByPlaceholder('hh:mm')
         this.dropdowntimeofreferral=page.getByTestId('Time of Referral')
-        this.dropdownsourceofreferral=page.locator("xpath=//div[@aria-labelledby='mui-component-select-sourceOfReferral']")
+        this.dropdownsourceofreferral=page.locator("xpath=//input[@name='sourceOfReferral']")
         this.dropdownreferraltype=page.locator("xpath=//input[@name='referralType']")
         this.dropdownreferralreason=page.getByTestId('referralReason')
         this.dropdownreferrername=page.getByTestId('Referrer Name').getByRole('button', { name: '​' })
-        this.dropdownmodeofreferral=page.locator("xpath=//div[@aria-labelledby='mui-component-select-modeOfReferral']")
+        this.dropdownmodeofreferral=page.locator("xpath=//input[@name='modeOfReferral']")
         
         this.txtboxreferringprofessional=page.getByLabel('Referring Professional')
         this.dropdownservice=page.locator("xpath=//div[@aria-labelledby='mui-component-select-service']")

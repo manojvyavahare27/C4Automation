@@ -10,10 +10,10 @@ class ConfirmExisting
         this.txtbox_mobileNo=page.locator('input[name="addMobile"]')
         this.txtbox_phoneNo=page.locator('input[name="addPhone"]')
         //Next of Kin
-        this.dropdown_NextofKinTitle=page.locator("xpath=//div[@aria-labelledby='mui-component-select-kinTitle']")
+        this.dropdown_NextofKinTitle=page.locator("xpath=//input[@name='kinTitle']")
         this.txtbox_givenName=page.locator("xpath=//input[@name='kinFirstname']")
         this.txtbox_familyName=page.locator("xpath=//input[@name='kinSurname']")
-        this.dropdown_Relcationship=page.locator("xpath=//div[@aria-labelledby='mui-component-select-kinRelationship']")
+        this.dropdown_Relcationship=page.locator("xpath=//input[@name='kinRelationship']")
         this.txtbox_kinEmailId=page.locator('input[name="kinEmail"]')
         this.txtbox_kinMobile=page.locator('input[name="kinMobile"]')
         this.txtbox_kinPhone=page.locator('input[name="kinPhone"]')
@@ -33,8 +33,8 @@ class ConfirmExisting
         this.txtbox_TempCompanyName=page.locator('#tempAddressCompanyName')
         this.txtbox_tempAddNumberNRoad=page.locator("xpath=//input[@name='tempAddAddress1']")
         this.txtbox_tempAddPostcode=page.locator("xpath=//input[@name='tempAddAddress5']")
-        this.btn_confirmExistingDetails=page.locator("xpath=//div[contains(text(),'Confirm Existing Details')]")
-        this.btn_SaveChangeDetails=page.locator("xpath=//div[contains(text(),'Save Changed Details')]")
+        this.btn_confirmExistingDetails=page.locator("xpath=//button[@data-testid='Confirm Existing Details']")
+        this.btn_SaveChangeDetails=page.locator("xpath=//button[@data-testid='Save Changed Details']")
 
     }
     async enterTempAddressDetails()
