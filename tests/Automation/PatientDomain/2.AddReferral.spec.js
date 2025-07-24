@@ -85,12 +85,14 @@ test.describe("Patient Domain Db COmparison", () => {
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
-    await patientsearch.clickOnSearchPatientLink();  
+    await patientsearch.clickOnSearchPatientLink(); 
+    //await page.pause() 
     await page.waitForTimeout(1500);
     await confirmexisting.selectRelationship(jsonData.pip[index].pip_relationship);
-    await page.waitForTimeout(1500);   
+    await page.waitForTimeout(2000);   
     await confirmexisting.clickOnConfirmExistingDetails();
     await page.waitForTimeout(1500);
+    
     await addreferral.enterReceiveReferrldate(jsonData.AddReferral[index].rtt_referral_received_date.toString());
     await addreferral.enterApproveReferralDate(
       jsonData.AddReferral[index].rtt_referral_approved_date.toString()
@@ -115,7 +117,7 @@ test.describe("Patient Domain Db COmparison", () => {
     await addreferral.selectClinicType(
       jsonData.AddReferral[index].ref_clinic_type.toString()
     );
-   // await page.pause()
+   // 
     await addreferral.selectClinicLocation(jsonData.AddReferral[index].ref_clinic_location);
     await addreferral.selectTeam(jsonData.AddReferral[index].ref_region_eli_text.toString());
     await addreferral.selectPatientcare();

@@ -10,10 +10,10 @@ class ConfirmExisting
         this.txtbox_mobileNo=page.locator('input[name="addMobile"]')
         this.txtbox_phoneNo=page.locator('input[name="addPhone"]')
         //Next of Kin
-        this.dropdown_NextofKinTitle=page.locator("xpath=//input[@name='kinTitle']")
+        this.dropdown_NextofKinTitle=page.locator("xpath=//div[@id='mui-component-select-kinTitle']")
         this.txtbox_givenName=page.locator("xpath=//input[@name='kinFirstname']")
         this.txtbox_familyName=page.locator("xpath=//input[@name='kinSurname']")
-        this.dropdown_Relcationship=page.locator("xpath=//input[@name='kinRelationship']")
+        this.dropdown_Relcationship=page.locator("xpath=//div[@id='mui-component-select-kinRelationship']")
         this.txtbox_kinEmailId=page.locator('input[name="kinEmail"]')
         this.txtbox_kinMobile=page.locator('input[name="kinMobile"]')
         this.txtbox_kinPhone=page.locator('input[name="kinPhone"]')
