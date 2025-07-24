@@ -3,13 +3,13 @@ class AddPIP
     constructor(page)
     {
         this.page=page
-        this.dropdown_PIPTitle=page.locator("xpath=//div[@aria-labelledby='mui-component-select-title']")
+        this.dropdown_PIPTitle=page.locator("xpath=//input[@name='title']")
         this.txtbox_PIPFamilyName=page.getByTestId('Family Name')
         this.txtbox_PIPGivenName=page.getByTestId('Given Name')
         this.txtbox_PIPMiddleName=page.getByTestId('Middle Name(s)')
         this.calender_PIPBornDate=page.getByTestId('Born')
-        this.dropdown_PIPEthnicity=page.locator("xpath=//div[@aria-labelledby='mui-component-select-ethnicity']")
-        this.dropdown_PIPOccupation=page.locator("xpath=//div[@aria-labelledby='mui-component-select-occupation']")
+        this.dropdown_PIPEthnicity=page.locator("xpath=//input[@name='pipEthnicityId']")
+        this.dropdown_PIPOccupation=page.locator("xpath=//input[@name='pipOccupationId']")
         this.txtbox_PIPMobile=page.getByTestId('Mobile')
         this.txtbox_PIPEmail=page.getByTestId('Email')
         this.dropdown_PIPRelation=page.locator("xpath=//div[@aria-labelledby='mui-component-select-relationship']")                                     
