@@ -94,7 +94,7 @@ test.describe('New Patient', () => {
       await page.waitForTimeout(2000);
       await loginpage.clickOnLogin();
 
-     await page.pause()
+     
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnPatientIcon();      
       await patientsearch.clickOnSearchButton();
