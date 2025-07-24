@@ -3,7 +3,7 @@ class AddPIP
     constructor(page)
     {
         this.page=page
-        this.dropdown_PIPTitle=page.locator("xpath=//input[@name='title']")
+        this.dropdown_PIPTitle=page.locator("xpath=//div[@id='mui-component-select-title']")
         this.txtbox_PIPFamilyName=page.getByTestId('Family Name')
         this.txtbox_PIPGivenName=page.getByTestId('Given Name')
         this.txtbox_PIPMiddleName=page.getByTestId('Middle Name(s)')

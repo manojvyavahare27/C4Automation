@@ -94,7 +94,7 @@ test.describe('New Patient', () => {
       await page.waitForTimeout(2000);
       await loginpage.clickOnLogin();
 
-     
+     await page.pause()
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnPatientIcon();      
       await patientsearch.clickOnSearchButton();
@@ -149,6 +149,7 @@ test.describe('New Patient', () => {
       //await expect(page.getByText('Duplicate Patients not found')).toHaveText('Duplicate Patients not found')
       await patientduplicatecheck.clickOnCreatePatientButton();
 
+      await page.pause()
       //Patient Wizard- Add Patient
       await addpatient.selectMaritalStatusDropdown(jsonData.addPatient[index].pat_marital_status);
       await addpatient.selectSexualOrientation(jsonData.addPatient[index].pat_sexual_orientation_eli_text);
@@ -170,7 +171,7 @@ test.describe('New Patient', () => {
       await addpatient.selectPatientWebRegistration();
       await addpatient.enterNotes(jsonData.addPatient[index].pat_notes);
       await addpatient.clickOnNextButton();
-    
+    await page.pause()
       //Add Address page
       await addaddress.clickOnSaveButton();
       await addaddress.enterNumberAndRoad(jsonData.permanentAddress[index].add_address1);
@@ -282,7 +283,7 @@ test.describe('New Patient', () => {
       //await expect(page.getByText("Patient address added successfully")).toHaveText("Patient address added successfully");
 
       //Add PIP
-      
+      await page.pause()
       await addpip.selectPIPTitle(jsonData.pip[index].pip_title);
       await addpip.enterPIPFamilyName(jsonData.pip[index].pip_surname);
       await addpip.enterPIPGivenName(jsonData.pip[index].pip_firstname);
