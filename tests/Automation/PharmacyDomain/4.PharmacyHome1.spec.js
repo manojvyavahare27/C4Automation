@@ -135,8 +135,8 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.clickHistoryIconForMedicine(jsonData.AddMedication[index].pacr_que_name)
       
       await pharmacyHomePage.clickOnClosePopup()
-      await pharmacyHomePage.clickOnAssociatedConditionIcon()
-      await pharmacyHomePage.clickOnClosePopup()
+      // await pharmacyHomePage.clickOnAssociatedConditionIcon()
+      // await pharmacyHomePage.clickOnClosePopup()
       // await pharmacyHomePage.clickOnSideEffectIcon()
       // await pharmacyHomePage.clickOnClosePopup()
       await pharmacyHomePage.selectCheckBoxforPrescription()
@@ -146,14 +146,14 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.clickOnitemWithPrescriptionLink()   
       await pharmacyHomePage.fillPrescriptionType('General');
      // await pharmacyHomePage.fillPrescriptionCode('123');
-     await page.pause()
+    
     // await pharmacyHomePage.fillPrescribedBy('Dr  CAMHS WHITESTONE CLINIC')
       await pharmacyHomePage.fillNotes('add for testing');
       await page.waitForTimeout(1000)
       await pharmacyHomePage.ClickOnExpandMedication()
       //await pharmacyHomePage.clickonExpandButton()
       await page.waitForTimeout(1000)         
-      await page.pause()
+     
      // await pharmacyHomePage.clickOnitemWithPrescriptionLink()
       await pharmacyHomePage.clickOnitemsOnlyLink()
       await pharmacyHomePage.clickOncancelledPrescriptionLink()
@@ -161,7 +161,7 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.clickOnitemNotOnPrescriptionLink()
       await pharmacyHomePage.clickOnitemWithPrescriptionLink()
       await pharmacyHomePage.ClickOnExpandMedication()     
-       await page.pause()     
+      
             
        await pharmacyHomePage.clickExpandIcon()
        await pharmacyHomePage.enterDispenseQty()
