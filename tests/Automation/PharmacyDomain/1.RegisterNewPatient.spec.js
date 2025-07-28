@@ -365,14 +365,13 @@ test.describe('Excel Conversion', () => {
                 throw new Error('❌ Patient.png not found anywhere under the workspace!');
               }
               
-              console.log('✅ Found Patient.png at:', targetFilePath);
-              
+              console.log('✅ Found Patient.png at:', targetFilePath);              
               // Upload the file using Playwright
               const fileInput = await page.getByTestId('PhotoCameraIcon');
               await fileInput.setInputFiles(targetFilePath);
               
-              await page.getByTestId("Upload").click();
-              await page.waitForTimeout(1000);
+              // await page.getByTestId("Upload").click();
+              // await page.waitForTimeout(1000);
 
         //await page.waitForTimeout(1000);
         await expect(page.getByText('Patient photo uploaded successfully')).toHaveText('Patient photo uploaded successfully')
