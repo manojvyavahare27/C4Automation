@@ -62,7 +62,7 @@ test.describe("Database Comparison Service Referrals", () => {
     await page.waitForTimeout(1500);
     await loginpage.clickOnLogin();
     await homepage.clickonSidebarHomeIcon();
-    await page.pause()
+    //await page.pause()
     await homepage.clickOnSideIconReferrals();
     //Appointment Tab
     //await servicereferrals.clickonSidebarlinkAddAppointments()
