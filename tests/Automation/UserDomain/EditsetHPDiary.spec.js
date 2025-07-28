@@ -101,7 +101,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         await page.waitForTimeout(3000)
         //await adduserwizard.toggleUserIsHP()    
         await adduserwizard.clickOnNext()
-        await page.pause()
+        //await page.pause()
         
         await sethpdairy.enterStartdate(jsonData.editHpDiary[index].hpd_start_date)
         await sethpdairy.enterEndDate(jsonData.editHpDiary[index].hpd_end_date)
@@ -239,7 +239,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         );
       } ``
 
-      await menu.clickOnLogout(page);
+     // await menu.clickOnLogout(page);
         
     });
 
