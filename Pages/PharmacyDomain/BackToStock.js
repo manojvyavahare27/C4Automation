@@ -5,7 +5,7 @@ class BackToStock {
         // Sidebar
         this.batchQty = page.locator("xpath=//input[contains(@data-testid, 'Batch')]");
         this.reasonforReturn=page.locator("xpath=//textarea[@data-testid='Reason for Return']")
-        this.SaveButton=page.locator("xpath=//button[@data-testid='Save']")
+        this.SaveButton=page.locator("xpath=//div[contains(text(),'Save')]")
         
     }
 
