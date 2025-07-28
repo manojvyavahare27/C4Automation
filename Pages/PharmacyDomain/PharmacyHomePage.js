@@ -25,6 +25,7 @@ class PharmacyHomePage {
     this.awaitingProductionLink=page.locator("xpath=//a[normalize-space()='Awaiting Production']")
     this.partiallyProducedLink=page.locator("xpath=//a[normalize-space()='Partially Produced']")
     this.producedLink=page.locator("xpath=//a[normalize-space()='Produced']")
+    this.CollectedLink=page.locator("xpath=//a[normalize-space()='Collected']")
 
     //Prescription Details
     this.prescriptionTypeInput = page.locator('xpath=//input[@name="prescriptionType"]');
@@ -57,7 +58,7 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
     this.buttonSaveBackToStock=page.locator("xpath=//button[@data-testid='Save']")
 
     //
-    this.expandMedicationIcon=page.locator("xpath=//button[@aria-label='expandRowIconundefined']");
+    this.expandMedicationIcon=page.locator("xpath=//button[@aria-label='expandRowIconParacetamol 500mg / Ibuprofen 200mg tablets']");
     this.dispenseButton = page.locator("xpath=button[data-testid='Dispense']")
     this.selectCheckBox=page.locator("xpath=//span[@data-testid='hideLabel']//input[@type='checkbox']")
    
@@ -225,6 +226,10 @@ this.createAndAdministerPrescriptionButton = page.locator('xpath=//button[@data-
   async clickOnProducedLink()
   {
     await this.producedLink.click()
+  }
+  async clickonCollectedLink()
+  {
+    await this.CollectedLink.click()
   }
 
 

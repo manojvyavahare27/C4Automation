@@ -124,78 +124,155 @@ test.describe("Medications Category", () => {
       //await patientsearch.selectBornDate(formattedDate);
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnSearchPatientLink();
-      await page.pause()
+      //await page.pause()
       await pharmacyHomePage.fillPrescriptionType('General');
       await pharmacyHomePage.fillPrescriptionCode('123');
       await pharmacyHomePage.fillNotes('add for testing');
       
       
 
-     // await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name)
-      await pharmacyHomePage.clickHistoryIconForMedicine(jsonData.AddMedication[index].pacr_que_name)
+    //  // await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name)
+    //   await pharmacyHomePage.clickHistoryIconForMedicine(jsonData.AddMedication[index].pacr_que_name)
       
-      await pharmacyHomePage.clickOnClosePopup()
-      await pharmacyHomePage.clickOnAssociatedConditionIcon()
-      await pharmacyHomePage.clickOnClosePopup()
-      // await pharmacyHomePage.clickOnSideEffectIcon()
+    //   await pharmacyHomePage.clickOnClosePopup()
+    //   await pharmacyHomePage.clickOnAssociatedConditionIcon()
+    //   await pharmacyHomePage.clickOnClosePopup()
+    //   // await pharmacyHomePage.clickOnSideEffectIcon()
+    //   // await pharmacyHomePage.clickOnClosePopup()
+    //   await pharmacyHomePage.selectCheckBoxforPrescription()
+    //   await pharmacyHomePage.clickOncreatePrescription()
+    //   await page.waitForTimeout(1000);
+      
+    //   await pharmacyHomePage.clickOnitemWithPrescriptionLink()
+    //   await pharmacyHomePage.clickOnitemsOnlyLink()
+    //   await pharmacyHomePage.clickOncancelledPrescriptionLink()
+    //   await pharmacyHomePage.clickOnitemsOnlyLink()
+    //   await pharmacyHomePage.clickOnitemNotOnPrescriptionLink()
+    //   await pharmacyHomePage.clickOnitemWithPrescriptionLink()
+    //   await pharmacyHomePage.ClickOnExpandMedication()
+    //   await pharmacyHomePage.clickOnRefillLeftLink()
+    //   await pharmacyHomePage.enterExternalRefillQty()
+    //   await page.getByTestId('CommonCellmaPopup').getByTestId('Save').click();
+    //   //await pharmacyHomePage.clickOnSaveExternalRefillQty()
+    //   //Updated Prescription Refills
+    //   await expect(page.getByText("Updated Prescription Refills")).toHaveText("Updated Prescription Refills");
+
+    //   await pharmacyHomePage.clickOnAwaitingProductionLink()
+    //   //await pharmacyHomePage.clickAwaitingProduction()
+    //   await page.getByRole('button', { name: 'Save' }).click()
+    //   //await pharmacyHomePage.clickOnSaveButton()
+    //   await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+    //   await page.waitForTimeout(1000)
+    //   await pharmacyHomePage.clickOnAwaitingProductionLink()
+    //    await page.waitForTimeout(1000)
+    //   await pharmacyHomePage.clickPartiallyProduced()
+    //   await page.getByRole('button', { name: 'Save' }).click()
+    //   //await pharmacyHomePage.clickOnSaveButton()
+    //   await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+    //   await page.waitForTimeout(1000)
+    //   await pharmacyHomePage.clickOnPartiallyProducedLink()
+    //    await page.waitForTimeout(1000)
+    //   await pharmacyHomePage.clickOnExpandIconForDispense()
+    //   await page.waitForTimeout(1000)
+    //   await pharmacyHomePage.enterDispenseQty()
+    //   await page.waitForTimeout(1000)
+    //   await pharmacyHomePage.clickOnDispenseButton()
+    //   await page.getByRole('button', { name: 'Save' }).click()
+    //   //await pharmacyHomePage.clickOnSaveButton()
+
+    //   await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+    //    await page.waitForTimeout(1000)
+    //   await pharmacyHomePage.clickOnProducedLink()
+    //   await page.waitForTimeout(1000)
+    //   await pharmacyHomePage.clickCollected()
+    //   await page.getByRole('button', { name: 'Save' }).click()
+    //   //await pharmacyHomePage.clickOnSaveButton()
+    //   await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+
+    //   // await pharmacyHomePage.enterPatientGivenName('try')
+    //   // await pharmacyHomePage.enterPatientFamilyName('pharma')
+    //   // await pharmacyHomePage.enterPrescriptionStatus()
+    //   // await pharmacyHomePage.clickOnPayLink()
+    //   // await pharmacyHomePage.closePopup()
+
+    //   // await pharmacyHomePage.clickOnChangeStatus()
+
+
+    await page.waitForTimeout(1000)
+      
+      await pharmacyHomePage.clickonExpandButton()
+      await page.waitForTimeout(1000)
+      // await pharmacyHomePage.clickHistoryIconForMedicine(jsonData.AddMedication[index].pacr_que_name)      
       // await pharmacyHomePage.clickOnClosePopup()
-      await pharmacyHomePage.selectCheckBoxforPrescription()
-      await pharmacyHomePage.clickOncreatePrescription()
+      // await page.waitForTimeout(1000)
+      // await pharmacyHomePage.clickOnAssociatedConditionIcon()
+      // await pharmacyHomePage.clickOnClosePopup()      
+      // await page.waitForTimeout(1000)
+      // await pharmacyHomePage.selectCheckBoxforPrescription()
+      // await pharmacyHomePage.clickOncreatePrescription()
       await page.waitForTimeout(1000);
-      
-      await pharmacyHomePage.clickOnitemWithPrescriptionLink()
+      await page.pause()
+     // await pharmacyHomePage.clickOnitemWithPrescriptionLink()
       await pharmacyHomePage.clickOnitemsOnlyLink()
       await pharmacyHomePage.clickOncancelledPrescriptionLink()
       await pharmacyHomePage.clickOnitemsOnlyLink()
       await pharmacyHomePage.clickOnitemNotOnPrescriptionLink()
       await pharmacyHomePage.clickOnitemWithPrescriptionLink()
-      await pharmacyHomePage.ClickOnExpandMedication()
-      await pharmacyHomePage.clickOnRefillLeftLink()
-      await pharmacyHomePage.enterExternalRefillQty()
-      await page.getByTestId('CommonCellmaPopup').getByTestId('Save').click();
-      //await pharmacyHomePage.clickOnSaveExternalRefillQty()
-      //Updated Prescription Refills
-      await expect(page.getByText("Updated Prescription Refills")).toHaveText("Updated Prescription Refills");
+      await pharmacyHomePage.clickonExpandButton()      
+       await page.pause()     
+      //await pharmacyHomePage.clickOnAwaitingProductionLink()
+      //await pharmacyHomePage.clickAwaitingProduction()
+      
+       await pharmacyHomePage.clickExpandIcon()
+       await pharmacyHomePage.enterDispenseQty()
+       await pharmacyHomePage.clickOnDispenseButton()
+       await page.pause()
+      await page.getByRole('button', { name: 'Save' }).click()
+      //await pharmacyHomePage.clickOnSaveButton()
+      await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+      await page.waitForTimeout(1000)
+      // await pharmacyHomePage.clickOnAwaitingProductionLink()
+      // await pharmacyHomePage.clickPartiallyProduced()
+      // await page.getByRole('button', { name: 'Save' }).click()
+      // //await pharmacyHomePage.clickOnSaveButton()
+      // await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+      // await page.waitForTimeout(1000)
+      // await pharmacyHomePage.clickOnPartiallyProducedLink()
+      // await pharmacyHomePage.clickOnExpandIconForDispense('Abacavir 300mg tablets')
+      // await page.waitForTimeout(1000)
+      // await pharmacyHomePage.enterDispenseQty()
+      // await page.waitForTimeout(1000)
+      // await pharmacyHomePage.clickOnDispenseButton()
+      // await page.getByRole('button', { name: 'Save' }).click()
+      // //await pharmacyHomePage.clickOnSaveButton()
 
-      await pharmacyHomePage.clickOnAwaitingProductionLink()
-      await pharmacyHomePage.clickAwaitingProduction()
-      await page.getByRole('button', { name: 'Save' }).click()
-      //await pharmacyHomePage.clickOnSaveButton()
-      await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+      // await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+      await page.pause()
       await page.waitForTimeout(1000)
-      await pharmacyHomePage.clickOnAwaitingProductionLink()
-       await page.waitForTimeout(1000)
-      await pharmacyHomePage.clickPartiallyProduced()
-      await page.getByRole('button', { name: 'Save' }).click()
-      //await pharmacyHomePage.clickOnSaveButton()
-      await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-      await page.waitForTimeout(1000)
-      await pharmacyHomePage.clickOnPartiallyProducedLink()
-       await page.waitForTimeout(1000)
-      await pharmacyHomePage.clickOnExpandIconForDispense()
-      await page.waitForTimeout(1000)
-      await pharmacyHomePage.enterDispenseQty()
-      await page.waitForTimeout(1000)
-      await pharmacyHomePage.clickOnDispenseButton()
-      await page.getByRole('button', { name: 'Save' }).click()
-      //await pharmacyHomePage.clickOnSaveButton()
-
-      await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickOnProducedLink()
       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickCollected()
       await page.getByRole('button', { name: 'Save' }).click()
       //await pharmacyHomePage.clickOnSaveButton()
-      await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-
-      // await pharmacyHomePage.enterPatientGivenName('try')
-      // await pharmacyHomePage.enterPatientFamilyName('pharma')
-      // await pharmacyHomePage.enterPrescriptionStatus()
-      // await pharmacyHomePage.clickOnPayLink()
-      // await pharmacyHomePage.closePopup()
-
-      // await pharmacyHomePage.clickOnChangeStatus()
+      //await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
+      await page.waitForTimeout(1000)
+      // await pharmacyHomePage.enterPatientGivenName(jsonData.addPatient[index].pat_firstname.toString());
+      // await pharmacyHomePage.enterPatientFamilyName(jsonData.addPatient[index].pat_surname.toString());      
+      // await pharmacyHomePage.ClickOnSearchButton()
+      //  await page.waitForTimeout(1000)
+      //  await pharmacyHomePage.clickonShowStatusLink()
+      await page.pause()
+       await pharmacyHomePage.clickExpandIcon()
+       await page.waitForTimeout(1000)
+       await pharmacyHomePage.clickOnBackToStockButton()
+       await page.waitForTimeout(1000)
+       await backtoStock.enterBatchQty()
+       await backtoStock.enterReasonforReturn()
+      // await backtoStock.clickOnSavebutton()    
+      await page.getByTestId('CommonCellmaPopup').getByTestId('Save').click()   
+       await expect(page.getByText("Items returned successfully")).toHaveText("Items returned successfully");
+       await page.waitForTimeout(2000)
+      await addStockItems.clickOnLogout(page)  
 
 
 

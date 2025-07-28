@@ -24,6 +24,8 @@ import ClinicalExtraDetails from "../../../Pages/ClinicalDomain/PatientSummary/C
 import PharmacyLocation from "../../../Pages/PharmacyDomain/PharmacySidebar"
 import PharmacyHome from "../../../Pages/PharmacyDomain/PharmacyHomePage"
 import PharmacySidebars from "../../../Pages/PharmacyDomain/PharmacySidebar";
+import BackToStock from "../../../Pages/PharmacyDomain/BackToStock";
+
 
 
 
@@ -82,6 +84,7 @@ test.describe("Medications Category", () => {
       const pharmacyLoc=new PharmacyLocation(page)
       const pharmacyHomePage=new PharmacyHome(page)
       const pharmacySidebar=new PharmacySidebar(page)
+      const backtoStock=new BackToStock(page)
       
 
       const menu = new Menu(page);
@@ -98,7 +101,7 @@ test.describe("Medications Category", () => {
       await homepage.clickOnPharmacyIcon()
      // await pharmacyLoc.clickOnCardioLocation()
       await pharmacyLoc.clickOnDefaultPharmacyLocation()
-      
+      await page.pause()
       // Prescription Tab
       await pharmacyHomePage.clickPrescriptionTab();
       await pharmacyHomePage.clickPrescriptionTab();
@@ -112,7 +115,7 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.ClickOnSearchButton()
       
       await pharmacySidebar.clickOnFindPatientSidebarLink()
-
+      await page.pause()
       //Search for patient
       await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
       logger.info("Given Name entered successfully");
@@ -150,6 +153,7 @@ test.describe("Medications Category", () => {
     // await pharmacyHomePage.fillPrescribedBy('Dr  CAMHS WHITESTONE CLINIC')
       await pharmacyHomePage.fillNotes('add for testing');
       await page.waitForTimeout(1000)
+      await page.pause()
       await pharmacyHomePage.ClickOnExpandMedication()
       //await pharmacyHomePage.clickonExpandButton()
       await page.waitForTimeout(1000)         
@@ -162,7 +166,8 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.clickOnitemWithPrescriptionLink()
       await pharmacyHomePage.ClickOnExpandMedication()     
       
-            
+            await page.pause()
+      await pharmacyHomePage.clickOnAwaitingProductionLink()
        await pharmacyHomePage.clickExpandIcon()
        await pharmacyHomePage.enterDispenseQty()
        await pharmacyHomePage.clickOnDispenseButton()
@@ -172,7 +177,7 @@ test.describe("Medications Category", () => {
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
       await page.waitForTimeout(1000)   
       // await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-      //await page.pause()
+      await page.pause()
       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickOnProducedLink()
       await page.waitForTimeout(1000)
@@ -182,18 +187,17 @@ test.describe("Medications Category", () => {
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
       await page.waitForTimeout(1000)      
       await page.pause()
+      await pharmacyHomePage.clickonCollectedLink()
        await pharmacyHomePage.clickExpandIcon()
        await page.waitForTimeout(1000)
        await pharmacyHomePage.clickOnBackToStockButton()
        await page.waitForTimeout(1000)
-       await backtoStock.enterBatchQty()
+      // await backtoStock.enterBatchQty()
        await backtoStock.enterReasonforReturn()
        await backtoStock.clickOnSavebutton()       
        await expect(page.getByText("Items returned successfully")).toHaveText("Items returned successfully");
        await page.waitForTimeout(2000)
-      await addStockItems.clickOnLogout(page)      
-
-
+      await addStockItems.clickOnLogout(page)   
 
     }
   });
