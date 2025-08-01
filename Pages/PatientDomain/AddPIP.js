@@ -3,27 +3,29 @@ class AddPIP
     constructor(page)
     {
         this.page=page
-        this.dropdown_PIPTitle=page.locator("xpath=//div[@id='mui-component-select-title']")
-        this.txtbox_PIPFamilyName=page.getByTestId('Family Name')
-        this.txtbox_PIPGivenName=page.getByTestId('Given Name')
-        this.txtbox_PIPMiddleName=page.getByTestId('Middle Name(s)')
-        this.calender_PIPBornDate=page.getByTestId('Born')
-        this.dropdown_PIPEthnicity=page.locator("xpath=//div[@id='mui-component-select-ethnicity']")
-        this.dropdown_PIPOccupation=page.locator("xpath=//div[@id='mui-component-select-occupation']")
-        this.txtbox_PIPMobile=page.getByTestId('Mobile')
-        this.txtbox_PIPEmail=page.getByTestId('Email')
-        this.dropdown_PIPRelation=page.locator("xpath=//div[@id='mui-component-select-relationship']")                                     
-        this.dropdownPIPNextOfkin=page.locator("xpath=//div[@id='mui-component-select-nextOfKin']")
+        this.dropdown_PIPTitle=page.locator("xpath=//div[@id='addPipTitle']")
+        this.txtbox_PIPFamilyName=page.locator("xpath=//input[@id='addPipFamilyName']")
+        this.txtbox_PIPGivenName=page.locator("xpath=//input[@id='addPipGivenName']")
+        this.txtbox_PIPMiddleName=page.locator("xpath=//input[@id='addPipMiddleNamePip']")
+        this.calender_PIPBornDate=page.locator("xpath=//input[@data-testid='Born']")
+        this.dropdown_PIPEthnicity=page.locator("xpath=//div[@id='addPipEthnicity']")
+        //this.dropdown_PIPEthnicity=page.locator("xpath=//input[@id='addPipTitle']")
+        this.dropdown_PIPOccupation=page.locator("xpath=//div[@id='addPipOccupation']")
+        this.txtbox_PIPMobile=page.locator("xpath=//input[@data-testid='Mobile']")
+        this.txtbox_PIPEmail=page.locator("xpath=//input[@data-testid='Email']")
+        this.dropdown_PIPRelation=page.locator("xpath=//div[@id='addPipRelationship']")                                     
+        this.dropdownPIPNextOfkin=page.locator("xpath=//div[@id='addPipNextOfKin']")
         this.chiNumber=page.locator("xpath=//input[@id='CHI Number']")
-        this.dropdownPIPFamilyAwareOfIllness=page.locator("xpath=//div[@aria-labelledby='mui-component-select-familyAwareOfIllness']")
-        this.dropdownPIPIdentifierType=page.getByTestId('Identifier Type').getByLabel('​', { exact: true })
-        this.txtboxPIPIdentifier=page.getByTestId('Identifier Number')
-        this.txtbox_PIPEnternalProf=page.getByTestId('externalProfessional').getByLabel('External Professional')
-        this.txtbox_PIPProfessionalTitle=page.getByTestId('Professional Title')
-        this.dropdown_PIPReceivePatientLetter=page.locator("xpath=//div[@aria-labelledby='mui-component-select-receivePatientLetter']")
-        this.dropdown_PIPReceiveAppointmentLtr=page.locator("xpath=//div[@aria-labelledby='mui-component-select-receiveAppointmentLetters']")
+        this.dropdownPIPFamilyAwareOfIllness=page.locator("xpath=//div[@id='addPipFamilyAwareOfIllness']")
+        this.dropdownPIPIdentifierType=page.locator("xpath=//div[@id='addPipIdentifierType']")
+        this.txtboxPIPIdentifier=page.locator("xpath=//input[@name='identifierNumber']")
+
+        this.txtbox_PIPEnternalProf=page.locator("xpath=//div[@data-testid='externalProfessional']")
+        this.txtbox_PIPProfessionalTitle=page.locator("xpath=//input[@data-testid='Professional Title']")
+        this.dropdown_PIPReceivePatientLetter=page.locator("xpath=//div[@id='addPipReceivePatientLetter']")
+        this.dropdown_PIPReceiveAppointmentLtr=page.locator("xpath=//div[@id='addPipReceiveAppointmentLetters']")
         //this.dropdown_PIPPrintPartnerdetailsOnReg=page.getByTestId('Print Partner Details On Birth Registration Form').getByRole('button', { name: 'No' })
-        this.dropdown_PIPPrintPartnerdetailsOnReg=page.locator("xpath=//div[@aria-labelledby='mui-component-select-partnerDetailsOnBirth']")
+        this.dropdown_PIPPrintPartnerdetailsOnReg=page.locator("xpath=//div[@id='addPipPartnerDetailsOnBirth']")
         this.chkbox_SendPatientTextEmail=page.getByRole('checkbox', { name: 'Send Patient Text/Email' })
         this.chkbox_PIPIsReferrer=page.getByRole('checkbox', { name: 'Is Referrer' })
         this.txtbox_PIPNotes=page.getByLabel('Notes', { exact: true })
@@ -104,7 +106,7 @@ class AddPIP
     }
     async enterCHInumber(pip_identifier_type)
     {
-        await this.chiNumber.type(pip_identifier_type)
+        await this.chiNumber.fill(pip_identifier_type)
     }
 
     async SelectPIPFamilyAwareOfIllness(pip_family_aware_illness_yes)
@@ -125,11 +127,11 @@ class AddPIP
     }
     async enterPIPEmailId(name)
     {
-        await this.txtbox_PIPEmail.type(name)
+        await this.txtbox_PIPEmail.fill(name)
     }
     async enterPIPMobileNumber(name)
     {
-        await this.txtbox_PIPMobile.type(name)
+        await this.txtbox_PIPMobile.fill(name)
     }
     async selectPIPOccupation()
     {
@@ -144,19 +146,19 @@ class AddPIP
     async selectPIPBornDate(pip_dob)
     {
         await this.calender_PIPBornDate.click()
-        await this.calender_PIPBornDate.type(pip_dob)
+        await this.calender_PIPBornDate.fill(pip_dob)
     }
     async enterPIPMiddleName(pip_middlename)
     {
-        await this.txtbox_PIPMiddleName.type(pip_middlename)
+        await this.txtbox_PIPMiddleName.fill(pip_middlename)
     }
     async enterPIPGivenName(pip_surname)
     {
-        await this.txtbox_PIPGivenName.type(pip_surname)
+        await this.txtbox_PIPGivenName.fill(pip_surname)
     }
     async enterPIPFamilyName(pip_firstname)
     {
-        await this.txtbox_PIPFamilyName.type(pip_firstname)
+        await this.txtbox_PIPFamilyName.fill(pip_firstname)
     }
     async selectPIPTitle(pip_title)
     {

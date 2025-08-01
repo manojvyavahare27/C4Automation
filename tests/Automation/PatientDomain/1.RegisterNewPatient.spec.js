@@ -105,7 +105,7 @@ test.describe('New Patient', () => {
 
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
-     // await page.pause();
+      
       await patientsearch.clickOnSearchButton();
       await patientsearch.clickOnAddPatientbutton();
       await patientduplicatecheck.clickOnDuplicateCheckButton();
@@ -275,24 +275,22 @@ test.describe('New Patient', () => {
       await addaddress.clickOnSaveAddress();
       await page.waitForTimeout(500);
       await expect(page.getByText('Patient address added successfully')).toHaveText('Patient address added successfully')
-
+    
       //Add PIP
 
       // await addpip.selectPIPTitle(jsonData.pip[index].pip_title);
       await addpip.enterPIPFamilyName(jsonData.pip[index].pip_surname);
       await addpip.enterPIPGivenName(jsonData.pip[index].pip_firstname);
-      await addpip.enterPIPMiddleName(jsonData.pip[index].pip_middlename);
-      await addpip.selectPIPBornDate(jsonData.pip[index].pip_dob);
-
-      await addpip.selecrPIPEthnicity(jsonData.pip[index].pip_ethnicity_text);
+      await addpip.enterPIPMiddleName(jsonData.pip[index].pip_middlename);      
+      await addpip.selectPIPBornDate(jsonData.pip[index].pip_dob);       
+      await addpip.selecrPIPEthnicity(jsonData.pip[index].pip_ethnicity_text);      
       await addpip.selectPIPOccupation();
       // await addpip.enterPIPMobileNumber(pipdetailsdata.MobileNo);
-      // await addpip.enterPIPEmailId(pipdetailsdata.Email);
+      // await addpip.enterPIPEmailId(pipdetailsdata.Email);     
       await addpip.selectPIPRelation(jsonData.pip[index].pip_relationship);
       await addpip.selectPIPNextOfKin(jsonData.pip[index].pip_next_of_kin_Yes);
-      await addpip.SelectPIPFamilyAwareOfIllness(jsonData.pip[index].pip_family_aware_illness_yes);
-      await addpip.selectPIPIdentifierType(jsonData.pip[index].pip_identifier_type)
-
+      await addpip.SelectPIPFamilyAwareOfIllness(jsonData.pip[index].pip_family_aware_illness_yes);      
+      await addpip.selectPIPIdentifierType(jsonData.pip[index].pip_identifier_type)     
       // await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString())
       if (await addpip.dropdownPIPIdentifierType.isVisible()) {
         await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString());
@@ -358,6 +356,7 @@ test.describe('New Patient', () => {
       await addgp.enterGPMobile(jsonData.gpAddress[index].add_mobile.toString())
       await addgp.enterGPEmail(jsonData.gpAddress[index].add_email)
 
+    
       await addgp.clickOnSaveGPButton();
       await page.waitForTimeout(1000);
       await expect(page.getByText("GP Added Successfully")).toHaveText("GP Added Successfully");

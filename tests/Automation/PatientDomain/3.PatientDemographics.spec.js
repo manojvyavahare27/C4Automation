@@ -93,7 +93,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await loginpage.enter_Password(jsonData.loginDetails[0].password);
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
-         //await page.pause()
+      
         //logger.info("Clicked on Login button successfully");
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnPatientIcon()
@@ -102,7 +102,6 @@ test.describe("Patient Domain Db Comparison", () => {
         await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
         await patientsearch.clickOnSearchButton()
         await page.waitForTimeout(2500)
-
         await patientsearch.clickOnSearchPatientLink()
         await page.waitForTimeout(2500)
         // await patientsearch.ClickOnNoConfirmLegitimateRelationship()
@@ -114,7 +113,6 @@ test.describe("Patient Domain Db Comparison", () => {
 
         await topbluebar.clickOnBannerButtonKeyboardArrow()
         await page.waitForTimeout(2000)
-
         await topbluebar.ClickOnViewAllContactDetails()
 
         //Click On Links
@@ -150,6 +148,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await topbluebar.clickOnBannerButtonKeyboardArrow()
         await topbluebar.ClickOnViewAllContactDetails()
 
+      
 
         //Expands Patient Details on demographics page
         await demogrphics.ClickOnExpandsPatientInformation()
@@ -176,10 +175,11 @@ test.describe("Patient Domain Db Comparison", () => {
         await editpatient.clickOnPatientAddress()
         await editpatient.clickOnPatientDetails()
 
+       
         // await expect(page.getByText('Sex required')).toHaveText('Sex required')
         // await expect(page.getByText('Ethnicity required')).toHaveText('Ethnicity required')
         // await expect(page.getByText('Religion required')).toHaveText('Religion required')
-        // await page.pause()
+       
         await editpatient.selectSexualOrientation(jsonData.editPatient[index].pat_sexual_orientation_eli_text)
         //await editpatient.selectCurrentlyPrgenant(jsonData.editPatient[index].pat_currently_pregnant_yes)
         //await editpatient.selectSexDropdown()
@@ -194,7 +194,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await editpatient.clickOnSaveForPatientDetails()
         // await expect(page.getByText('Patient address added successfully')).toHaveText('Patient address added successfully')
         await editpatient.clickOnPatientPIP()
-        //await page.pause()
+      
         await editpatient.enterIntoSearchGP('Wednesday')
 
         await editpatient.clickOnViewPIPLink()
@@ -205,7 +205,7 @@ test.describe("Patient Domain Db Comparison", () => {
         //await editpatient.clickOnViewforInterestedPartyList()
         await page.waitForTimeout(2000)
         // await editpatient.clickOnAddressPIP()
-        //await page.pause()
+      
         await editpatient.clickOnExportToCSVLink()
         await page.waitForTimeout(1000)
         await editpatient.clickOnExportToExcelLink()
@@ -398,9 +398,7 @@ test.describe("Patient Domain Db Comparison", () => {
           );
         }
 
-        // await menu.clickOnLogout();
-
-        //await page.pause()
+        // await menu.clickOnLogout();      
 
       }
     }); // <-- ✅ This closes test('Pharmacy Register New Patient')
