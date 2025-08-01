@@ -71,7 +71,7 @@ class AddAddress
     async enterNumberAndRoad(add_address1)
     {
         await this.txtbox_numberandroad.fill('')
-        await this.txtbox_numberandroad.type(add_address1)
+        await this.txtbox_numberandroad.fill(add_address1)
         //await this.txtbox_postcode.type(name)
     }
     async enterTownInAddress(add_address3)
@@ -111,23 +111,23 @@ class AddAddress
 
     async enterTempNumberandRoad(add_address1)
     {
-        await this.txtbox_tempNumberandRoad.type(add_address1)
+        await this.txtbox_tempNumberandRoad.fill(add_address1)
     }
     async enterTempTown(add_address3)
     {
-        await this.txtbox_temptown.type(add_address3)
+        await this.txtbox_temptown.fill(add_address3)
     }
     async enterTempDistrict(add_address2)
     {
-        await this.txtbox_tempDistrict.type(add_address2)
+        await this.txtbox_tempDistrict.fill(add_address2)
     }
     async enterTempCounty(add_address4)
     {
-        await this.txtbox_tempCounty.type(add_address4)
+        await this.txtbox_tempCounty.fill(add_address4)
     }
     async enterTempPostcode(add_address5)
     {
-        await this.txtbox_PostCode.type(add_address5)
+        await this.txtbox_PostCode.fill(add_address5)
     }
 
    async selectTempCountry()
@@ -137,20 +137,20 @@ class AddAddress
    }
     async enterTempISOCountryCode(add_iso_country_code)
     {
-        await this.txtbox_tempISOCountryCode.type(add_iso_country_code)
+        await this.txtbox_tempISOCountryCode.fill(add_iso_country_code)
     }
     async enterTempICAOCountryCode(add_icao_country_code)
     {
-        await this.txtbox_tempICAOCountryCode.type(add_icao_country_code)
+        await this.txtbox_tempICAOCountryCode.fill(add_icao_country_code)
     }
     async enterTempPhone(add_phone)
     {
-        await this.txtbox_tempPhone.type(add_phone)
+        await this.txtbox_tempPhone.fill(add_phone)
     }
 
     async enterTempEmail(add_email)
     {
-        await this.txtbox_tempEmail.type(add_email)
+        await this.txtbox_tempEmail.fill(add_email)
     }
     
     async enterTempMobileNumber(add_mobile)
@@ -159,11 +159,11 @@ class AddAddress
     }
     async enterTempWorkPhone(add_work_phone)
     {
-        await this.txtbox_tempWorkPhone.type(add_work_phone)
+        await this.txtbox_tempWorkPhone.fill(add_work_phone)
     }
     async enterTempFax(add_fax)
     {
-        await this.txtbox_tempFax.type(add_fax)
+        await this.txtbox_tempFax.fill(add_fax)
     }
     async selectTempHealthRegion()
     {
@@ -192,11 +192,11 @@ class AddAddress
     //Permanent Address functions
     async enterPermISOCountryCode(add_isocountycode)
     {
-        await this.txtbox_permISOCountryCode.type(add_isocountycode)
+        await this.txtbox_permISOCountryCode.fill(add_isocountycode)
     }
     async enterPermICAOCode(add_icaocode)
     { 
-        await this.txtbox_permICAOCountryCode.type(add_icaocode)
+        await this.txtbox_permICAOCountryCode.fill(add_icaocode)
     }
     async selectCountry()
     {
@@ -210,20 +210,20 @@ class AddAddress
     async enterPermEmail(add_email)
     {
         await this.txtbox_permEmail.fill('')
-        await this.txtbox_permEmail.type(add_email)
+        await this.txtbox_permEmail.fill(add_email)
     }
     async enterPerMobileNumber(add_mobile)
     {
         await this.txtbox_PerMobileNumber.fill('')
-        await this.txtbox_PerMobileNumber.type(add_mobile)
+        await this.txtbox_PerMobileNumber.fill(add_mobile)
     }
     async enterPermWorkPhone(add_permworkphone)
     {
-        await this.txtbox_permWorkPhone.type(add_permworkphone)
+        await this.txtbox_permWorkPhone.fill(add_permworkphone)
     }
     async enterPermFax(add_fax)
     {
-        await this.txtbox_permFax.type(add_fax)
+        await this.txtbox_permFax.fill(add_fax)
     }
     async selectPermHealthRegion()
     {
@@ -241,7 +241,7 @@ class AddAddress
     }
     async enterPermAddresNotes(add_notes)
     {
-        await this.txtbox_PermAddressNotes.type(add_notes)
+        await this.txtbox_PermAddressNotes.fill(add_notes)
         await this.page.getByTestId('CommonCellmaPopup').getByTestId('Save').click()
     }
     async closePermAddressNotesPopup()
