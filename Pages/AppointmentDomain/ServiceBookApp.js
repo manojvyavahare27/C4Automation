@@ -61,7 +61,7 @@ class ServiceBookApp {
     this.slowMonth = page.getByTestId("month");
     this.slotAvailableSlot = page.getByTestId("availableSlots");
     //this.bntNext = page.getByTestId("Next");
-    this.bntNext=page.locator("xpath=//div[contains(text(),'Next')]")
+    this.bntNext=page.locator("xpath=//button[@data-testid='Next']")
 
     this.btncancel = page.getByTestId("Cancel");
     this.btnslot830 = page.getByTestId("08:15 AM");

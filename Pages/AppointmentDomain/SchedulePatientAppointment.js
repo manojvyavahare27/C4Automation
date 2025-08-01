@@ -10,13 +10,14 @@ class ServiceBookApp
         this.closePopup=page.getByLabel('cancelIcon')
 
         //Links
-        this.linksLink=page.getByTestId('Links')
-        this.linkAddAppointment=page.getByRole('heading', { name: 'Add Appointment' })
-        this.linkAddProvisionalAppointment=page.getByRole('heading', { name: 'Add Provisional Appointment' })
-        this.linkAssessment=page.getByRole('heading', { name: 'Assessment' })
-        this.linkReSchedule=page.getByTestId('Rescheduled')
+        this.linksLink=page.locator("xpath=//button[@data-testid='links']")
+        this.linkAddAppointment=page.locator("xpath=//li[@data-testid='addAppointmentLink']")
+        this.linkAddProvisionalAppointment=page.locator("xpath=//li[@data-testid='addProvisionalAppointmentLink']")
+        this.linkAssessment=page.locator("xpath=//li[@data-testid='assessmentLink']")
+        this.linkReSchedule=page.locator("xpath=//li[@data-testid='scheduleLink']")
+        this.buttonRescheduleApp=page.locator("xpath=//button[@data-testid='Rescheduled']")
         this.dropdownReasonforRescheduling=page.getByLabel('Open')
-        this.buttonSaveReschedulingStatus=page.getByTestId('Save')
+        this.buttonSaveReschedulingStatus=page.locator("xpath=//button[@data-testid='saveAppointmentStatus']")
         this.buttonCancelReschedulingConfirmation=page.getByRole('button', { name: 'Cancel', exact: true })
         this.buttonProceedReschedulingConfirmation=page.getByTestId('Proceed')
         this.linkAttended=page.getByTestId('attended')
@@ -34,19 +35,19 @@ class ServiceBookApp
         this.linkWaitNotSeen=page.getByRole('heading', { name: 'Waited Not Seen' })  
         
         //Change Appointment Type:
-        this.linkAppType=page.locator("xpath=//span[contains(text(),'New')]")
+        this.linkAppType=page.locator("xpath=//a[text()='New']")
         this.btncloseAppTypePopup=page.getByLabel('cancelIcon')
         this.dropdownAppType=page.getByLabel('Open')
         this.btnChange=page.getByTestId('Change')
 
         //Change Appointment Status
-        this.linkAppStautsSchedule=page.getByTestId('Status')
+        this.linkAppStautsSchedule=page.locator("xpath=//a[@data-testid='Status']")
 
         //Click On Date
         this.Datelink=page.getByTestId('Date')
         this.btnCancel=page.getByTestId('Cancel')
         this.dropdownAppCalcelReason=page.getByLabel('Please enter reason for appointment cancellation *')
-        this.btnSaveCancelApp=page.getByTestId('Save')
+        this.btnSaveCancelApp=page.locator("xpath=//button[@data-testid='saveAppointmentStatus']")
 
         //change Status
         this.btnWaiting=page.getByTestId('Waiting') 
@@ -97,6 +98,12 @@ class ServiceBookApp
     async clickOnReScheduleAppButton()
     {
         await this.linkReSchedule.click()
+    }
+
+    async clickonRescheduleAppButton()
+    {
+        await this.buttonRescheduleApp.click()
+
     }
     async selectDropdownReasonForRescheduling()
     {

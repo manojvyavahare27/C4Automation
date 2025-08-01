@@ -197,7 +197,7 @@ test.describe("Medications Category", () => {
        await backtoStock.clickOnSavebutton()       
        await expect(page.getByText("Items returned successfully")).toHaveText("Items returned successfully");
        await page.waitForTimeout(2000)
-      await addStockItems.clickOnLogout(page)   
+         
 
     }
   });

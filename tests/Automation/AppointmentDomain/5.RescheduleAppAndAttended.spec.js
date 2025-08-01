@@ -109,7 +109,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);
         await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
         await patientsearch.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref);  
-
+        await page.pause()
         //await patientsearch.selectBornDate()
         await patientsearch.clickOnSearchPatButton()
         await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
@@ -144,7 +144,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await addreferral.selectPatientcare()
         await addreferral.selectPreferredSexForAssessment(jsonData.AddReferral[index].ref_preferred_examiner_sex_entry)
         await addreferral.selectConsultant()
-        
+      
         await addreferral.selectMethodOfArrival(jsonData.AddReferral[index].ref_method_of_arrival.toString())
         await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString())
         await addreferral.clickOnSaveButton()
@@ -181,7 +181,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //await servicebookapp.clickOnNextButton()
         await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
-        
+        await page.pause()
         //Communication Consent
         await servicebookapp.selectCommConsentNo()
         await servicebookapp.clikcOnRadioAllNo()
@@ -260,7 +260,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //  await servicebookapp.selectAvailableSlots()     
         //  await servicebookapp.clickOnNextButton()    
         
-        
+        await page.pause()
         await servicebookapp.clickOnNextButton()
         
         await servicebookapp.selectAppDetailsAppointmentType(jsonData.rescheduleAppointments[index].reaType)
@@ -334,7 +334,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
                 
 
         //change Appoitntment Type
-
+  await page.pause()
         await scheduleserviceapp.ClickonAppTypeLink()
         await scheduleserviceapp.clickOnCloseAppTypePopup()
         await scheduleserviceapp.ClickonAppTypeLink()
@@ -365,7 +365,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
           );
         }
 
-
+  await page.pause()
         //Click On Date Link
         await scheduleserviceapp.clickOnDateLink()
         await adeditpatientappointment.clickOnBackButton()
@@ -377,16 +377,18 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
 
 
     //Change status to Reschedule Appointment
-    
+      await page.pause()
+       await page.pause()
+    await page.pause()
     await scheduleserviceapp.clickOnAppScheduleStatus()
-    await scheduleserviceapp.clickOnReScheduleAppButton()
+    await scheduleserviceapp.clickonRescheduleAppButton()
     await scheduleserviceapp.selectDropdownReasonForRescheduling()
     await scheduleserviceapp.clickOnSaveReschedulingReason()
     await scheduleserviceapp.clickOnCancelReschedulingConfirmation()
     await scheduleserviceapp.clickOnSaveReschedulingReason()
     await scheduleserviceapp.clickOnPreceedReschedulingConfirmation()
 
-
+   
     //Rescheduled New Appointment.
     
         await servicebookapp.RescheduleSelectDate(jsonData.rescheduleAppointments[index].rea_date)
@@ -408,6 +410,8 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
            await page.getByTestId('Ok').click()
         }
 
+        await page.pause()
+        await page.pause()
         await servicebookapp.selectAppDetailsAppointmentType(jsonData.rescheduleAppointments[index].reaType)    
         await servicebookapp.selectAppDetailsAppReason(jsonData.rescheduleAppointments[index].rea_review_reason)
         await servicebookapp.selectSendAppTextEmail()
@@ -417,6 +421,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.enterNotes(jsonData.rescheduleAppointments[index].rea_notes)
         await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
+        await page.pause()
         //Communication Consent
         await servicebookapp.selectCommConsentNo()
         await servicebookapp.clikcOnRadioAllNo()
@@ -451,6 +456,9 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         );
       }
 
+      await page.pause()
+
+      await page.pause()
         //SchedulePatientAppointment Page. Links
         // await scheduleserviceapp.clickOnLinksMenu()
         // await scheduleserviceapp.clickOnAddAppointmentLink()
@@ -518,6 +526,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
     //      //Atteded Appointment
     //     await scheduleserviceapp.clickOnAppScheduleStatus()
     
+    await page.pause()
     //Cancel Appointment
         await scheduleserviceapp.clickOnAppScheduleStatus()
         await scheduleserviceapp.clickOnCancelButton()

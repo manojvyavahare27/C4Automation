@@ -88,12 +88,15 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.clickSearchButton()
 
 
+   
     //Add New Medication
     await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
     await stockItemsFliters.clickSearchButton()
+ 
     await page.waitForTimeout(1000)
     await addStockItems.clickOnExpandsDefaultPharmacy()   
     await stockallLoc.clickOnTransferLink()
+   
     //await addStockItems.clickOnStockBatchLink(page,jsonData.AddNewStock[0].stbat_batch_number)
     await stockTransferPopUp.selectLocationToTransferTo()
     await stockTransferPopUp.enterQuantityToTransfer('45')
@@ -119,7 +122,6 @@ test.describe("Database Comparison Add New Referral", () => {
     } else {
       console.log("\n Add New Stock Comparision: Parameters from both JSON files do not match!\n");
     }
-
 
 
 
@@ -154,7 +156,6 @@ test.describe("Database Comparison Add New Referral", () => {
     }
 
 
-
     await stockTransferPage.enterPickedQuantity()
     await stockTransferPage.clickOnCreatePickListButton()
     await processPickListPopup.clickOncloseIcon()
@@ -181,6 +182,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(1000)
     await stockTransferPage.clickOnOkbutton()
     await page.waitForTimeout(2000)
+
     //await expect(page.getByText('Only items with transferred status will be dispatched.')).toHaveText('Only items with transferred status will be dispatched.')
     await stockTransferPage.clickOnSaveButton()   
     //await stockTransferPage.clickOnOkbutton()
@@ -240,7 +242,7 @@ test.describe("Database Comparison Add New Referral", () => {
     //await stocksidebar.clickOnManageStockTab()
 
     //check approved Status
-      
+    
     //Check approved status after click receive item into another location
 
      var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
