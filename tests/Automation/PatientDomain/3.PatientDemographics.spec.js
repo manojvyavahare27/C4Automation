@@ -93,7 +93,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await loginpage.enter_Password(jsonData.loginDetails[0].password);
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
-      
+        
         //logger.info("Clicked on Login button successfully");
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnPatientIcon()

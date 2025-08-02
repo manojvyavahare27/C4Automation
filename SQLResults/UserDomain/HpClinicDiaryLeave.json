@@ -1,8 +1,8 @@
 [
   {
-    "hcd_id": 1336,
-    "hcd_esp_id": 2283,
-    "hcd_hpd_id": 1572,
+    "hcd_id": 1368,
+    "hcd_esp_id": 2312,
+    "hcd_hpd_id": 1604,
     "hcd_est_id": 4,
     "hcd_cli_id": 84,
     "hcd_start_date": "15/06/2025",
@@ -17,7 +17,7 @@
     "hcd_friday": 1,
     "hcd_saturday": 1,
     "hcd_sunday": 1,
-    "hcd_created": "22/07/2025",
+    "hcd_created": "01/08/2025",
     "hcd_created_by": "manoj.auto",
     "hcd_updated": null,
     "hcd_updated_by": null,

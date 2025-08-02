@@ -86,7 +86,7 @@ test.describe("Patient Domain Db COmparison", () => {
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
     await patientsearch.clickOnSearchButton();
     await patientsearch.clickOnSearchPatientLink(); 
-    await page.pause() 
+    //await page.pause() 
     await page.waitForTimeout(1500);
     await confirmexisting.selectRelationship(jsonData.pip[index].pip_relationship);
     await page.waitForTimeout(2000);   
@@ -114,7 +114,7 @@ test.describe("Patient Domain Db COmparison", () => {
       jsonData.AddReferral[index].ref_clinic_type.toString()
     );
    // 
-   await page.pause()
+  
     await addreferral.selectClinicLocation(jsonData.AddReferral[index].ref_clinic_location);
     await addreferral.selectTeam(jsonData.AddReferral[index].ref_region_eli_text.toString());
     await addreferral.selectPatientcare();
