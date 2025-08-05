@@ -94,8 +94,9 @@ test.describe("Patient Domain Db Comparison", () => {
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
         
+        
         //logger.info("Clicked on Login button successfully");
-        await homepage.clickonSidebarHomeIcon()
+       // await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnPatientIcon()
         await patientsearch.clickOnSearchButton()
         await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
