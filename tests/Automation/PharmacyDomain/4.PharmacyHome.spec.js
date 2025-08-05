@@ -211,7 +211,7 @@ test.describe("Medications Category", () => {
       // await pharmacyHomePage.selectCheckBoxforPrescription()
       // await pharmacyHomePage.clickOncreatePrescription()
       await page.waitForTimeout(1000);
-      await page.pause()
+      //await page.pause()
      // await pharmacyHomePage.clickOnitemWithPrescriptionLink()
       await pharmacyHomePage.clickOnitemsOnlyLink()
       await pharmacyHomePage.clickOncancelledPrescriptionLink()
@@ -219,14 +219,14 @@ test.describe("Medications Category", () => {
       await pharmacyHomePage.clickOnitemNotOnPrescriptionLink()
       await pharmacyHomePage.clickOnitemWithPrescriptionLink()
       await pharmacyHomePage.clickonExpandButton()      
-       await page.pause()     
+       //await page.pause()     
       //await pharmacyHomePage.clickOnAwaitingProductionLink()
       //await pharmacyHomePage.clickAwaitingProduction()
       
        await pharmacyHomePage.clickExpandIcon()
        await pharmacyHomePage.enterDispenseQty()
        await pharmacyHomePage.clickOnDispenseButton()
-       await page.pause()
+      // await page.pause()
       await page.getByRole('button', { name: 'Save' }).click()
       //await pharmacyHomePage.clickOnSaveButton()
       await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
@@ -247,7 +247,7 @@ test.describe("Medications Category", () => {
       // //await pharmacyHomePage.clickOnSaveButton()
 
       // await expect(page.getByText("Prescription updated successfully")).toHaveText("Prescription updated successfully");
-      await page.pause()
+      //await page.pause()
       await page.waitForTimeout(1000)
       await pharmacyHomePage.clickOnProducedLink()
       await page.waitForTimeout(1000)
@@ -261,7 +261,7 @@ test.describe("Medications Category", () => {
       // await pharmacyHomePage.ClickOnSearchButton()
       //  await page.waitForTimeout(1000)
       //  await pharmacyHomePage.clickonShowStatusLink()
-      await page.pause()
+     // await page.pause()
        await pharmacyHomePage.clickExpandIcon()
        await page.waitForTimeout(1000)
        await pharmacyHomePage.clickOnBackToStockButton()

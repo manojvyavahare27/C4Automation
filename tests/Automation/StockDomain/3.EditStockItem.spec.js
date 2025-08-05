@@ -163,7 +163,6 @@ test.describe("Database Comparison Add New Referral", () => {
         } else {
           console.log("\n Add New Stock Comparision: Parameters from both JSON files do not match!\n");
         }
-
    
    await addStockItems.clickOnLogout(page)
    //await addStockItems.enterPurchaseRate('5.00')
