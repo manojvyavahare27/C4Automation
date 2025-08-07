@@ -27,8 +27,6 @@ import PharmacySidebars from "../../../Pages/PharmacyDomain/PharmacySidebar";
 import BackToStock from "../../../Pages/PharmacyDomain/BackToStock";
 
 
-
-
 import { TIMEOUT } from "dns";
 import { error } from "console";
 import { before } from "node:test";

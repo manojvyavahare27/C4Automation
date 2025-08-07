@@ -114,9 +114,7 @@ test.describe('New Patient', () => {
       await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
 
      //  await page.pause()
-      await patientduplicatecheck.selectUniqueIdentification();
-      //await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId)
-      //await patientduplicatecheck.enterUniqueIdentificationId(jsonData.patientIdentifier[index].pid_value1.toString());
+      await patientduplicatecheck.selectUniqueIdentification();      
       await patientduplicatecheck.selectPhotoIdentification();
       await patientduplicatecheck.enterPhotoIdentification(jsonData.patientIdentifier[index].pid_value2.toString());
       await patientduplicatecheck.selectIssuingCountry(jsonData.patientIdentifier[index].pat_country);
@@ -132,10 +130,7 @@ test.describe('New Patient', () => {
         selectedDate.getMonth(),
         selectedDate.getDate()
       );
-      const currentDate = new Date();
-      // Format the date into DD/MM/YYYY
-      //const currentDate = `${currentDate.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
-
+      const currentDate = new Date();      
       const currentDateOnly = new Date(
         currentDate.getFullYear(),
         currentDate.getMonth(),
@@ -144,12 +139,10 @@ test.describe('New Patient', () => {
       const differenceInMs = currentDateOnly - selectedDateOnly;
       const differenceInDays = differenceInMs / (1000 * 60 * 60 * 24);
       console.log(differenceInDays);
-      // await page.pause()
+     
       // Check if the difference is less than 5 days
       if (differenceInDays < 5) {
-        // await expect(page.getByText('Baby born in this hospital required')).toHaveText('Baby born in this hospital required')
-        // console.log("Date is less than 5 days from current date");
-        // await patientduplicatecheck.selectIsBabyBornInHospital()
+        
       } else {
         console.log("Date is not less than 5 days from current date");
       }
@@ -237,28 +230,16 @@ test.describe('New Patient', () => {
       // await addaddress.enterCountryonPopup(jsonData.permanentAddress[index].add_address6.toString());
       await addaddress.clickOnSaveButtonOnPopup();
 
-      await addaddress.enterTempISOCountryCode(
-        jsonData.tempAddress[index].add_iso_country_code.toString()
-      );
-      await addaddress.enterTempICAOCountryCode(
-        jsonData.tempAddress[index].add_icao_country_code.toString()
-      );
+      await addaddress.enterTempISOCountryCode(jsonData.tempAddress[index].add_iso_country_code.toString());
+      await addaddress.enterTempICAOCountryCode(jsonData.tempAddress[index].add_icao_country_code.toString());
 
 
-      await addaddress.enterTempPhone(
-        jsonData.tempAddress[index].add_phone.toString()
-      );
+      await addaddress.enterTempPhone(jsonData.tempAddress[index].add_phone.toString());
       await addaddress.enterTempEmail(jsonData.tempAddress[index].add_email);
-      await addaddress.enterTempMobileNumber(
-        jsonData.tempAddress[index].add_mobile.toString()
-      );
+      await addaddress.enterTempMobileNumber(jsonData.tempAddress[index].add_mobile.toString());
 
-      await addaddress.enterTempWorkPhone(
-        jsonData.tempAddress[index].add_work_phone.toString()
-      );
-      await addaddress.enterTempFax(
-        jsonData.tempAddress[index].add_fax.toString()
-      );
+      await addaddress.enterTempWorkPhone(jsonData.tempAddress[index].add_work_phone.toString());
+      await addaddress.enterTempFax(jsonData.tempAddress[index].add_fax.toString());
       await addaddress.selectTempHealthRegion();
       await addaddress.selectTempLocationZone();
       await addaddress.clickOnTempAddressAddViewBnt();
@@ -285,13 +266,12 @@ test.describe('New Patient', () => {
       await addpip.selectPIPBornDate(jsonData.pip[index].pip_dob);       
       await addpip.selecrPIPEthnicity(jsonData.pip[index].pip_ethnicity_text);      
       await addpip.selectPIPOccupation();
-      // await addpip.enterPIPMobileNumber(pipdetailsdata.MobileNo);
-      // await addpip.enterPIPEmailId(pipdetailsdata.Email);     
+        
       await addpip.selectPIPRelation(jsonData.pip[index].pip_relationship);
       await addpip.selectPIPNextOfKin(jsonData.pip[index].pip_next_of_kin_Yes);
       await addpip.SelectPIPFamilyAwareOfIllness(jsonData.pip[index].pip_family_aware_illness_yes);      
       await addpip.selectPIPIdentifierType(jsonData.pip[index].pip_identifier_type)     
-      // await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString())
+      
       if (await addpip.dropdownPIPIdentifierType.isVisible()) {
         await addpip.enterPIPIdentifier(jsonData.pip[index].pip_identifier_number.toString());
       } else if (await addpip.chiNumber.isVisible()) {
@@ -299,7 +279,7 @@ test.describe('New Patient', () => {
       } else {
         throw new Error('Neither PIP Identifier dropdown nor CHI Number field is visible on the screen.');
       }
-      // await addpip.enterExternalProfessional(pipdetailsdata.ExternalProfessional);
+      
 
       await addpip.enterProfessionalTitle(jsonData.pip[index].pip_professional_title);
       await addpip.selectPIPReceivePatientLetter(jsonData.pip[index].pip_receive_patient_letter_no);
@@ -313,9 +293,9 @@ test.describe('New Patient', () => {
       await addpip.checkBeingPhotographed();
       await addpip.checkGeneralPublicity();
       await addpip.ClickOnSavePIP();
-      //await page.pause()
+      
       await page.waitForTimeout(1000);
-      //await expect(page.getByText("Patient interested party details added successfully")).toHaveText("Patient interested party details added successfully");
+      await expect(page.getByText("Patient interested party details added successfully")).toHaveText("Patient interested party details added successfully");
 
       //View PIP
 
@@ -349,34 +329,22 @@ test.describe('New Patient', () => {
       await addgp.enterGpAddressTown(jsonData.gpAddress[index].add_address2)
       await addgp.enterGpAddressCounty(jsonData.gpAddress[index].add_address4)
       await addgp.enterGPAddressPostCode(jsonData.gpAddress[index].add_address5)
-
       await addgp.enterGPPhone(jsonData.gpAddress[index].add_phone.toString())
       await addgp.enterGPFax(jsonData.gpAddress[index].add_fax.toString())
       await addgp.enterGPWorkPhone(jsonData.gpAddress[index].add_work_phone.toString())
       await addgp.enterGPMobile(jsonData.gpAddress[index].add_mobile.toString())
-      await addgp.enterGPEmail(jsonData.gpAddress[index].add_email)
-
-    
+      await addgp.enterGPEmail(jsonData.gpAddress[index].add_email)    
       await addgp.clickOnSaveGPButton();
       await page.waitForTimeout(1000);
       await expect(page.getByText("GP Added Successfully")).toHaveText("GP Added Successfully");
 
       await addgp.enterAppGpSearch(jsonData.SPaddGP[index].egp_fullname);
       // Add GP To Patient
-      await addgp.clickOnPersonAddButton();
-      // await page.getByTestId('Save').click()
+      await addgp.clickOnPersonAddButton();      
       await addgp.clickOnNextButtonOnSearchGp();
       await page.waitForTimeout(3000);
 
-
-      // Print Id Card               
-      //const fileInput = await page.$("input[type=file]");
-    //   const fileInput = page.getByTestId('PhotoCameraIcon');
-    //   // const filePath = "../Cellma4Automation/UploadPics/Patient.png";
-    //   const filePath = "../Manoj Vyavahare/UploadPics/Patient.png";
-    //   console.log("File path is: "+filePath);      
-    //  await fileInput.setInputFiles(filePath, fileInput);
-
+     
 
     /////////////////////////////
     /**
