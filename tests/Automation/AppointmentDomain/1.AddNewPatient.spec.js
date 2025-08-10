@@ -280,7 +280,7 @@ test.describe('New Patient', () => {
       
       await addaddress.clickOnSaveAddress();
       await page.waitForTimeout(1000);
-      //await expect(page.getByText("Patient address added successfully")).toHaveText("Patient address added successfully");
+      await expect(page.getByText("Patient address added successfully")).toHaveText("Patient address added successfully");
 
       //Add PIP
       
@@ -323,6 +323,7 @@ test.describe('New Patient', () => {
       await addpip.checkGeneralPublicity();
       await addpip.ClickOnSavePIP();
       await page.waitForTimeout(1000);
+      await expect(page.getByText('Patient interested parties details added successfully')).toHaveText('Patient interested parties details added successfully')
       
 
       //View PIP

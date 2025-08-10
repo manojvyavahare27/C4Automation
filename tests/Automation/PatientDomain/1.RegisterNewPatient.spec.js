@@ -254,9 +254,11 @@ test.describe('New Patient', () => {
       await addaddress.SelectStartEndDate();
 
       await addaddress.clickOnSaveAddress();
-      await page.waitForTimeout(500);
+      await page.waitForTimeout(1000);
+      
       await expect(page.getByText('Patient address added successfully')).toHaveText('Patient address added successfully')
     
+      await page.pause()
       //Add PIP
 
       // await addpip.selectPIPTitle(jsonData.pip[index].pip_title);
@@ -294,9 +296,12 @@ test.describe('New Patient', () => {
       await addpip.checkGeneralPublicity();
       await addpip.ClickOnSavePIP();
       
-      await page.waitForTimeout(1000);
-      await expect(page.getByText("Patient interested party details added successfully")).toHaveText("Patient interested party details added successfully");
+      await page.waitForTimeout(500);
 
+      
+      await expect(page.getByText('Patient interested parties details added successfully')).toHaveText('Patient interested parties details added successfully')
+      //await expect(page.getByText("Patient interested party details added successfully")).toHaveText("Patient interested party details added successfully");
+await page.pause()
       //View PIP
 
       await viewpip.clickOnViewPIPLink();
