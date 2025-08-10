@@ -128,12 +128,6 @@ test.describe("Patient Domain Db COmparison", () => {
 
     await expect(page.getByText("Referral added successfully")).toHaveText("Referral added successfully");
     
-
-    
-    // await page.pause()
-    //Again select same patient.
-    //await menu.clickOnMenubtn()
-    //await menu.clickOnFindPatientlink()
     await homepage.clickOnHomePageIcon();
     await homepage.clickOnPatientIcon();
     //await patientsearch.clickOnSearchButton()
