@@ -258,7 +258,7 @@ test.describe('New Patient', () => {
       
       await expect(page.getByText('Patient address added successfully')).toHaveText('Patient address added successfully')
     
-      await page.pause()
+    
       //Add PIP
 
       // await addpip.selectPIPTitle(jsonData.pip[index].pip_title);
@@ -301,7 +301,7 @@ test.describe('New Patient', () => {
       
       await expect(page.getByText('Patient interested parties details added successfully')).toHaveText('Patient interested parties details added successfully')
       //await expect(page.getByText("Patient interested party details added successfully")).toHaveText("Patient interested party details added successfully");
-await page.pause()
+
       //View PIP
 
       await viewpip.clickOnViewPIPLink();
