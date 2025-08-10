@@ -76,6 +76,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await page.waitForTimeout(1500);
         await loginpage.clickOnLogin()
         await expect(page.getByText('Login success')).toHaveText('Login success')
+       
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnSidebarAppointmentIcon()     
         await patientsearch.clickonBackButton()
