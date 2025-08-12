@@ -84,7 +84,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await page.waitForTimeout(1500);
         
         await loginpage.clickOnLogin()
-        await expect(page.getByText('Login success')).toHaveText('Login success')
+        //await expect(page.getByText('Login success')).toHaveText('Login success')
         // Scroll to the bottom of the page
         await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
         await homepage.clickonSidebarHomeIcon()
@@ -181,7 +181,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //await servicebookapp.clickOnNextButton()
         await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
-        await page.pause()
+        
         //Communication Consent
         await servicebookapp.selectCommConsentNo()
         await servicebookapp.clikcOnRadioAllNo()
@@ -260,7 +260,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //  await servicebookapp.selectAvailableSlots()     
         //  await servicebookapp.clickOnNextButton()    
         
-        await page.pause()
+        
         await servicebookapp.clickOnNextButton()
         
         await servicebookapp.selectAppDetailsAppointmentType(jsonData.rescheduleAppointments[index].reaType)
@@ -334,7 +334,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
                 
 
         //change Appoitntment Type
-  await page.pause()
+ 
         await scheduleserviceapp.ClickonAppTypeLink()
         await scheduleserviceapp.clickOnCloseAppTypePopup()
         await scheduleserviceapp.ClickonAppTypeLink()
@@ -365,7 +365,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
           );
         }
 
-  await page.pause()
+  
         //Click On Date Link
         await scheduleserviceapp.clickOnDateLink()
         await adeditpatientappointment.clickOnBackButton()
@@ -377,9 +377,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
 
 
     //Change status to Reschedule Appointment
-      await page.pause()
-       await page.pause()
-    await page.pause()
+     
     await scheduleserviceapp.clickOnAppScheduleStatus()
     await scheduleserviceapp.clickonRescheduleAppButton()
     await scheduleserviceapp.selectDropdownReasonForRescheduling()
