@@ -408,8 +408,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
            await page.getByTestId('Ok').click()
         }
 
-        await page.pause()
-        await page.pause()
+        
         await servicebookapp.selectAppDetailsAppointmentType(jsonData.rescheduleAppointments[index].reaType)    
         await servicebookapp.selectAppDetailsAppReason(jsonData.rescheduleAppointments[index].rea_review_reason)
         await servicebookapp.selectSendAppTextEmail()
@@ -419,7 +418,6 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.enterNotes(jsonData.rescheduleAppointments[index].rea_notes)
         await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
-        await page.pause()
         //Communication Consent
         await servicebookapp.selectCommConsentNo()
         await servicebookapp.clikcOnRadioAllNo()
