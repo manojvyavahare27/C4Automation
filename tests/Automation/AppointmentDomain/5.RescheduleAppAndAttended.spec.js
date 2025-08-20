@@ -452,9 +452,6 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         );
       }
 
-      await page.pause()
-
-      await page.pause()
         //SchedulePatientAppointment Page. Links
         // await scheduleserviceapp.clickOnLinksMenu()
         // await scheduleserviceapp.clickOnAddAppointmentLink()
@@ -522,7 +519,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
     //      //Atteded Appointment
     //     await scheduleserviceapp.clickOnAppScheduleStatus()
     
-    await page.pause()
+    
     //Cancel Appointment
         await scheduleserviceapp.clickOnAppScheduleStatus()
         await scheduleserviceapp.clickOnCancelButton()
