@@ -190,7 +190,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
          
-          await page.pause()
+          // await page.pause()
           // 3rd July code
           await scheduleserviceapp.clickOnLinksMenu()
           await scheduleserviceapp.clickOnAddAppointmentLink()
