@@ -109,7 +109,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);
         await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
         await patientsearch.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref);  
-        await page.pause()
+        //await page.pause()
         //await patientsearch.selectBornDate()
         await patientsearch.clickOnSearchPatButton()
         await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
