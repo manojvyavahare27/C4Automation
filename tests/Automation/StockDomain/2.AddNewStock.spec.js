@@ -66,7 +66,7 @@ test.describe("Database Comparison Add New Referral", () => {
    
 
    // Stock items filters
-   await page.pause()
+   //await page.pause()
    await stockItemsFliters.selectLocation('Default Pharmacy')
    await stockItemsFliters.selectCategory(jsonData.AddNewStock[0].stock_category)
    await stockItemsFliters.selectFilter('All Stock')
