@@ -155,7 +155,8 @@ class AddUserWizard {
         await this.page.getByRole('combobox').click()
         await this.page.getByRole('option', { name: 'Lab Authoriser', exact: true }).getByRole('checkbox').check()
         //await this.page.getByRole('option', { name: 'Admin', exact: true }).getByRole('checkbox').check()
-        await this.page.locator('#menu- > .MuiBackdrop-root').click()
+        //await this.page.locator('#menu- > .MuiBackdrop-root').click()
+        await page.keyboard.press('Escape');
         await this.page.getByTestId('CommonCellmaPopup').getByTestId('Add').click()
     }
 
