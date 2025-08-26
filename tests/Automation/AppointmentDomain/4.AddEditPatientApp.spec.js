@@ -391,6 +391,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         );
       }
       //Edit Patient App.
+      await page.pause()
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(8000);
       await addeditpatientappointment.selectAppointmentDuration(jsonData.addEditAppointments[index].rea_duration);

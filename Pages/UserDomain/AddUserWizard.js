@@ -151,7 +151,7 @@ class AddUserWizard {
     async clickOnAddLink() {
         await this.link_UserGroupAdd.click()
     }
-    async addUserGroup() {
+    async addUserGroup(page) {
         await this.page.getByRole('combobox').click()
         await this.page.getByRole('option', { name: 'Lab Authoriser', exact: true }).getByRole('checkbox').check()
         //await this.page.getByRole('option', { name: 'Admin', exact: true }).getByRole('checkbox').check()
