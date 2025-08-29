@@ -335,6 +335,7 @@ test.describe('New Patient', () => {
 
       //Search GP
       await addgp.clickOnSearchGPBtn();
+      await page.pause()
       await addgp.enterGpSearch();
       await page.waitForTimeout(1000);
       

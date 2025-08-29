@@ -311,6 +311,7 @@ test.describe('New Patient', () => {
       //Search GP      
       await addgp.clickOnSearchGPBtn();
       await expect(page.getByText("Local GP found")).toHaveText("Local GP found");
+      await page.pause()
       await addgp.enterGpSearch();
       await addgp.clickOnAddGPBtn();
 
