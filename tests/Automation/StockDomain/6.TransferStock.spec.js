@@ -123,10 +123,6 @@ test.describe("Database Comparison Add New Referral", () => {
       console.log("\n Add New Stock Comparision: Parameters from both JSON files do not match!\n");
     }
 
-
-
-
-
     await stocksidebar.clickOnManageStockTab()
     await stocksidebar.clickOnTransferLink()
 

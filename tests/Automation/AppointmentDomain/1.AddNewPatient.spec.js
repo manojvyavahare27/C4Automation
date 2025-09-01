@@ -437,6 +437,7 @@ test.describe('New Patient', () => {
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
 
+      await page.pause()
       //////// Patient Detail comparison/////////
       var sqlQuery =
         "select * from patients where pat_hospital_ref= '" +
