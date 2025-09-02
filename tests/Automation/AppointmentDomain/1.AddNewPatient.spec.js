@@ -510,11 +510,7 @@ test.describe('New Patient', () => {
       results = await executeQuery(sqlQuery, sqlFilePath);
 
       match = 0;
-      match = await compareJsons(
-        sqlFilePath,
-        null,
-        jsonData.permanentAddress[index]
-      );
+      match = await compareJsons(sqlFilePath, null, jsonData.permanentAddress[index]);
       if (match) {
         console.log(
           "\n Patient Permanent Address Details Comparision: Parameters from both JSON files match!\n"
@@ -526,10 +522,7 @@ test.describe('New Patient', () => {
       }
 
       //////// Temporary Address Detail comparison/////////
-      sqlQuery =
-        "select * from addresses where add_pat_id=" +
-        patId +
-        " and add_temp_permanent='T' order by 1 desc limit 1;";
+      sqlQuery = "select * from addresses where add_pat_id=" +  patId + " and add_temp_permanent='T' order by 1 desc limit 1;";
       sqlFilePath = "SQLResults/AppointmentDomain/patientTempAddressData.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
       //console.log("\n Address Details stored into the database: \n", results);
