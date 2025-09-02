@@ -150,7 +150,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await topbluebar.ClickOnViewAllContactDetails()
 
       
-
+  await page.pause()
         //Expands Patient Details on demographics page
         await demogrphics.ClickOnExpandsPatientInformation()
         //await demogrphics.ClickOnExpandsPatientInformation()
@@ -163,7 +163,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await demogrphics.ClickOnExpandsPatientGP()
         await demogrphics.ClickOnExpandsPatientGP()
 
-        //await page.pause()
+        await page.pause()
         await demogrphics.SelectRadioButtonForConsentForPhotographcsNo()
         await demogrphics.SelectRadioButtonForConsentForPhotographcsYes()
         await demogrphics.ClickSaveButtonForConsentForPhotographcs()
@@ -193,9 +193,10 @@ test.describe("Patient Domain Db Comparison", () => {
         await expect(page.getByText('Patient updated successfully')).toHaveText('Patient updated successfully')
         await editpatient.clickOnPatientAddress()
         await editpatient.clickOnSaveForPatientDetails()
+         await page.pause()
         // await expect(page.getByText('Patient address added successfully')).toHaveText('Patient address added successfully')
         await editpatient.clickOnPatientPIP()
-      
+       await page.pause()
         await editpatient.enterIntoSearchGP('Wednesday')
 
         await editpatient.clickOnViewPIPLink()
@@ -215,7 +216,9 @@ test.describe("Patient Domain Db Comparison", () => {
         await page.waitForTimeout(1000)
         await editpatient.clickOnExportToPDFLink()
         await page.waitForTimeout(1000)
+        await page.pause()
         await editpatient.clickOnCloseInterestedPartyPopup()
+        await page.pause()
         await editpatient.clickOnPatientGP()
         await editpatient.clickOnPrintIdCard()
 

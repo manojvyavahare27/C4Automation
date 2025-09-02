@@ -83,6 +83,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await loginpage.enter_Password(jsonData.loginDetails[0].password);
      await page.waitForTimeout(1500);
      await loginpage.clickOnLogin();
+     await page.pause()
     // await expect(page.getByText("Login success")).toHaveText("Login success");
      await page.waitForTimeout(1000);
      await homepage.clickonSidebarHomeIcon()
@@ -105,7 +106,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname)
      await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname)
      await patientsearch.selectSex(jsonData.addPatient[index].pat_sex)  
-     await patientsearch.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref)
+    await patientsearch.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref)
     
      //await patientsearch.selectBornDate()
      await patientsearch.clickOnSearchPatButton()
@@ -150,6 +151,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await addreferral.clickOnBackButton()     
           await page.waitForTimeout(2000);
           // await page.getByRole('button', { name: 'Add Appointments' }).click()
+          await page.pause()
           await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date)
           await page.waitForTimeout(2000);
           await servicebookapp.selectDropdownSpecility(jsonData.bookNewAppointments[index].rea_special)
