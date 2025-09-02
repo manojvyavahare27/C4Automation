@@ -113,7 +113,7 @@ test.describe('New Patient', () => {
       await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
       await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
 
-     //  await page.pause()
+       
       await patientduplicatecheck.selectUniqueIdentification();      
       await patientduplicatecheck.selectPhotoIdentification();
       await patientduplicatecheck.enterPhotoIdentification(jsonData.patientIdentifier[index].pid_value2.toString());
@@ -166,7 +166,7 @@ test.describe('New Patient', () => {
      
       await addpatient.enterDisablityNotes(jsonData.addPatient[index].pat_disability_note);
       await addpatient.selectLanguage(jsonData.addPatient[index].pat_language);      
-      await addpatient.enterHospitalRef(data.pat_hospital_ref);
+      
       
 
       await addpatient.selectPatientType(jsonData.addPatient[index].pat_type);
@@ -311,7 +311,7 @@ test.describe('New Patient', () => {
       //Search GP      
       await addgp.clickOnSearchGPBtn();
       await expect(page.getByText("Local GP found")).toHaveText("Local GP found");
-      await page.pause()
+     
       await addgp.enterGpSearch();
       await addgp.clickOnAddGPBtn();
 
@@ -397,6 +397,9 @@ await page.waitForTimeout(200)
       await page.waitForTimeout(2000);
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
+
+      await addpatient.enterHospitalRef(data.pat_hospital_ref);
+      await addpatient.clickOnsavebutton()
 
       //await menu.clickOnMenubtn();
       // await menu.clickOnLogout();
