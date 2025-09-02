@@ -622,6 +622,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
          await page.getByText('Logout').click();
     //await menu.clickOnMenubtn()
   // await menu.clickOnLogout()
+  
       //////// Patient Detail comparison/////////
       var sqlQuery =
         "select * from patients where pat_hospital_ref= '" +
