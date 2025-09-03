@@ -436,10 +436,11 @@ test.describe('New Patient', () => {
       //await expect(page.getByText('Patient photo uploaded successfully')).toHaveText('Patient photo uploaded successfully')
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
-
        await addpatient.enterHospitalRef(data.pat_hospital_ref);
       await addpatient.clickOnsavebutton()
-
+      
+ await page.getByLabel('profileIcon').click();
+         await page.getByText('Logout').click();
       
       //////// Patient Detail comparison/////////
       var sqlQuery =

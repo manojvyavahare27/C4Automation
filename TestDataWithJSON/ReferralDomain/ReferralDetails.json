@@ -15,9 +15,9 @@
   ],
   "addPatient": [
     {
-      "pat_hospital_ref": "refPat031",
+      "pat_hospital_ref": "refPat032",
       "pat_title": "B/O",
-      "pat_firstname": "RefABk",
+      "pat_firstname": "RefABL",
       "pat_surname": "Riomedtest",
       "pat_sex": "M",
       "pat_dob": "28/09/2023",
@@ -50,7 +50,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "RefABk",
+      "pat_firstname": "RefABL",
       "pat_surname": "Riomedtest",
       "pat_sex": "M",
       "pat_dob": "28/09/2023",
@@ -81,7 +81,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "RefABk",
+      "pat_firstname": "RefABL",
       "pat_lastname": "Riomedtest",
       "pat_sex": "M",
       "pat_dob": "28/09/2023",
@@ -90,7 +90,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "RefABk.Riomedtest@Gmail.com"
+      "add_email": "RefABL.Riomedtest@Gmail.com"
     }
   ],
   "tempAddress": [

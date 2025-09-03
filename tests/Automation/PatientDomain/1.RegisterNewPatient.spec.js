@@ -398,9 +398,12 @@ await page.waitForTimeout(200)
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
 
-      await addpatient.enterHospitalRef(data.pat_hospital_ref);
+      await page.pause()
+      await addpatient.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref);
       await addpatient.clickOnsavebutton()
 
+       await page.getByLabel('profileIcon').click();
+         await page.getByText('Logout').click();
       //await menu.clickOnMenubtn();
       // await menu.clickOnLogout();
 
