@@ -219,7 +219,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
       //await addpatient.selectInterpreterType()
       //await addpatient.enterNHSNo(patientdetailsdata.NHSNo)
       //await addpatient.enterHospitalRef(patientdetailsdata.HospitalRef)
-      await addpatient.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref);
+      
       //await addpatient.enterHospitalRef("hosp0524Id146");
       // await addpatient.enterIdentifier(patientdetailsdata.Identifier)
       //await addpatient.enterPASId(patientdetailsdata.PASId)
