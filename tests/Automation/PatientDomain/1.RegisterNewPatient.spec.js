@@ -398,7 +398,7 @@ await page.waitForTimeout(200)
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
 
-      await page.pause()
+     // await page.pause()
       await addpatient.enterHospitalRef(jsonData.addPatient[index].pat_hospital_ref);
       await addpatient.clickOnsavebutton()
 
