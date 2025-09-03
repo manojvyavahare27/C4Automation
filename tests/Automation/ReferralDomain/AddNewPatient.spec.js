@@ -616,7 +616,8 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await printidcard.clickOnSavebtn();
       await page.waitForTimeout(2000);
 
-       await addpatient.enterHospitalRef(jsonData.pat_hospital_ref);
+     // await page.pause()
+       await addpatient.enterHospitalRef(jsonData.pat_hospital_ref.toString());
       await addpatient.clickOnsavebutton()
             await page.getByLabel('profileIcon').click();
          await page.getByText('Logout').click();

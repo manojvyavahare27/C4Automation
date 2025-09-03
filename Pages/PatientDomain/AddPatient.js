@@ -22,7 +22,7 @@ class AddPatient
         this.dropdown_interpreterneeded=page.locator("xpath=//div[@aria-labelledby='mui-component-select-patNeedInterpreterAtAppointments']")
         this.dropdown_interpretertype=page.locator("xpath=//div[@aria-labelledby='mui-component-select-patInterpreterTypeEliId']")
         this.txtbox_NHSNo=page.getByTestId('NHS.No')
-        this.txtbox_hospitalref=page.getByTestId('Hospital Ref')
+        this.txtbox_hospitalref=page.locator("xpath=//input[@data-testid='Hospital Ref']")
         this.txtbox_Identifier=page.getByTestId('Identifier')
         this.txtbox_PasId=page.getByTestId('PAS ID')
         this.dropdownPatientType=page.locator("xpath=//div[@aria-labelledby='mui-component-select-patType']")
