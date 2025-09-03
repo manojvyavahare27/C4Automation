@@ -657,7 +657,6 @@ test.describe("Database Comparison Add Edit Patient", () => {
       //////// Patient UNique Identifier comparison/////////
       sqlQuery =
         "Select pid_value from patient_identifiers where pid_pat_id=" + patId;
-
       console.log("Query for Identifier:" + sqlQuery);
 
       sqlFilePath = "SQLResults/ReferralDomain/patientIData.json";
