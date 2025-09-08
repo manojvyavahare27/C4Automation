@@ -25,8 +25,6 @@ import PharmacyLocation from "../../../Pages/PharmacyDomain/PharmacySidebar"
 import PharmacyHome from "../../../Pages/PharmacyDomain/PharmacyHomePage"
 import PharmacySidebars from "../../../Pages/PharmacyDomain/PharmacySidebar";
 
-
-
 import { TIMEOUT } from "dns";
 import { error } from "console";
 import { before } from "node:test";
