@@ -391,14 +391,14 @@ test.describe("Database Comparison Add Edit Patient", () => {
         );
       }
       //Edit Patient App.
-      await page.pause()
+      //await page.pause()
       await scheduleserviceapp.clickOnDateLink();
       await page.waitForTimeout(8000);
       await addeditpatientappointment.selectAppointmentDuration(jsonData.addEditAppointments[index].rea_duration);
       await addeditpatientappointment.selectResonforReviewAppointment(jsonData.addEditAppointments[index].rea_review_reason);
       //await page.pause()
       await addeditpatientappointment.clickOnSaveButton();
-      await page.locator("xpath=//div[contains(text(),'Ok')]").click();
+     // await page.locator("xpath=//div[contains(text(),'Ok')]").click();
       await expect(page.getByText("Appointment updated successfully")).toHaveText("Appointment updated successfully");
       await page.waitForTimeout(1000);
      
