@@ -92,6 +92,39 @@ test.describe('New Patient', () => {
       logger.info("Clicked on Login button successfully");
       await homepage.clickonSidebarHomeIcon()
       await homepage.clickOnPatientIcon();
+
+//Regression for Patient search page
+      //Check all links
+      // await patientsearch.clickOnAppointmentLink()
+      // await patientsearch.assertPageTitleAfterClick(patientsearch.link_AppointmentLink, "Service Appointments");
+
+      //Check all fields
+
+//       await page.pause()
+//       await patientsearch.validateMPIField(page, {
+//     shouldBeEnabled: true,
+//     defaultValue: '',
+//     validInput: '1234567890',
+//     invalidInput: 'ABC#123',
+//     errorSelector: '.error-message',
+//     errorText: 'Invalid MPI Number',
+//     submitSelector: 'button:has-text("Save")'
+// });
+      
+
+
+
+
+
+      await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentDate);
+      await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentTime);
+      await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentType);
+      await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentStatus);
+
+      await page.pause()
+      
+
+
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
       logger.info("Clicked on Search button successfully");
@@ -101,8 +134,6 @@ test.describe('New Patient', () => {
       await patientsearch.enterFamilyName(data.pat_surname);
       logger.info("Family Name entered successfully");
       await patientsearch.selectSex(data.pat_sex);
-
-
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       
@@ -112,8 +143,12 @@ test.describe('New Patient', () => {
       await expect(page.getByText("Photo Identification required")).toHaveText("Photo Identification required");
       await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
       await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
+      
 
-       
+
+
+
+
       await patientduplicatecheck.selectUniqueIdentification();      
       await patientduplicatecheck.selectPhotoIdentification();
       await patientduplicatecheck.enterPhotoIdentification(jsonData.patientIdentifier[index].pid_value2.toString());
