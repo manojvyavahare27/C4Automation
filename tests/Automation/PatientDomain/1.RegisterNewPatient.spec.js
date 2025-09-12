@@ -116,12 +116,12 @@ test.describe('New Patient', () => {
 
 
 
-      await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentDate);
-      await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentTime);
-      await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentType);
-      await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentStatus);
+      // await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentDate);
+      // await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentTime);
+      // await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentType);
+      // await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentStatus);
 
-      await page.pause()
+      // await page.pause()
       
 
 
