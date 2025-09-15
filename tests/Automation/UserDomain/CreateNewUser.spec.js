@@ -249,7 +249,7 @@ test.describe("Database Comparison Add New User", () => {
 
     await adduserwizard.clickOnAddLink()
     await page.waitForTimeout(2000)
-    await page.pause()
+    
     await adduserwizard.addUserGroup(page)
     await adduserwizard.addHpDeaultRole()
 
