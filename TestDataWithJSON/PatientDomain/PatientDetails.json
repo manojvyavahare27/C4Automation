@@ -23,9 +23,9 @@
   ],
   "addPatient": [
     {
-      "pat_hospital_ref": "hosp2571",
+      "pat_hospital_ref": "hosp2572",
       "pat_title": "B/O",
-      "pat_firstname": "StarI",
+      "pat_firstname": "StarJ",
       "pat_surname": "India",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -58,7 +58,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "StarI",
+      "pat_firstname": "StarJ",
       "pat_surname": "India",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -89,7 +89,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "StarI",
+      "pat_firstname": "StarJ",
       "pat_lastname": "India",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -98,7 +98,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "StarI.India@Gmail.com"
+      "add_email": "StarJ.India@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -440,12 +440,12 @@
   ],
   "patDetails": [
     {
-      "pat_hospital_ref": "hosp2571",
+      "pat_hospital_ref": "hosp2572",
       "pat_dod": "29/10/2023",
       "pat_tod": "00:11",
       "pat_dead_confirmation_status": "confirmed",
       "pat_death_notes": "Added For Testing",
-      "pat_firstname": "StarI",
+      "pat_firstname": "StarJ",
       "pat_surname": "India"
     }
   ],
