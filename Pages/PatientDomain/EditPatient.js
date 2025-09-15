@@ -7,7 +7,7 @@ class EditPatient
         this.tab_PatientAddress=page.getByRole('tab', { name: 'Patient Address' })
         this.tab_PatientPIP=page.getByTestId('Patient PIP')
         this.tab_PatientGP=page.getByRole('tab', { name: 'Patient GP' })
-        this.tab_PrintIdCard=page.getByTestId('Print Id Card')
+        this.tab_PrintIdCard=page.locator("xpath=//button[@data-testid='Print ID Card']")
         this.btn_PatientDetailsSave=page.getByTestId('Save')
         this.dropdowninterpreterNeeded=page.getByTestId('Interpreter Needed').getByRole('button', { name: '​' })
          
