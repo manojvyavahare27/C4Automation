@@ -92,7 +92,7 @@ test.describe('New Patient', () => {
       await page.waitForTimeout(2000);
       await loginpage.clickOnLogin();
       logger.info("Clicked on Login button successfully");
-      await page.pause()
+     
       await homepage.clickonSidebarHomeIcon()
       await homepage.clickOnPatientIcon();
 
@@ -144,7 +144,7 @@ await expect(page.getByText("At least one search field should be set for a searc
       await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
       //await patientsearch.selectBornDate(formattedDate);
       logger.info("Born Date selected successfully");
-      await page.pause()
+      
       await patientsearch.clickOnSearchButton();
 
       logger.info("Clicked on Search button successfully");
