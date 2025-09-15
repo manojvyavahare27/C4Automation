@@ -54,33 +54,32 @@ async openUrl()
 //enter_Password=async()=> await this.passWord.type(password)
 
 
-     async enterUsername(username)
-    {
-        await this.userName.fill(username)
-        if(this.userName!=null)
-        {
-            return this.userName
+     async enterUsername(username) {
+        await this.userName.fill(username);
+        const actual = await this.userName.inputValue();
+        if (actual !== username) {
+            throw new Error(`❌ Username mismatch. Expected: "${username}", Found: "${actual}"`);
         }
-        else throw new Error("No Username Element Present")
+        console.log(`✅ Username filled correctly: "${actual}"`);
     }
 
-    async readusername()
-    {
-        const value= await this.userName.inputValue()
-        return value          
-        console.log(value)
+    // Reads username from the field
+    async readUsername() {
+        const value = await this.userName.inputValue();
+        console.log(`✅ Username read from input: "${value}"`);
+        return value;
     }
 
-
-    async enter_Password(password)
-    {
-        await this.passWord.type(password)
-        if(this.passWord!=null)
-        {
-            return this.passWord
+    // Enters password and validates input
+    async enter_Password(password) {
+        await this.passWord.fill(password);
+        const actual = await this.passWord.inputValue();
+        if (actual !== password) {
+            throw new Error(`❌ Password mismatch. Expected: "${password}", Found: "${actual}"`);
         }
-        else throw new Error("No Password Element Present")
+        console.log(`✅ Password filled correctly: "${actual}"`);
     }
+    
     async clickOnLogin()
     {
         await this.loginButton.click()

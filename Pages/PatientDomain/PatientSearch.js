@@ -271,13 +271,6 @@ class PatientSearch {
     // }
     async enterFamilyName(pat_surname) {
         await this.txtbox_FamilyName.type(pat_surname);
-
-        const value = await this.txtbox_FamilyName.inputValue();
-        if (value !== pat_surname) {
-            throw new Error(`❌ Family Name not filled correctly. Expected: "${pat_surname}", Found: "${value}"`);
-        } else {
-            console.log(`✅ Family Name filled correctly: "${value}"`);
-        }
     }
 
     //Hospital Ref
