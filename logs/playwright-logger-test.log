@@ -275,3 +275,5 @@
 {"level":"info","message":"App GP search entered successfully","timestamp":"2025-09-15T12:49:51.204Z"}
 {"level":"info","message":"Person add button clicked successfully","timestamp":"2025-09-15T12:49:51.332Z"}
 {"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-09-15T12:49:52.270Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-15T15:18:44.990Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-15T15:18:58.623Z"}

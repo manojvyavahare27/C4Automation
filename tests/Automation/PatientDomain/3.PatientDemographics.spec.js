@@ -219,6 +219,7 @@ test.describe("Patient Domain Db Comparison", () => {
        
         await editpatient.clickOnCloseInterestedPartyPopup()
         
+        await page.pause()
         await editpatient.clickOnPatientGP()
         await editpatient.clickOnPrintIdCard()
 
