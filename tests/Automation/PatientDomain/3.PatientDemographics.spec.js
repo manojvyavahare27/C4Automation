@@ -94,7 +94,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
         
-        //await page.pause()
+       
         //logger.info("Clicked on Login button successfully");
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnPatientIcon()
@@ -219,7 +219,7 @@ test.describe("Patient Domain Db Comparison", () => {
        
         await editpatient.clickOnCloseInterestedPartyPopup()
         
-        await page.pause()
+       
         await editpatient.clickOnPatientGP()
         await editpatient.clickOnPrintIdCard()
 
