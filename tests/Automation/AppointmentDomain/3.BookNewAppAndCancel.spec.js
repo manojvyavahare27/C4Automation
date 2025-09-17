@@ -151,7 +151,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await addreferral.clickOnBackButton()     
           await page.waitForTimeout(2000);
           // await page.getByRole('button', { name: 'Add Appointments' }).click()
-          await page.pause()
+        
           await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date)
           await page.waitForTimeout(2000);
           await servicebookapp.selectDropdownSpecility(jsonData.bookNewAppointments[index].rea_special)

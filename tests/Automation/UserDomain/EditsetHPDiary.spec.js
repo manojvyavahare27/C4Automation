@@ -108,7 +108,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         //await page.pause()
         await sethpdairy.clickOnSearchbutton()
         //await page.pause()
-       
+      
         await sethpdairy.clickOnHpSchedlue()
         await sethpdairy.clickOnClinicSchedule()
         await sethpdairy.clickOnCombinedSchedule()
@@ -123,7 +123,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
         // await sethpdairy.closeRepeatSchedulePopupPage()
         // await sethpdairy.clickOnRepeatSchedule()
         await page.waitForTimeout(2000)
-         await page.pause()
+        
         await sethpdairy.enterRepeatScheduleEndDate(jsonData.editHpDiary[index].RepeatScheduleEndDate)
         await sethpdairy.clickOnSaveForRepeatSchedule()
         //await expect(page.getByText('HP work schedule set successfully')).toHaveText('HP work schedule set successfully')

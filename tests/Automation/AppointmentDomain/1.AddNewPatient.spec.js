@@ -284,7 +284,7 @@ test.describe('New Patient', () => {
       await expect(page.getByText("Patient address added successfully")).toHaveText("Patient address added successfully");
 
       //Add PIP
-      await page.pause();
+     
       await addpip.selectPIPTitle(jsonData.pip[index].pip_title);
       await addpip.enterPIPFamilyName(jsonData.pip[index].pip_surname);
       await addpip.enterPIPGivenName(jsonData.pip[index].pip_firstname);

@@ -5,20 +5,22 @@ class LoginPage{
 constructor(page)
 {
     this.page=page
-    this.userName=page.getByRole('textbox', { name: 'Username' })        
-    this.passWord=page.getByRole('textbox', { name: 'Password' })
+    this.userName=page.locator("xpath=//input[@id='userNameLogin']")
+    this.passWord=page.locator("xpath=//input[@id='Password']")
     this.emailaddress=page.locator("xpath=//input[@id='Email Address']")
-    this.loginButton=page.locator("xpath=//button[@data-testid='Login']")
+   // this.loginButton=page.locator("xpath=//button[@data-testid='Login']")
+   this.loginButton=page.getByTestId('Login')
     this.message=page.getByText('Your username/password combination has not been recognised. Please try again.')
     
     //Forgot Password Page
-    this.forgotpasswordlink=page.locator("//body/div[@id='root']/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[5]/a[1]")
-    this.forgotpasswordlink=page.getByText('Forgot Password')
+    //this.forgotpasswordlink=page.locator("//body/div[@id='root']/div[2]/div[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[5]/a[1]")
+    //this.forgotpasswordlink=page.getByText('Forgot Password')
+    this.forgotpasswordlink=page.locator("xpath=//a[@data-testid='Forgot Password']")
+
     this.closeforgotpasswordpopup=page.getByTestId('CancelIcon')
     this.txtEmailAddress=page.locator("xpath=//input[@id='Email Address']")
 
-    //Login to Rferral Portal
-   
+    //Login to Rferral Portal  
 
     this.txtUserName=page.locator("xpath=//input[@id='Username']")
     this.txtPassword=page.locator("xpath=//input[@id='Password']")

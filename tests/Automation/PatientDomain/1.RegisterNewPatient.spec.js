@@ -86,6 +86,7 @@ test.describe('New Patient', () => {
       await page.waitForTimeout(2000);
      //await expect(page.locator('text=Please Login Here')).toBeVisible();
 
+     
       await loginpage.enterUsername(jsonData.loginDetails[0].username);
       await page.waitForTimeout(2000);
       await loginpage.enter_Password(jsonData.loginDetails[0].password);
