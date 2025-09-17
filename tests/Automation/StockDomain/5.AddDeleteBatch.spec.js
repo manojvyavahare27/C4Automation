@@ -133,6 +133,7 @@ test.describe("Database Comparison Add New Referral", () => {
    //Delete Batch
    
    //await page.pause()
+   await page.waitForTimeout(1000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
    await addBatch.clickOnExtraBatchLink()
    await page.waitForTimeout(3000)
