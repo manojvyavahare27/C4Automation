@@ -99,15 +99,13 @@ test.describe("Database Comparison Add New Referral", () => {
    await addBatch.enterManufacturedDate(jsonData.AddBatch[0].stbat_manufacture_date)
    await addBatch.enterReceivedDate(jsonData.AddBatch[0].stbat_batch_received_date)
    await addBatch.enterExpiryDate(jsonData.AddBatch[0].stbat_expiry_date)
-   await addBatch.enterRetailPrice(jsonData.AddBatch[0].stbat_retail_price)
-   
-    await page.waitForTimeout(500) 
-   await addBatch.clickSave()
-   await page.waitForTimeout(500) 
+   await addBatch.enterRetailPrice(jsonData.AddBatch[0].stbat_retail_price)  
+    
+   await addBatch.clickSave()   
    //await addFormulary.clickOnAddFormularyButton()
    await expect(page.getByText('Batch added successfully')).toHaveText('Batch added successfully')
    //await addFormulary.clickOnClosePopup()
-   await page.waitForTimeout(500) 
+   
 
    //get Stock Id from DB
 
