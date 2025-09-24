@@ -152,6 +152,7 @@ class AddPatient
     }
     async enterHospitalRef(pat_hospital_ref)
     {
+        await this.txtbox_hospitalref.fill('')
         await this.txtbox_hospitalref.type(pat_hospital_ref)
     }
     async enterIdentifier(name)
