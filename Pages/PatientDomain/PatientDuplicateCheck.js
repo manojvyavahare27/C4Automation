@@ -1,8 +1,10 @@
+const { expect } = require('@playwright/test');
 class PatientDuplicateCheck
 {
     constructor(page)
     {
         this.page=page
+        this.txtbox_nhs=page.locator("xpath=//input[@id='NHS Ref']")
         this.txtbox_Identifier=page.locator("xpath=//input[@id='Identifier']")
         this.dropdown_unique_Identification=page.locator("xpath=//input[@id='uniqueIdentification']")
         this.txtbox_unique_Identification_Id=page.getByTestId('Unique Identification ID')
@@ -17,8 +19,41 @@ class PatientDuplicateCheck
         this.txtbox_EmailID=page.getByTestId('Email')
         this.btn_Duplicate_check=page.locator("xpath=//button[@data-testid='Duplicate Check']")
         this.btn_Create_Patient=page.getByTestId('Create Patient')
-
     }
+
+    async checkAllLocatorVisibilityforPatientDetails() {
+// Create an array of locators
+    const locators = [
+        this.txtbox_nhs,
+        this.txtbox_Identifier,
+        this.dropdown_unique_Identification,
+        this.txtbox_unique_Identification_Id,
+        this.dropdown_photo_Identification,
+        this.dropdown_issuing_Country,
+        this.dropdown_Title,
+        this.txtbox_middleName,
+        this.txtbox_maidenName,
+        this.txtbox_mobile,
+        this.txtbox_EmailID,
+        this.txtbox_mobile,
+        this.btn_Duplicate_check       
+    ];
+
+    // Loop through each locator and check its visibility
+    for (let locator of locators) {
+        try {
+            // Wait for the locator to be visible
+            await expect(locator).toBeVisible();
+
+            // If the locator is visible, log success
+            console.log(`Locator '${locator}' is displayed and visible.`);
+        } catch (error) {
+            // If the locator is not visible, log failure
+            console.log(`Error: Locator '${locator}' is NOT visible. Error: ${error.message}`);
+        }
+    }
+}
+
     async enterIdentifier(name)
     {
         await this.txtbox_Identifier.type(name)

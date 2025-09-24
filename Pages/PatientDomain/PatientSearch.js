@@ -23,9 +23,9 @@ class PatientSearch {
         this.txtbox_BornDate = page.getByPlaceholder('dd/mm/yyyy')
         this.dropdown_PatientSeenInLastDays = page.locator("xpath=//input[@name='patientSeenInLastDays']")
         this.txtbox_MPINumber = page.getByRole('textbox', { name: 'MPI Number' })
-        this.checkbox_IncludeDeceasedPatient = page.getByRole('checkbox', { name: 'Include deceased patients' })
-        this.checkbox_IncludeServicePatient = page.getByRole('checkbox', { name: 'Include service patients' })
-        this.checkbox_Soundex = page.getByRole('checkbox', { name: 'Soundex' })
+        this.checkbox_IncludeDeceasedPatient = page.locator("xpath=//input[@name='includeDeceasedPatients']")
+        this.checkbox_IncludeServicePatient = page.locator("xpath=//input[@name='includeDeceasedService']")
+        this.checkbox_Soundex = page.locator("xpath=//input[@name='soundex']")
 
         this.btnExportList = page.locator("xpath=//button[@data-testid='Export List']")
 
@@ -108,6 +108,47 @@ class PatientSearch {
         //Appointment module patient
 
     }
+
+    
+
+    async checkAllLocatorVisibilityforFindPatient() {
+    // Create an array of locators
+    const locators = [
+        this.txtbox_MPINumber,
+        this.txtbox_Barcode,
+        this.txtbox_Card,
+        this.txtbox_GivenName,
+        this.txtbox_FamilyName,
+        this.dropdown_sex,
+        this.txtbox_BornDate,
+        this.txtbox_Postcode,
+        this.txtbox_MRNNumber,
+        this.txtbox_IdentificationId,
+        this.txtbox_HospitalRef,
+        this.txtbox_MobileNumber,
+        this.txtbox_PatNameInOtherLang,
+        this.dropdown_PatientSeenInLastDays,
+        this.checkbox_IncludeDeceasedPatient,
+        this.checkbox_IncludeServicePatient,
+        this.checkbox_Soundex
+    ];
+
+    // Loop through each locator and check its visibility
+    for (let locator of locators) {
+        try {
+            // Wait for the locator to be visible
+            await expect(locator).toBeVisible();
+
+            // If the locator is visible, log success
+            console.log(`Locator '${locator}' is displayed and visible.`);
+        } catch (error) {
+            // If the locator is not visible, log failure
+            console.log(`Error: Locator '${locator}' is NOT visible. Error: ${error.message}`);
+        }
+    }
+}
+
+
 
     async clickOnAppointmentLink()
     {
@@ -302,6 +343,12 @@ class PatientSearch {
         await this.txtbox_PatNameInOtherLang.type(name)
     }
 
+
+    //card
+    async enterCard()
+    {
+        await this.txtbox_Card.type("123456")
+    }
     async assertDropdownValue(selector, expectedValue) {
         const dropdown = await this.page.$(selector);
         const selectedOption = await dropdown_sex.$('Male');

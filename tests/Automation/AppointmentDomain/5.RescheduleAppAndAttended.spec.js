@@ -189,6 +189,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.clickOnCommuConsentSaveButton()
         await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
         await page.waitForTimeout(2000);
+        
         //Atteded Appointment
         await scheduleserviceapp.clickOnAppScheduleStatus()
         await scheduleserviceapp.clickOnAddAttended()
@@ -283,7 +284,6 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.clickOnRadioAllYes()
         await servicebookapp.clickOnCommuConsentSaveButton()
         await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-        
 
         var sqlQuery =
         "select * from patients where pat_hospital_ref= '" +
