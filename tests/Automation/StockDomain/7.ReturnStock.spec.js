@@ -73,7 +73,7 @@ test.describe("Database Comparison Add New Referral", () => {
         await loginpage.enter_Password(jsonData.loginDetails[1].password);
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
-        await page.pause()
+        
         await homepage.clickonSidebarHomeIcon();
         await homepage.clickOnSideIconStock()
 
