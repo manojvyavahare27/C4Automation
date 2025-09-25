@@ -78,6 +78,7 @@ test.describe("Database Comparison Add New Referral", () => {
         await homepage.clickOnSideIconStock()
 
         await stockallLoc.clickOnShowHiddenLocationButton()     
+        await page.waitForTimeout(1000)
         await stockallLoc.clickOnCardioLocation()
         await page.waitForTimeout(1000)
         await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
