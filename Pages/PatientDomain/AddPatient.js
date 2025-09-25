@@ -146,6 +146,7 @@ class AddPatient
         await this.dropdown_interpretertype.click()
         await this.page.getByRole('option', { name: 'Whisper', exact: true }).click()
     }
+    
     async enterNHSNo(NHSNo)
     {
         await this.txtbox_NHSNo.type(NHSNo)
