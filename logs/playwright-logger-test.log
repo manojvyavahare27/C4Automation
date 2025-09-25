@@ -713,3 +713,11 @@
 {"level":"info","message":"App GP search entered successfully","timestamp":"2025-09-23T16:00:15.636Z"}
 {"level":"info","message":"Person add button clicked successfully","timestamp":"2025-09-23T16:00:15.812Z"}
 {"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-09-23T16:00:17.042Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-25T05:35:02.093Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-25T05:35:03.210Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-25T05:35:03.393Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-25T05:35:15.194Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-25T05:35:15.626Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-25T05:37:16.420Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-25T05:37:17.525Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-25T05:37:17.688Z"}
