@@ -124,7 +124,7 @@ test.describe('New Patient', () => {
       // await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentDate);
       // await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentTime);
       // await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentType);
-      // await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentStatus);
+       //await patientsearch.assertFieldIsVisible(patientsearch.field_AppointmentStatus);
 
       // await page.pause()
       
@@ -212,7 +212,7 @@ await expect(page.getByText("At least one search field should be set for a searc
       await patientduplicatecheck.clickOnCreatePatientButton();
       logger.info("Clicked on Create Patient button successfully");
 
-      await page.pause()
+     // await page.pause()
       //Patient Wizard- Add Patient
       await addpatient.selectMaritalStatusDropdown(jsonData.addPatient[index].pat_marital_status);
       logger.info("Marital Status selected successfully");

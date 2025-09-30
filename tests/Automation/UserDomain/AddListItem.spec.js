@@ -96,7 +96,7 @@ test.describe("Database Comparison Add List Item", () => {
     await usersearch.clickOnMedicalcategoryDisplayedNameLinking();
     await usersearch.clickOnCancelbutton();
 
-    await page.pause()
+  //  await page.pause()
 
     await addtolistitem.selectListItemList();
     await addtolistitem.clickOnFilterButton();

@@ -96,7 +96,7 @@ test.describe("Database Comparison Edit HP Diary", () => {
 
         
         await usersearch.clickOnSearchButton()
-        await page.pause()
+       // await page.pause()
         await usersearch.clickOnEditUser()    
         await page.waitForTimeout(3000)
         //await adduserwizard.toggleUserIsHP()    

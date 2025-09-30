@@ -107,9 +107,7 @@ class PatientSearch {
 
         //Appointment module patient
 
-    }
-
-    
+    }    
 
     async checkAllLocatorVisibilityforFindPatient() {
     // Create an array of locators
