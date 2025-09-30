@@ -62,6 +62,7 @@ test.describe('Excel Conversion', () => {
 // Proceed with the test loop after Excel to JSON conversion
 test.describe('New Patient', () => {
   test('Register New Patient', async ({ page }) => {
+    
     if (!jsonData || !jsonData.addPatient) {
       throw new Error('JSON data is missing or invalid.');
     }
@@ -211,6 +212,7 @@ await expect(page.getByText("At least one search field should be set for a searc
       await patientduplicatecheck.clickOnCreatePatientButton();
       logger.info("Clicked on Create Patient button successfully");
 
+      await page.pause()
       //Patient Wizard- Add Patient
       await addpatient.selectMaritalStatusDropdown(jsonData.addPatient[index].pat_marital_status);
       logger.info("Marital Status selected successfully");

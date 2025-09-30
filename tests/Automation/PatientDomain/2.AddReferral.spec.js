@@ -122,7 +122,7 @@ test.describe("Patient Domain Db COmparison", () => {
     await addreferral.selectConsultant();
     await addreferral.selectMethodOfArrival(jsonData.AddReferral[index].ref_method_of_arrival.toString());
     await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString());
-    await page.pause()
+  
     await addreferral.clickOnAwaitReferralAcceptance();
     await addreferral.clickOnSaveButton();
     await page.waitForTimeout(200);

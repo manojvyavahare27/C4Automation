@@ -179,7 +179,7 @@ test.describe("Medications Category", () => {
       await page.getByLabel('cancelIcon').click();      
       await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name)
       await page.waitForTimeout(2000);            
-      //await page.pause()      
+      await page.pause()      
       await MedicationsExtraDetails.EnterOnDose(page,jsonData.AddMedication[index].medi_dose,jsonData.AddMedication[index].pacr_que_name)
       await page.getByTestId('Ok').click()
       await MedicationsExtraDetails.enterForm()
