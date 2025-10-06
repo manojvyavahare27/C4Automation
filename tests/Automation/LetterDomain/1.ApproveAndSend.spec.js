@@ -93,6 +93,7 @@ console.log("Confirmed existing patient details.");
 
 await page.waitForTimeout(1000);
 
+await page.pause()
 
 await patientsidebar.clickOnLettersCategory();
 console.log("Opened Letters category.");
