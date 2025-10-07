@@ -144,7 +144,8 @@ test.describe("Database Comparison Add Edit Patient", () => {
         console.log("Date is not less than 5 days from current date");
       }
       await patientduplicatecheck.selectUniqueIdentification();
-      await page.pause()
+      //await page.pause()
+
       await patientduplicatecheck.enterUniqueIdentificationId(patientdetailsdata.UniqueIdentificationId);
       await patientduplicatecheck.selectPhotoIdentification();
       await patientduplicatecheck.enterPhotoIdentification(patientdetailsdata.PhotoIdentificationId);
