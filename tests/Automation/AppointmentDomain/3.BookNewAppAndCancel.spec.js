@@ -84,12 +84,16 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await page.waitForTimeout(1500);
      await loginpage.clickOnLogin();
    
+    
     // await expect(page.getByText("Login success")).toHaveText("Login success");
      await page.waitForTimeout(1000);
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnAppointmentIcon()     
      await patientsearch.clickonBackButton()
      await homepage.clickOnAppointmentIcon()   
+     await homepage.clickOnDrawerHeader()
+    await homepage.clickOnAddappLink()
+
      await patientsearch.clickOnsettingbutton()    
      await patientsearch.clickOncustomizableViewforPatientSearchOnAppointment()    
      await patientsearch.clickOnResetToDefaultViewButton()
@@ -100,6 +104,11 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnAppointmentIcon()    
     
+
+      await homepage.clickOnDrawerHeader()
+      await homepage.clickOnAddappLink()
+
+
      await patientsearch.clickOnSearchPatButton()
      await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
      await page.waitForTimeout(1000);

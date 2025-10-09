@@ -91,6 +91,8 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await homepage.clickOnAppointmentIcon()     
         await patientsearch.clickonBackButton()
         await homepage.clickOnAppointmentIcon()   
+        await homepage.clickOnDrawerHeader()
+        await homepage.clickOnAddappLink()
         await patientsearch.clickOnsettingbutton()
         await page.waitForTimeout(2000);
         await patientsearch.clickOncustomizableViewforPatientSearchOnAppointment()    
@@ -104,6 +106,8 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //await homepage.clickOnPatientIcon()
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnAppointmentIcon()     
+        await homepage.clickOnDrawerHeader()
+      await homepage.clickOnAddappLink()
         await patientsearch.clickOnSearchPatButton()
         await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname)
         await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);

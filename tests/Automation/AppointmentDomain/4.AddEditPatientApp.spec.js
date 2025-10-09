@@ -94,12 +94,17 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await homepage.clickOnAppointmentIcon();
     await patientsearch.clickonBackButton();
     await homepage.clickOnAppointmentIcon();
+     await homepage.clickOnDrawerHeader()
+    await homepage.clickOnAddappLink()
     await patientsearch.clickOnsettingbutton();
     await patientsearch.clickOncustomizableViewforPatientSearchOnAppointment();
     await patientsearch.clickOnResetToDefaultViewButton();
     await page.getByRole("img", { name: "Cellma Image Avatar" }).click();
     await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnAppointmentIcon();
+
+     await homepage.clickOnDrawerHeader()
+    await homepage.clickOnAddappLink()
     await patientsearch.clickOnSearchPatButton();
     await patientsearch.enterGivenName(
       jsonData.addPatient[index].pat_firstname

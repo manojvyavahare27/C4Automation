@@ -9,6 +9,9 @@ class Homepage{
         this.pharmacyIcon=page.locator("xpath=//div[@data-testid='Pharmacy']")
 
         
+        this.drawerHeader=page.locator("xpath=//div[@data-testid='DrawerHeader']")
+        this.addAppLink=page.locator("xpath=//h1[text()='Add Appointments']")
+        
         this.iconReferral=page.getByRole('heading', { name: 'Referrals' })
         this.iconMDT=page.getByRole('heading', { name: 'MDT' })
         this.iconUser=page.getByRole('heading', { name: 'Users' })
@@ -182,6 +185,17 @@ class Homepage{
         await this.iconPatient.click()
     }
     
+
+    async clickOnDrawerHeader()
+    {
+        await this.drawerHeader.click()
+    }
+    async clickOnAddappLink()
+    {
+        await this.addAppLink.click()
+    }
+
+
     async clickOnHomePageIcon()
     {
         await this.iconHomePage.click()
