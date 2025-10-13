@@ -180,11 +180,11 @@ console.log("Clicked search again to apply filters.");
 await page.getByLabel('expandRowIconundefined').click();
 console.log("Expanded letter row.");
 
-await letterorSummeries.clickOnWordFormatIcon();
-console.log("Clicked Word format icon.");
+// await letterorSummeries.clickOnWordFormatIcon();
+// console.log("Clicked Word format icon.");
 
-await letterorSummeries.clickOnHtmlIcon();
-console.log("Clicked HTML icon.");
+// await letterorSummeries.clickOnHtmlIcon();
+// console.log("Clicked HTML icon.");
 
 await letterorSummeries.clickOnEditHistoryIcon();
 console.log("Opened edit history.");
