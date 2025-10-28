@@ -4,19 +4,25 @@ class ConfirmExisting
     constructor(page)
     {
         this.page=page
-        this.txtbox_alsoknownas=page.locator("xpath=//input[@id='Also Known As']")
+         this.txtbox_alsoknownas=page.locator("xpath=//input[@id='Also Known As']")
         this.dropdown_InterpreterReq=page.getByTestId('Interpreter Required').getByRole('button', { name: 'No' })
         this.txtbox_emailId=page.locator('input[name="addEmail"]')
         this.txtbox_mobileNo=page.locator('input[name="addMobile"]')
         this.txtbox_phoneNo=page.locator('input[name="addPhone"]')
         //Next of Kin
-        this.dropdown_NextofKinTitle=page.locator("xpath=//div[@data-testid='Title']")
+      // this.dropdown_NextofKinTitle=page.locator("xpath=//div[@data-testid='Title']")
+       this.dropdown_NextofKinTitle=page.locator("xpath= //input[@id='titleNextOfKin']")
         this.txtbox_givenName=page.locator("xpath=//input[@id='firstNameNextOfKin']")
         this.txtbox_familyName=page.locator("xpath=//input[@id='surnameNextOfKin']")
-        this.dropdown_Relcationship=page.locator("xpath=//div[@data-testid='Relationship']")
-        this.txtbox_kinEmailId=page.locator("xpath=//input[@id='emailNextOfKin']")
-        this.txtbox_kinMobile=page.locator("xpath=//input[@id='mobileNextOfKin']")
-        this.txtbox_kinPhone=page.locator("xpath=//input[@id='phoneNextOfKi']")
+        //this.dropdown_Relcationship=page.locator("xpath=//div[@data-testid='Relationship']")
+        this.dropdown_Relcationship=page.locator("xpath=//input[@id='relationshipNextOfKin']")
+        // this.txtbox_kinEmailId=page.locator("xpath=//input[@id='emailNextOfKin']")
+        // this.txtbox_kinMobile=page.locator("xpath=//input[@id='mobileNextOfKin']")
+        // this.txtbox_kinPhone=page.locator("xpath=//input[@id='phoneNextOfKi']")
+
+         this.txtbox_kinEmailId=page.locator('input[name="kinEmail"]')
+        this.txtbox_kinMobile=page.locator('input[name="kinMobile"]')
+        this.txtbox_kinPhone=page.locator('input[name="kinPhone"]')
 
         this.txtbox_AddCompanyName=page.locator('input[name="addCompanyName"]')
         this.txtbox_numberRoad=page.locator('input[name="addAddress1"]')
@@ -33,8 +39,8 @@ class ConfirmExisting
         this.txtbox_TempCompanyName=page.locator('#tempAddressCompanyName')
         this.txtbox_tempAddNumberNRoad=page.locator("xpath=//input[@name='tempAddAddress1']")
         this.txtbox_tempAddPostcode=page.locator("xpath=//input[@name='tempAddAddress5']")
-        this.btn_confirmExistingDetails=page.locator("xpath=//button[@data-testid='Confirm Existing Details']")
-        this.btn_SaveChangeDetails=page.locator("xpath=//button[@data-testid='Save Changed Details']")
+        this.btn_confirmExistingDetails=page.locator("xpath=//div[contains(text(),'Confirm Existing Details')]")
+        this.btn_SaveChangeDetails=page.locator("xpath=//div[contains(text(),'Save Changed Details')]")
 
     }
     async enterTempAddressDetails()
