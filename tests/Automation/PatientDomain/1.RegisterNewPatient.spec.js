@@ -581,7 +581,7 @@ logger.info("GP mobile number entered successfully");
 await addgp.enterGPEmail(jsonData.gpAddress[index].add_email);
 logger.info("GP email entered successfully");
 
-await page.pause()
+
 await addgp.clickOnSaveGPButton();
 logger.info("Save GP button clicked successfully");
 
@@ -658,7 +658,7 @@ await page.waitForTimeout(200)
       //await menu.clickOnMenubtn();
       // await menu.clickOnLogout();
 
-       await page.pause()
+      
       //////// Patient Detail comparison/////////
       var sqlQuery = "select * from patients where pat_hospital_ref= '" + data.pat_hospital_ref +
         "' order by pat_id desc limit 1";
@@ -703,7 +703,7 @@ await page.waitForTimeout(200)
         console.log("\n Patient Identifier Comparision: Parameters from both JSON files do not match!\n");
       }
 
-       await page.pause()
+      
       //////// Permanent Address Detail comparison/////////
       sqlQuery = "select * from addresses where add_id=" + patAddId;
       sqlFilePath = "SQLResults/PatientDomain/patientAddressData.json";
@@ -733,7 +733,7 @@ await page.waitForTimeout(200)
         console.log("\n Patient Temporary Address Details Comparision: Parameters from both JSON files do not match!\n");
       }
 
-       await page.pause()
+    
       //////// PIP Detail comparison/////////
       sqlQuery = "select * from patient_interested_parties where pip_pat_id=" + patId;
       sqlFilePath = "SQLResults/PatientDomain/patientPIPData.json";
@@ -768,7 +768,7 @@ await page.waitForTimeout(200)
       } else {
         console.log("\n PIP Permanent Address Details Comparision: Parameters from both JSON files do not match!\n");
       }
-       await page.pause()
+      
 
       //////// Added GP Detail comparison/////////
       sqlQuery =
@@ -795,7 +795,7 @@ await page.waitForTimeout(200)
       } else {
         console.log("\n Newly created GP was not linked to the patient!\n");
       }
- await page.pause()
+ 
       ////////  GP Address comparison/////////
       sqlQuery = "select * from addresses where add_id=" + egpAddId + "";
       sqlFilePath = "SQLResults/PatientDomain/patientGPAddressData.json";
@@ -810,7 +810,7 @@ await page.waitForTimeout(200)
         console.log("\n Patient GP Address comparison: Parameters from both JSON files do not match!\n");
       }
 
-      await page.pause()
+     
       //Listen for console events
       // page.on("console", async (msg) => {
       //   const args = await Promise.all(msg.args().map((arg) => arg.jsonValue()));
