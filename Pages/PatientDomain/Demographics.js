@@ -20,11 +20,12 @@ class Demographics{
         this.btn_ClosePopups=page.getByTestId('CancelIcon')
 
         //Expands Patient Details on demographics page
-        this.expand_PatientInformation=page.getByTestId('Patient Information')
-        this.expand_PatientIdentifier=page.getByTestId('Patient Identifier')
-        this.expand_PatientAddress=page.getByTestId('Patient Address')
-        this.expand_PatientPIP=page.getByRole('button', { name: 'Patient Interested Parties' })
-        this.expand_PatientGP=page.getByTestId('Patient Gp')       
+        //Expands Patient Details on demographics page
+        this.expand_PatientInformation=page.locator("xpath=//button[@data-testid='Patient Information']")
+        this.expand_PatientIdentifier=page.locator("xpath=//button[@data-testid='Patient Identifier']")
+        this.expand_PatientAddress=page.locator("xpath=//button[@data-testid='Patient Address']")
+        this.expand_PatientPIP=page.locator("xpath=//button[@data-testid='Patient Interested Parties']")
+        this.expand_PatientGP=page.locator("xpath=//button[@data-testid='Patient Gp']")      
         
     }
     async ClickOnExpandsPatientInformation()

@@ -146,6 +146,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await demogrphics.SelectDropdownTestPatient()
         //await expect(page.getByText('Successfully marked patient as test patient')).toHaveText('Successfully marked patient as test patient')
 
+        //await page.pause()
         await topbluebar.clickOnBannerButtonKeyboardArrow()
         await topbluebar.ClickOnViewAllContactDetails()
 
