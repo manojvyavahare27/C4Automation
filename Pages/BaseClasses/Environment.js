@@ -10,7 +10,6 @@ export default class Environment{
 //Added line for testing
 
 
-
         //this.Test="http://10.0.0.63:3000/cellmaUser/login";
         //this.Test="https://10.0.0.63/cellmaUser/login"
        // this.Test1="https://10.0.0.99/cellmaUserAPI/swagger-ui/index.html"
