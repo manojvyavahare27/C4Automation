@@ -94,7 +94,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
         
-       
+       await page.pause()
         //logger.info("Clicked on Login button successfully");
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnPatientIcon()
@@ -111,7 +111,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await patientsearch.clickOnBackbuttonOnPatientSearch()
         await page.waitForTimeout(3000)
         //await confirmexisting.clickOnConfirmExistingDetails()
-
+await page.pause()
         await topbluebar.clickOnBannerButtonKeyboardArrow()
         await page.waitForTimeout(2000)
         await topbluebar.ClickOnViewAllContactDetails()
@@ -136,7 +136,7 @@ test.describe("Patient Domain Db Comparison", () => {
         // await demogrphics.ClickOnLinkLinks()
         // await demogrphics.ClickOnLinkSummary()
         // await demogrphics.ClickOnCloseAllPopup()
-
+await page.pause()
         await demogrphics.ClickOnLinkLinks()
         await demogrphics.ClickOnLinkWorkList()
         await demogrphics.ClickOnCloseAllPopup()
@@ -151,7 +151,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await topbluebar.ClickOnViewAllContactDetails()
 
       
-  
+  //await page.pause()
         //Expands Patient Details on demographics page
         await demogrphics.ClickOnExpandsPatientInformation()
         //await demogrphics.ClickOnExpandsPatientInformation()
