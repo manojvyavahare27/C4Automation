@@ -92,7 +92,7 @@ class AddPatient
         this.link_ResetPassword=page.getByTestId('Reset Password')
         this.txtbox_Notes=page.locator("xpath=//textarea[@aria-label='Notes']")
         this.btn_Next=page.getByTestId('Next')
-        this.btn_Save=page.getByTestId('Save')   
+        this.btn_Save=page.locator("xpath=//button[@data-testid='Save']") 
         
         //Add Identifier
         this.btnAddPatientIdentifier=page.getByTestId('Add Patient Unique Identifier')
