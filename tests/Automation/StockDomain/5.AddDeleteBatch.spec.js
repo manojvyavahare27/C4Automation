@@ -80,22 +80,22 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()
 
-   await page.pause()
+   
   
    await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
    await stockItemsFliters.clickSearchButton()
    await page.waitForTimeout(2000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
-    await page.pause()
+   
 
    await stockallLoc.clickOnAddBatchLink()
    await page.waitForTimeout(500)
-    await page.pause()
+   
    await addFormulary.clickOnClosePopup()
    await page.waitForTimeout(500)
-    await page.pause()
+    
    await stockallLoc.clickOnAddBatchLink()
-    await page.pause()
+  
    await addBatch.enterSupplierName(jsonData.AddBatch[0].stbat_supplier)
    await addBatch.enterBatchNumber(jsonData.AddBatch[0].stbat_batch_number)
    await addBatch.enterBatchQuantity(jsonData.AddBatch[0].stbat_quantity)
@@ -121,8 +121,9 @@ test.describe("Database Comparison Add New Referral", () => {
         const stock_id = results[0].stock_id;     
         console.log("Stock id is: "+stock_id); 
 
+     
    //check DB for add Batch
-    var sqlQuery =  "SELECT * FROM stock_batches where stbat_stock_id=1398 order by 1 desc limit 1;";
+    var sqlQuery =  "SELECT * FROM stock_batches where stbat_stock_id='" + stock_id + "' order by 1 desc limit 1;";
         console.log(sqlQuery)        
         var sqlFilePath = "SQLResults/StockDomain/AddBatch.json";
         var results = await executeQuery(sqlQuery, sqlFilePath);        
@@ -170,7 +171,7 @@ test.describe("Database Comparison Add New Referral", () => {
    //Delete Batch
 
     //check DB for add Batch
-    var sqlQuery =  "SELECT stbat_serial_number,stbat_quantity,stbat_manufacture_date,stbat_expiry_date,stbat_batch_number,stbat_supplier,stbat_batch_received_date,stbat_purchase_price,stbat_unit_cost,stbat_retail_price FROM stock_batches where stbat_stock_id=1398 order by 1 desc limit 1;";
+    var sqlQuery =  "SELECT stbat_serial_number,stbat_quantity,stbat_manufacture_date,stbat_expiry_date,stbat_batch_number,stbat_supplier,stbat_batch_received_date,stbat_purchase_price,stbat_unit_cost,stbat_retail_price FROM stock_batches where stbat_stock_id='" + stock_id + "' order by 1 desc limit 1;";
         console.log(sqlQuery)        
         var sqlFilePath = "SQLResults/StockDomain/DeleteBatch.json";
         var results = await executeQuery(sqlQuery, sqlFilePath);        
