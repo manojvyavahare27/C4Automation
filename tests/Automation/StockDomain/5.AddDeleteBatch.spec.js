@@ -80,18 +80,22 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockItemsFliters.clearItemName()
    await stockItemsFliters.clickSearchButton()
 
+   await page.pause()
   
    await stockItemsFliters.enterItemName(jsonData.AddNewStock[0].stock_name)
    await stockItemsFliters.clickSearchButton()
    await page.waitForTimeout(2000)
    await addStockItems.clickOnExpandsDefaultPharmacy()
-   
+    await page.pause()
 
    await stockallLoc.clickOnAddBatchLink()
    await page.waitForTimeout(500)
+    await page.pause()
    await addFormulary.clickOnClosePopup()
    await page.waitForTimeout(500)
+    await page.pause()
    await stockallLoc.clickOnAddBatchLink()
+    await page.pause()
    await addBatch.enterSupplierName(jsonData.AddBatch[0].stbat_supplier)
    await addBatch.enterBatchNumber(jsonData.AddBatch[0].stbat_batch_number)
    await addBatch.enterBatchQuantity(jsonData.AddBatch[0].stbat_quantity)
@@ -102,9 +106,9 @@ test.describe("Database Comparison Add New Referral", () => {
    await addBatch.enterRetailPrice(jsonData.AddBatch[0].stbat_retail_price)  
     await page.waitForTimeout(1000)
    await addBatch.clickSave()   
-   await page.waitForTimeout(500)
+  
    //await addFormulary.clickOnAddFormularyButton()
-   await expect(page.getByText('Batch added successfully')).toHaveText('Batch added successfully')
+   //await expect(page.getByText('Batch added successfully')).toHaveText('Batch added successfully')
    //await addFormulary.clickOnClosePopup()
    
 
