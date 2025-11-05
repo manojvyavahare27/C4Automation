@@ -15,7 +15,7 @@ class PatientDeath
         this.calendar_DateofDeath=page.getByTestId('Date of Death')
         
         //this.dropdown_MarkPatientAsDead=page.getByRole('button', { name: 'No' })
-        this.dropdown_MarkPatientAsDead=page.locator("xpath=//div[@data-testid='Discharge and remove pending referrals from all services']")
+        this.dropdown_MarkPatientAsDead=page.locator("xpath=//input[@id='patientIsDied']")
         this.checkbox_SearchAntecedentcauseofDeath=page.locator("xpath=//input[@id='otherCauseOfDeathType']")
 
         this.btn_Ok=page.getByTestId('Ok')
