@@ -105,7 +105,7 @@ test.describe("Database Comparison Add List Item", () => {
     //AddToList
 
     await addtolistitem.selectDropdownFromService();
-    //await page.pause()
+    await page.pause()
     await addtolistitem.selectDropDownApplicationList();
     await addtolistitem.enterTextInTextBox(jsonData.addListItem[index].eli_text);
     await addtolistitem.enterTextInOtherLang(jsonData.addListItem[index].eli_text_other_lang);
@@ -120,6 +120,7 @@ test.describe("Database Comparison Add List Item", () => {
     await expect(page.getByText("List item added successfully")).toHaveText(
       "List item added successfully"
     );
+    await page.pause()
 
     var sqlQuery ="select * from establishment_list_items where eli_text = '" +
       jsonData.addListItem[index].eli_text +"' and eli_app_id = 111 order by eli_id desc limit 1";

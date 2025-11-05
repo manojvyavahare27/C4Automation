@@ -11,21 +11,21 @@ const dbConfig = {
    /// // connectionLimit: 10
 
    //Below code is for Pre-release server
-    // host: "10.0.0.16",
-    // user: "cellma4_api_user",
-    // password: "Welcome@123",
-    // port:3314,
-    // //database: "cellma4_api",
-    // database: "cellma4_pre_release",
-    // connectionLimit: 10
-
-    //Active code for regression server
-	host: "10.0.0.16",
-  user: "admin",
+    host: "10.0.0.16",
+    user: "cellma4_api_user",
     password: "Welcome@123",
     port:3314,
-    database: "cellma4_loadtesting_9sep25",
+    //database: "cellma4_api",
+    database: "cellma4_pre_release",
     connectionLimit: 10
+
+    //Active code for regression server
+	// host: "10.0.0.16",
+  // user: "admin",
+  //   password: "Welcome@123",
+  //   port:3314,
+  //   database: "cellma4_loadtesting_9sep25",
+  //   connectionLimit: 10
 
 
     //Activate below code for Linux server execution.
