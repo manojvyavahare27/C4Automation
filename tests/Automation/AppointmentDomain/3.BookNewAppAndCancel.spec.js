@@ -341,7 +341,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.clikcOnRadioAllNo()
           await servicebookapp.clickOnCommuConsentSaveButton()
           await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-         
+         await page.pause()
           var sqlQuery =
           "select * from patients where pat_hospital_ref= '" + jsonData.addPatient[index].pat_hospital_ref + "' order by pat_id desc limit 1";
         console.log(sqlQuery);
@@ -366,18 +366,22 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           console.log( "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n" );
         }
        
+        await page.pause()
      await page.waitForTimeout(1000)
      await scheduleserviceapp.ClickonAppTypeLink()
      await scheduleserviceapp.clickOnCloseAppTypePopup()
+     await page.pause()
      await scheduleserviceapp.ClickonAppTypeLink()
      await scheduleserviceapp.selectAppTypeDropdown()
      await scheduleserviceapp.clickOnChangeButton()
      await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')
 
+     await page.pause()
          //Click On Date Link
      await scheduleserviceapp.clickOnDateLink()
      await adeditpatientappointment.clickOnBackButton()   
      //Cancel Appointment
+     await page.pause()
      await scheduleserviceapp.clickOnAppScheduleStatus()
      await scheduleserviceapp.clickOnCancelButton()
      await scheduleserviceapp.selectAppCancellationReason(jsonData.bookNewAppointments[index].rea_cancelled_reason)
