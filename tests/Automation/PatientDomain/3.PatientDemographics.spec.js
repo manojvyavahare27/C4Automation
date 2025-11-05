@@ -94,7 +94,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await page.waitForTimeout(2000);
         await loginpage.clickOnLogin();
         
-       await page.pause()
+       
         //logger.info("Clicked on Login button successfully");
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnPatientIcon()
@@ -111,11 +111,11 @@ test.describe("Patient Domain Db Comparison", () => {
         await patientsearch.clickOnBackbuttonOnPatientSearch()
         await page.waitForTimeout(3000)
         //await confirmexisting.clickOnConfirmExistingDetails()
-await page.pause()
+        
         await topbluebar.clickOnBannerButtonKeyboardArrow()
         await page.waitForTimeout(2000)
         await topbluebar.ClickOnViewAllContactDetails()
-
+       
         //Click On Links
         // await demogrphics.ClickOnLinkLinks()
         // await demogrphics.ClickOnLinkDetails()
@@ -124,19 +124,19 @@ await page.pause()
         await demogrphics.ClickOnLinkLinks()
         await demogrphics.ClickOnLinkPatientIdentifier()
         await demogrphics.ClickOnCloseAllPopup()
-
+        //await page.pause()
         // await demogrphics.ClickOnLinkLinks()
         // await demogrphics.ClickOnLinkPIP()
         // await demogrphics.ClickOnCloseAllPopup()
 
-        await demogrphics.ClickOnLinkLinks()
-        await demogrphics.ClickOnLinkQAndA()
-        await demogrphics.ClickOnCloseAllPopup()
+        // await demogrphics.ClickOnLinkLinks()
+        // await demogrphics.ClickOnLinkQAndA()
+        // await demogrphics.ClickOnCloseAllPopup()
 
         // await demogrphics.ClickOnLinkLinks()
         // await demogrphics.ClickOnLinkSummary()
         // await demogrphics.ClickOnCloseAllPopup()
-await page.pause()
+        
         await demogrphics.ClickOnLinkLinks()
         await demogrphics.ClickOnLinkWorkList()
         await demogrphics.ClickOnCloseAllPopup()
@@ -163,13 +163,13 @@ await page.pause()
         await demogrphics.ClickOnExpandsPatientPIP()
         await demogrphics.ClickOnExpandsPatientGP()
         await demogrphics.ClickOnExpandsPatientGP()
-
+await page.pause()
         
         await demogrphics.SelectRadioButtonForConsentForPhotographcsNo()
         await demogrphics.SelectRadioButtonForConsentForPhotographcsYes()
         await demogrphics.ClickSaveButtonForConsentForPhotographcs()
 
-
+       
         await topbluebar.clickOnTopBlueBar()
 
         await page.waitForTimeout(3000)
@@ -194,21 +194,22 @@ await page.pause()
         await expect(page.getByText('Patient updated successfully')).toHaveText('Patient updated successfully')
         await editpatient.clickOnPatientAddress()
         await editpatient.clickOnSaveForPatientDetails()
-         
+          
         // await expect(page.getByText('Patient address added successfully')).toHaveText('Patient address added successfully')
         await editpatient.clickOnPatientPIP()
      
-        await editpatient.enterIntoSearchGP('Wednesday')
+       // await editpatient.enterIntoSearchGP('Wednesday')
 
         await editpatient.clickOnViewPIPLink()
 
         await page.waitForTimeout(2000)
+       
         await editpatient.clickOnClosePIPAddressPopup()
         await editpatient.clickOnExportListbtn()
         //await editpatient.clickOnViewforInterestedPartyList()
         await page.waitForTimeout(2000)
         // await editpatient.clickOnAddressPIP()
-      
+  
         await editpatient.clickOnExportToCSVLink()
         await page.waitForTimeout(1000)
         await editpatient.clickOnExportToExcelLink()

@@ -13,9 +13,9 @@ class Demographics{
         this.link_PIP=page.getByRole('heading', { name: 'Patient Interested Parties' })
         this.link_QAndA=page.locator("xpath=//li[@data-testid='patientQuestionLink']")
         this.link_Summary=page.getByTestId('Summary').getByRole('heading', { name: 'Summary' })
-        this.link_WorkList=page.getByRole('heading', { name: 'Worklist' })
-        this.link_TestPatient=page.getByRole('heading', { name: 'Test' })
-        this.dropdown_TestPatient=page.locator("xpath=//div[@data-testid='Test Patient']")
+        this.link_WorkList=page.locator("xpath=//li[@data-testid='worklistLink']")
+        this.link_TestPatient=page.locator("xpath=//li[@data-testid='testLink']")
+        this.dropdown_TestPatient=page.locator("xpath=//input[@id='testPatient']")
 
         this.btn_ClosePopups=page.getByTestId('CancelIcon')
 
@@ -97,7 +97,7 @@ class Demographics{
     {
         await this.dropdown_TestPatient.click()
         await this.page.getByRole('option', { name: 'No' }).click()
-        await this.page.getByTestId('Set').click()
+        await this.page.locator("xpath=//button[@data-testid='Set']").click()
     }
 
     async SelectRadioButtonForConsentForPhotographcsNo()
