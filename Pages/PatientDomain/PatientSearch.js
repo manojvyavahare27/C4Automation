@@ -73,7 +73,7 @@ class PatientSearch {
         this.link_CustomizableView = page.getByTestId('Customizable View')
 
         //Custom setting for Appointment Module Patient search
-        this.link_CustomizableViewAppPatSearch = page.getByRole('menuitem', { name: 'Customizable View' })
+        this.link_CustomizableViewAppPatSearch = page.locator("xpath=//li[contains(text(), 'Customisable View')]")
         this.btn_ResetToDefaultView = page.getByTestId('Reset to Default View')
 
 
