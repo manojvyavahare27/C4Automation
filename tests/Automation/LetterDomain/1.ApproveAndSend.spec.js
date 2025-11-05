@@ -91,8 +91,9 @@ await confirmexisting.clickOnConfirmExistingDetails();
 console.log("Confirmed existing patient details.");
 
 
-await page.waitForTimeout(1000);
-
+await page.waitForTimeout(2000);
+await page.getByRole('button', { name: 'cancelIcon' }).click()
+await page.waitForTimeout(2000)
 await page.pause()
 
 await patientsidebar.clickOnLettersCategory();

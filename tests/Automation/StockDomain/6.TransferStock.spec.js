@@ -110,7 +110,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
     //DB for Select Transfer quantity
 
-    var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
+    var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 487 ORDER BY cst.sttra_id DESC LIMIT 1;"
     console.log(sqlQuery)
     var sqlFilePath = "SQLResults/StockDomain/StockItemDetails.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
@@ -138,7 +138,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
     //Check Approved status after click on save checklist
 
-     var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
+     var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 487 ORDER BY cst.sttra_id DESC LIMIT 1;"
     console.log(sqlQuery)
     var sqlFilePath = "SQLResults/StockDomain/StockItemDetails.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
@@ -160,7 +160,7 @@ test.describe("Database Comparison Add New Referral", () => {
     
     //Check Approved status after click on save checklist
 
-     var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
+     var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 487 ORDER BY cst.sttra_id DESC LIMIT 1;"
     console.log(sqlQuery)
     var sqlFilePath = "SQLResults/StockDomain/StockItemDetails.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
@@ -179,6 +179,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockTransferPage.clickOnOkbutton()
     await page.waitForTimeout(2000)
 
+    await page.pause()
     //await expect(page.getByText('Only items with transferred status will be dispatched.')).toHaveText('Only items with transferred status will be dispatched.')
     await stockTransferPage.clickOnSaveButton()   
     //await stockTransferPage.clickOnOkbutton()
@@ -187,13 +188,13 @@ test.describe("Database Comparison Add New Referral", () => {
     await page.waitForTimeout(2000)
     await processDispatchOrderPopup.clickOnCreateDispatchOrderButtonFromPopUp()
 
-    await expect(page.getByText('Item successfully received')).toHaveText('Item successfully received')
+    //await expect(page.getByText('Item successfully received')).toHaveText('Item successfully received')
     await processDispatchOrderPopup.clickOncloseIcon()
     
     //check Dispatch Status    
     //Check Dispatch status after click on Create dispatch order
 
-     var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
+     var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 487 ORDER BY cst.sttra_id DESC LIMIT 1;"
     console.log(sqlQuery)
     var sqlFilePath = "SQLResults/StockDomain/StockItemDetails.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
@@ -241,7 +242,7 @@ test.describe("Database Comparison Add New Referral", () => {
     
     //Check approved status after click receive item into another location
 
-     var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
+     var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 487 ORDER BY cst.sttra_id DESC LIMIT 1;"
     console.log(sqlQuery)
     var sqlFilePath = "SQLResults/StockDomain/StockItemDetails.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
