@@ -179,7 +179,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await stockTransferPage.clickOnOkbutton()
     await page.waitForTimeout(2000)
 
-    await page.pause()
+    
     //await expect(page.getByText('Only items with transferred status will be dispatched.')).toHaveText('Only items with transferred status will be dispatched.')
     await stockTransferPage.clickOnSaveButton()   
     //await stockTransferPage.clickOnOkbutton()
