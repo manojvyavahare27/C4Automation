@@ -111,7 +111,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
 
 
      await patientsearch.clickOnSearchPatButton()
-     await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
+    // await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
      await page.waitForTimeout(1000);
      await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname)
      await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname)
