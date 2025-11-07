@@ -98,6 +98,7 @@ test.describe("Medications Category", () => {
       
       
       
+      
       await patientsearch.clickOnSearchButton();
       logger.info("Clicked on Search button successfully");
       await patientsearch.enterGivenName(data.pat_firstname);
@@ -171,7 +172,6 @@ test.describe("Medications Category", () => {
       const patId = results[0].paa_pat_id;
       console.log("Patient Accessed by User:" + patId);
 
-      
 
         // Add New Medication
       await Medications.selectandAddClinicalItem(jsonData.AddMedication[index].pacr_que_name)
