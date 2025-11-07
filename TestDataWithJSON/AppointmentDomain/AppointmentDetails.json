@@ -18,9 +18,9 @@
   ],
   "addPatient": [
     {
-      "pat_hospital_ref": "HospLin065",
+      "pat_hospital_ref": "HospLin066",
       "pat_title": "B/O",
-      "pat_firstname": "AppLins",
+      "pat_firstname": "AppLinT",
       "pat_surname": "Marathi",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -53,7 +53,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "AppLins",
+      "pat_firstname": "AppLinT",
       "pat_surname": "Marathi",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -84,7 +84,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "AppLins",
+      "pat_firstname": "AppLinT",
       "pat_lastname": "Marathi",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -93,7 +93,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "AppLins.Marathi@Gmail.com"
+      "add_email": "AppLinT.Marathi@Gmail.com"
     }
   ],
   "tempAddress": [
