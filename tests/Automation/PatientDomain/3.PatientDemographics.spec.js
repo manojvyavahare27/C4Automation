@@ -163,7 +163,7 @@ test.describe("Patient Domain Db Comparison", () => {
         await demogrphics.ClickOnExpandsPatientPIP()
         await demogrphics.ClickOnExpandsPatientGP()
         await demogrphics.ClickOnExpandsPatientGP()
-await page.pause()
+
         
         await demogrphics.SelectRadioButtonForConsentForPhotographcsNo()
         await demogrphics.SelectRadioButtonForConsentForPhotographcsYes()
