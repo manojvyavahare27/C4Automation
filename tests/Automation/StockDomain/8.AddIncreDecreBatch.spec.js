@@ -109,7 +109,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
     //check for Batch Id
 
-    var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 487 ORDER BY cst.sttra_id DESC LIMIT 1;"
+    var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
     console.log(sqlQuery)
     var sqlFilePath = "SQLResults/StockDomain/StockItemDetails.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
@@ -119,7 +119,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
     //check for Increment Db comparsion
 
-    var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, sb.stbat_batch_change_type, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 487 ORDER BY cst.sttra_id DESC LIMIT 1;"
+    var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, sb.stbat_batch_change_type, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
     console.log(sqlQuery)
     var sqlFilePath = "SQLResults/StockDomain/BatchIncrementDetails.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
@@ -154,7 +154,7 @@ test.describe("Database Comparison Add New Referral", () => {
 
     //check for Decrement Db comparsion
 
-    var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, sb.stbat_batch_change_type, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 487 ORDER BY cst.sttra_id DESC LIMIT 1;"
+    var sqlQuery = "SELECT sb.stbat_id,sb.stbat_batch_number, sb.stbat_batch_change_type, cst.sttra_quantity, cst.sttra_request_type, cst.sttra_status FROM c4_stock_transfer cst JOIN  stock_batches sb ON cst.sttra_stbat_id = sb.stbat_id WHERE sb.stbat_id = 773 ORDER BY cst.sttra_id DESC LIMIT 1;"
     console.log(sqlQuery)
     var sqlFilePath = "SQLResults/StockDomain/BatchDecrementDetails.json";
     var results = await executeQuery(sqlQuery, sqlFilePath);
