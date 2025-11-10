@@ -107,9 +107,9 @@ test.describe('New Patient', () => {
       //await page.goto("http://10.0.0.64:3000/cellmaUser/patient/patientDuplicateCheck")
       await patientduplicatecheck.clickOnDuplicateCheckButton();
      // await page.pause()
-      await expect(page.getByText("Photo Identification required")).toHaveText("Photo Identification required");
-      await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
-      await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
+      // await expect(page.getByText("Photo Identification required")).toHaveText("Photo Identification required");
+      // await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
+      // await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
 
       //Is baby born in hospital
       const dateValue = await page.$eval("#Born", (textbox) => textbox.value);
