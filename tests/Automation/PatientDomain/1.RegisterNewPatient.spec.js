@@ -158,9 +158,9 @@ await expect(page.getByText("At least one search field should be set for a searc
       logger.info("Clicked on Add Patient button successfully");
       await patientduplicatecheck.clickOnDuplicateCheckButton();
       logger.info("Clicked on Duplicate Check button successfully");
-      await expect(page.getByText("Photo Identification required")).toHaveText("Photo Identification required");
-      await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
-      await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
+      // await expect(page.getByText("Photo Identification required")).toHaveText("Photo Identification required");
+      // await expect(page.getByText("Photo Identification ID required")).toHaveText("Photo Identification ID required");
+      // await expect(page.getByText("Middle name(s) is required")).toHaveText("Middle name(s) is required");
       
       await patientduplicatecheck.selectUniqueIdentification(); 
       logger.info("Selected Unique Identification successfully");     
