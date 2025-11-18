@@ -131,6 +131,8 @@ test.describe("Patient Domain Db COmparison", () => {
     
     await homepage.clickOnHomePageIcon();
     await homepage.clickOnPatientIcon();
+
+    await page.pause()
     //await patientsearch.clickOnSearchButton()
     await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname.toString());
     await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname.toString());
