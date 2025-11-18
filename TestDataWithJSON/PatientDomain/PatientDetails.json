@@ -10,7 +10,7 @@
     },
     {
       "username": "prerelease.auto",
-      "password": "Manoj@2023"
+      "password": "Manoj@2025"
     },
     {
       "username": "manoj.auto",
@@ -23,9 +23,9 @@
   ],
   "addPatient": [
     {
-      "pat_hospital_ref": "HospLin15",
+      "pat_hospital_ref": "HospLin16",
       "pat_title": "B/O",
-      "pat_firstname": "LinuxPatAN",
+      "pat_firstname": "LinuxPatAo",
       "pat_surname": "Riomed",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -43,7 +43,7 @@
       "pat_currently_pregnant_yes": "No",
       "pat_currently_pregnant": 0,
       "pat_language": "English",
-      "pat_temp_address_start": 45974,
+      "pat_temp_address_start": 45975,
       "pat_country_of_birth": "India",
       "pat_gender_at_birth": "M",
       "pat_nationality": "Indian",
@@ -58,7 +58,7 @@
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "LinuxPatAN",
+      "pat_firstname": "LinuxPatAo",
       "pat_surname": "Riomed",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -89,7 +89,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "LinuxPatAN",
+      "pat_firstname": "LinuxPatAo",
       "pat_lastname": "Riomed",
       "pat_sex": "Male",
       "pat_dob": "22/09/2023",
@@ -98,7 +98,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "LinuxPatAN_Riomed@Gmail.com"
+      "add_email": "LinuxPatAo_Riomed@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -440,12 +440,12 @@
   ],
   "patDetails": [
     {
-      "pat_hospital_ref": "HospLin15",
+      "pat_hospital_ref": "HospLin16",
       "pat_dod": "29/10/2023",
       "pat_tod": "00:11",
       "pat_dead_confirmation_status": "confirmed",
       "pat_death_notes": "Added For Testing",
-      "pat_firstname": "LinuxPatAN",
+      "pat_firstname": "LinuxPatAo",
       "pat_surname": "Riomed"
     }
   ],
