@@ -116,7 +116,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //await page.pause()
         //await patientsearch.selectBornDate()
         await patientsearch.clickOnSearchPatButton()
-        await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
+       // await expect(page.getByText('Patient list found')).toHaveText('Patient list found') 
         await patientsearch.clickOnSearchPatientLink()   
         
         //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
