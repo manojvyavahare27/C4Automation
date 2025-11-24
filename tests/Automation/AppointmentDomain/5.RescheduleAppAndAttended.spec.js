@@ -128,6 +128,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         if(addReferralText==true)
         {       
 
+           await page.pause()
         // await menu.clickOnMenubtn()
         // await menu.clickOnAddReferrallink()
         //Add New Referral to Patient.
@@ -194,6 +195,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
         await page.waitForTimeout(2000);
         
+        await page.pause()
         //Atteded Appointment
         await scheduleserviceapp.clickOnAppScheduleStatus()
         await scheduleserviceapp.clickOnAddAttended()
@@ -288,7 +290,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.clickOnRadioAllYes()
         await servicebookapp.clickOnCommuConsentSaveButton()
         await expect(page.getByText('Communication consent saved successfully')).toHaveText('Communication consent saved successfully')     
-
+ await page.pause()
         var sqlQuery =
         "select * from patients where pat_hospital_ref= '" +
         jsonData.addPatient[index].pat_hospital_ref +
@@ -378,7 +380,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //Change App Status
     //     const AppStatus=await page.getByTestId('Status').isVisible()
     //     if(AppStatus=="Scheduled")
-
+ 
 
     //Change status to Reschedule Appointment
      

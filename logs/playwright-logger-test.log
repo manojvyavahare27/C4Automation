@@ -2915,3 +2915,28 @@
 {"level":"info","message":"App GP search entered successfully","timestamp":"2025-11-18T03:13:36.911Z"}
 {"level":"info","message":"Person add button clicked successfully","timestamp":"2025-11-18T03:13:37.057Z"}
 {"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-11-18T03:13:38.127Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-11-24T13:39:01.888Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-11-24T13:39:04.887Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-11-24T13:39:08.170Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-11-24T13:39:08.308Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-11-24T13:39:08.652Z"}
+{"level":"info","message":"Sex selected successfully","timestamp":"2025-11-24T13:39:08.910Z"}
+{"level":"info","message":"Born Date selected successfully","timestamp":"2025-11-24T13:39:09.090Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-11-24T13:39:09.335Z"}
+{"level":"info","message":"Clicked on Add Patient button successfully","timestamp":"2025-11-24T13:39:10.908Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-11-24T13:39:11.992Z"}
+{"level":"info","message":"Selected Unique Identification successfully","timestamp":"2025-11-24T13:39:12.236Z"}
+{"level":"info","message":"Selected Photo Identification successfully","timestamp":"2025-11-24T13:39:12.863Z"}
+{"level":"info","message":"Photo Identification entered successfully","timestamp":"2025-11-24T13:39:13.401Z"}
+{"level":"info","message":"Issuing Country selected successfully","timestamp":"2025-11-24T13:39:13.753Z"}
+{"level":"info","message":"Title selected successfully","timestamp":"2025-11-24T13:39:14.080Z"}
+{"level":"info","message":"Middle Name entered successfully","timestamp":"2025-11-24T13:39:14.637Z"}
+{"level":"info","message":"Maiden Name entered successfully","timestamp":"2025-11-24T13:39:15.035Z"}
+{"level":"info","message":"Mobile Number entered successfully","timestamp":"2025-11-24T13:39:15.843Z"}
+{"level":"info","message":"Email ID entered successfully","timestamp":"2025-11-24T13:39:17.773Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-11-24T13:39:18.064Z"}
+{"level":"info","message":"Clicked on Create Patient button successfully","timestamp":"2025-11-24T13:39:18.218Z"}
+{"level":"info","message":"Marital Status selected successfully","timestamp":"2025-11-24T13:39:19.783Z"}
+{"level":"info","message":"Sexual Orientation selected successfully","timestamp":"2025-11-24T13:39:20.159Z"}
+{"level":"info","message":"Ethnicity selected successfully","timestamp":"2025-11-24T13:39:20.554Z"}
+{"level":"info","message":"Occupation selected successfully","timestamp":"2025-11-24T13:39:20.912Z"}
