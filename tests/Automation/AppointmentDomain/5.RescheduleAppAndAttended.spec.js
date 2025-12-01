@@ -379,8 +379,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
     
         //Change App Status
     //     const AppStatus=await page.getByTestId('Status').isVisible()
-    //     if(AppStatus=="Scheduled")
- 
+    //     if(AppStatus=="Scheduled") 
 
     //Change status to Reschedule Appointment
      
