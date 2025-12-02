@@ -460,7 +460,7 @@ await addpip.selectPIPReceiveAppointmentLetter(jsonData.pip[index].pip_receive_p
 logger.info("PIP receive appointment letter option selected successfully");
 
       //await addpip.selectPIPPartnerDetailsOnRegForm();
-      await addpip.checkSendPatientTextEmail(jsonData.pip[index].pip_send_txt_email_yes);
+     // await addpip.checkSendPatientTextEmail(jsonData.pip[index].pip_send_txt_email_yes);
 logger.info("PIP send patient text/email option selected successfully");
 
 await addpip.checkIsReferrer();

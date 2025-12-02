@@ -313,9 +313,9 @@ test.describe('New Patient', () => {
         jsonData.pip[index].pip_receive_pat_appt_letter_no
       );
       //await addpip.selectPIPPartnerDetailsOnRegForm();
-      await addpip.checkSendPatientTextEmail(
-        jsonData.pip[index].pip_send_txt_email_yes
-      );
+      // await addpip.checkSendPatientTextEmail(
+      //   jsonData.pip[index].pip_send_txt_email_yes
+      // );
       await addpip.checkIsReferrer();
       await addpip.enterPIPNotes(jsonData.pip[index].pip_notes);
       await addpip.checkcAssistingInPartner();
