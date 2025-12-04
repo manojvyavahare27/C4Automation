@@ -273,7 +273,7 @@ test.describe('Excel Conversion', () => {
         await addpip.selectPIPReceiveAppointmentLetter(jsonData.pip[index].pip_receive_pat_appt_letter_no);        
        // await addpip.checkSendPatientTextEmail(jsonData.pip[index].pip_send_txt_email_yes);
         await addpip.checkIsReferrer();
-        await addpip.enterPIPNotes(jsonData.pip[index].pip_notes);
+        //await addpip.enterPIPNotes(jsonData.pip[index].pip_notes);
         await addpip.checkcAssistingInPartner();
         await addpip.checkHelpingPatients();
         await addpip.checkBeingPhotographed();

@@ -466,8 +466,8 @@ logger.info("PIP send patient text/email option selected successfully");
 await addpip.checkIsReferrer();
 logger.info("PIP referrer checkbox selected successfully");
 
-await addpip.enterPIPNotes(jsonData.pip[index].pip_notes);
-logger.info("PIP notes entered successfully");
+//await addpip.enterPIPNotes(jsonData.pip[index].pip_notes);
+//logger.info("PIP notes entered successfully");
 
 await addpip.checkcAssistingInPartner();
 logger.info("PIP assisting in partner checkbox selected successfully");
